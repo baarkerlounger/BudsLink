@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-07 00:00+0700\n"
-"Last-Translator: Andrey Sychin <moloko@skofey.com>\n"
+"PO-Revision-Date: 2026-09-13 23:10+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: src/appLibs/widgets/settingsButton.js:26
 msgid "Application Settings"
@@ -1399,7 +1400,7 @@ msgstr "Управление мультимедиа (сжатие и свайп)
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:340
 msgid "Enable Touch Controls "
-msgstr "Включить сенсорное управление"
+msgstr "Включить сенсорное управление "
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:396
 #: src/preferences/devices/boseBuds/configureWindow.js:713
