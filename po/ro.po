@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-01-28 21:26-0700\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2026-09-13 23:10+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: src/appLibs/widgets/settingsButton.js:26
 msgid "Application Settings"
@@ -2051,11 +2052,11 @@ msgstr ""
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:351
 msgid "Connect"
-msgstr ""
+msgstr "Conectare"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:352
 msgid "Disconnect"
-msgstr ""
+msgstr "Deconectează"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:467
 msgid "Manage Device Connections"
