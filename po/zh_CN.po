@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-12 06:44+0000\n"
+"PO-Revision-Date: 2026-09-13 10:51+0000\n"
 "Last-Translator: reducedradius "
 "<137701630+flytothehighest@users.noreply.github.com>\n"
 "Language-Team: none\n"
@@ -31,23 +31,23 @@ msgstr "系统默认值"
 
 #: src/appLibs/widgets/settingsButton.js:36
 msgid "Blue"
-msgstr ""
+msgstr "蓝色"
 
 #: src/appLibs/widgets/settingsButton.js:37
 msgid "Teal"
-msgstr ""
+msgstr "蓝绿色"
 
 #: src/appLibs/widgets/settingsButton.js:38
 msgid "Green"
-msgstr ""
+msgstr "绿色"
 
 #: src/appLibs/widgets/settingsButton.js:39
 msgid "Yellow"
-msgstr ""
+msgstr "黄色"
 
 #: src/appLibs/widgets/settingsButton.js:40
 msgid "Orange"
-msgstr ""
+msgstr "橙色"
 
 #: src/appLibs/widgets/settingsButton.js:41
 msgid "Red"
@@ -76,7 +76,7 @@ msgstr "强调色"
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -92,7 +92,7 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:107
 msgid "About BudsLink"
-msgstr ""
+msgstr "关于BudsLink"
 
 #: src/appLibs/widgets/settingsButton.js:118
 msgid "Translation"
