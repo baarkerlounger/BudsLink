@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-13 10:51+0000\n"
-"Last-Translator: reducedradius "
-"<137701630+flytothehighest@users.noreply.github.com>\n"
+"PO-Revision-Date: 2026-09-13 23:10+0000\n"
+"Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -181,7 +180,7 @@ msgstr ""
 
 #: src/appLibs/widgets/deviceRow.js:56 src/app.js:227
 msgid "BudsLink"
-msgstr ""
+msgstr "BudsLink"
 
 #: src/appLibs/widgets/deviceRow.js:98
 msgid "Configure"
@@ -439,15 +438,15 @@ msgstr ""
 
 #: src/preferences/devices/airpods/configureWindow.js:289
 msgid "15%"
-msgstr ""
+msgstr "15%"
 
 #: src/preferences/devices/airpods/configureWindow.js:290
 msgid "100%"
-msgstr ""
+msgstr "100%"
 
 #: src/preferences/devices/airpods/configureWindow.js:291
 msgid "125%"
-msgstr ""
+msgstr "125%"
 
 #: src/preferences/devices/airpods/configureWindow.js:308
 #: src/preferences/devices/nothingBuds/configureWindow.js:648
@@ -593,11 +592,11 @@ msgstr ""
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:259
 msgid "Harman EFX"
-msgstr ""
+msgstr "Harman EFX"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:260
 msgid "Harman Master"
-msgstr ""
+msgstr "Harman Master"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:262
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:627
@@ -645,25 +644,25 @@ msgstr ""
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 msgid "62"
-msgstr ""
+msgstr "62"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:308
 #: src/preferences/devices/sony/configureWindow.js:261
 msgid "125"
-msgstr ""
+msgstr "125"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:309
 #: src/preferences/devices/sony/configureWindow.js:261
 msgid "250"
-msgstr ""
+msgstr "250"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:311
 #: src/preferences/devices/sony/configureWindow.js:261
 msgid "500"
-msgstr ""
+msgstr "500"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:313
@@ -944,7 +943,7 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:220
 msgid "Dirac"
-msgstr ""
+msgstr "Dirac"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:221
 #: src/preferences/devices/senhBuds/configureWindow.js:265
@@ -1017,11 +1016,11 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:304
 msgid "-"
-msgstr ""
+msgstr "-"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:308
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:336
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:177
@@ -1156,21 +1155,21 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
-msgstr ""
+msgstr "50"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:307
 #: src/preferences/devices/sony/configureWindow.js:261
 msgid "63"
-msgstr ""
+msgstr "63"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:310
 #: src/preferences/devices/sony/configureWindow.js:260
 msgid "400"
-msgstr ""
+msgstr "400"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:312
 msgid "800"
-msgstr ""
+msgstr "800"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:315
 #: src/preferences/devices/sony/configureWindow.js:260
@@ -1416,11 +1415,11 @@ msgstr ""
 #: src/preferences/devices/galaxyBuds/configureWindow.js:470
 #: src/preferences/devices/boseBuds/configureWindow.js:820
 msgid "Spotify"
-msgstr ""
+msgstr "Spotify"
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:472
 msgid "ANC"
-msgstr ""
+msgstr "ANC"
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:488
 msgid "Left Earbud Pinch and Hold Function"
@@ -1867,7 +1866,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:288
 msgid "DSEE"
-msgstr ""
+msgstr "DSEE"
 
 #: src/preferences/devices/sony/configureWindow.js:292
 msgid "Enable DSEE enhancement"
@@ -1928,23 +1927,23 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:419
 msgid "-2"
-msgstr ""
+msgstr "-2"
 
 #: src/preferences/devices/sony/configureWindow.js:420
 msgid "-1"
-msgstr ""
+msgstr "-1"
 
 #: src/preferences/devices/sony/configureWindow.js:421
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: src/preferences/devices/sony/configureWindow.js:422
 msgid "+1"
-msgstr ""
+msgstr "+1"
 
 #: src/preferences/devices/sony/configureWindow.js:423
 msgid "+2"
-msgstr ""
+msgstr "+2"
 
 #: src/preferences/devices/sony/configureWindow.js:442
 msgid "Headset Take Off"
@@ -2052,11 +2051,11 @@ msgstr ""
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:351
 msgid "Connect"
-msgstr ""
+msgstr "连接"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:352
 msgid "Disconnect"
-msgstr ""
+msgstr "断开连接"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:467
 msgid "Manage Device Connections"
@@ -2187,43 +2186,43 @@ msgstr ""
 
 #: src/lib/devices/notifier.js:25
 msgid "AirPods / Beats"
-msgstr ""
+msgstr "AirPods / Beats"
 
 #: src/lib/devices/notifier.js:27
 msgid "Sony"
-msgstr ""
+msgstr "Sony"
 
 #: src/lib/devices/notifier.js:29
 msgid "Samsung Galaxy"
-msgstr ""
+msgstr "Samsung Galaxy"
 
 #: src/lib/devices/notifier.js:31
 msgid "Nothing / CMF"
-msgstr ""
+msgstr "Nothing / CMF"
 
 #: src/lib/devices/notifier.js:33
 msgid "Google Pixel Buds"
-msgstr ""
+msgstr "Google Pixel Buds"
 
 #: src/lib/devices/notifier.js:35
 msgid "Redmi / Xiaomi"
-msgstr ""
+msgstr "Redmi / Xiaomi"
 
 #: src/lib/devices/notifier.js:37
 msgid "Sennheiser"
-msgstr ""
+msgstr "Sennheiser"
 
 #: src/lib/devices/notifier.js:39
 msgid "Bose"
-msgstr ""
+msgstr "Bose"
 
 #: src/lib/devices/notifier.js:41
 msgid "Edifier"
-msgstr ""
+msgstr "Edifier"
 
 #: src/lib/devices/notifier.js:43
 msgid "Google Fast Pair"
-msgstr ""
+msgstr "Google Fast Pair"
 
 #: src/lib/devices/notifier.js:49
 #, javascript-format
