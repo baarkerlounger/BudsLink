@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-13 23:09+0000\n"
+"PO-Revision-Date: 2026-09-15 08:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -38,12 +38,14 @@ msgid "Teal"
 msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:38
+#, fuzzy
 msgid "Green"
-msgstr ""
+msgstr "أخضر"
 
 #: src/appLibs/widgets/settingsButton.js:39
+#, fuzzy
 msgid "Yellow"
-msgstr ""
+msgstr "أصفر"
 
 #: src/appLibs/widgets/settingsButton.js:40
 msgid "Orange"
