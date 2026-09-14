@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-13 10:51+0000\n"
+"PO-Revision-Date: 2026-09-15 08:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech\n"
 "Language: cs\n"
@@ -290,7 +290,7 @@ msgstr "Výchozí chování"
 #: src/preferences/devices/senhBuds/configureWindow.js:647
 #: src/preferences/devices/boseBuds/configureWindow.js:447
 msgid "Resume when worn"
-msgstr "Pokračovat pokud nošeno"
+msgstr "Pokračovat v přehrávání, pokud nošeno"
 
 #: src/preferences/devices/airpods/configureWindow.js:114
 #: src/preferences/devices/redmiBuds/configureWindow.js:217
@@ -338,9 +338,7 @@ msgstr "V průběhu povědomí o konverzaci snížit hlasitost"
 
 #: src/preferences/devices/airpods/configureWindow.js:141
 msgid "Automatically lower the volume when conversation awareness is active"
-msgstr ""
-"Když je aktivní povědomí o konverzaci, automaticky snížit hlasitost "
-"přehrávaného média"
+msgstr "Když je aktivní povědomí o konverzaci, automaticky snížit hlasitost"
 
 #: src/preferences/devices/airpods/configureWindow.js:159
 msgid "Conversation awareness volume limit"
@@ -426,7 +424,7 @@ msgstr "Stisknutí a podržení cykluje mezi"
 
 #: src/preferences/devices/airpods/configureWindow.js:255
 msgid "Settings don’t reflect current state"
-msgstr "Nastavneí neodráží stávající stav"
+msgstr "Nastavení neodráží stávající stav"
 
 #: src/preferences/devices/airpods/configureWindow.js:257
 #: src/preferences/devices/redmiBuds/configureWindow.js:416
@@ -1126,7 +1124,7 @@ msgstr "Vysílačka"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
-msgstr "Základní prostor"
+msgstr "Essential Space"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:230
 msgid "Podcast"
@@ -1408,7 +1406,7 @@ msgstr "Klepnutí a podržení"
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:415
 msgid "Pinch to Answer Call or End Call"
-msgstr "Roztáhnout pro zvednutí nebo ukončení hovoru"
+msgstr "Roztažení pro zvednutí nebo ukončení hovoru"
 
 #: src/preferences/devices/galaxyBuds/configureWindow.js:416
 msgid "Double Tap to Answer Call or End Call"
@@ -1641,7 +1639,7 @@ msgstr "Relaxace"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:629
 msgid "Run"
-msgstr "Spustit"
+msgstr "Běh"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:630
 msgid "Walk"
@@ -2092,15 +2090,15 @@ msgstr "Špička"
 
 #: src/preferences/widgets/peqRowWidget.js:632
 msgid "Low Pass Filter"
-msgstr "Nízkoprůchodový filtr"
+msgstr "Dolní propust"
 
 #: src/preferences/widgets/peqRowWidget.js:633
 msgid "High Pass Filter"
-msgstr "Vysokoprůchodový filtr"
+msgstr "Horní propust"
 
 #: src/preferences/widgets/peqRowWidget.js:634
 msgid "Low Shelf Filter"
-msgstr "Spodní shelf filtr"
+msgstr "Dolní shelf filtr"
 
 #: src/preferences/widgets/peqRowWidget.js:635
 msgid "High Shelf Filter"
@@ -2325,231 +2323,3 @@ msgstr "Automatické okolní"
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr "Automatická citlivost na okolní"
-
-#~ msgid "Audio Mode"
-#~ msgstr "Režim zvuku"
-
-#~ msgid "Enable Bass Boost"
-#~ msgstr "Zapnout posílení basů"
-
-#~ msgid "Enable In-Ear Detection"
-#~ msgstr "Zapnout zjišťování vložení v uchu"
-
-#~ msgid "Enable On Head Detection"
-#~ msgstr "Zapnout zjišťování nasazení na hlavě"
-
-#~ msgid "Automatically Answer Calls When Worn"
-#~ msgstr "Když nošeno, automaticky zvedat hovory"
-
-#~ msgid "Pause Media When Transparency Mode Is Enabled"
-#~ msgstr "Pokud je zapnutý režim transparentnosti, pozastavit médium"
-
-#~ msgid "Automatically Power Off When Not Worn"
-#~ msgstr "Automaticky vypnout pokud nenošeno"
-
-#~ msgid "Choose playback behavior for in-ear detection"
-#~ msgstr "Zvolte chování přehrávání pro zjišťování vložení do ucha"
-
-#~ msgid "Choose playback behavior for on-head detection"
-#~ msgstr "Zvolte chování přehrávání pro zjišťování nasazení na hlavě"
-
-#~ msgid "More Bass"
-#~ msgstr "Více basů"
-
-#~ msgid "More Treble"
-#~ msgstr "Více výšek"
-
-#~ msgid "Decrease bass"
-#~ msgstr "Snížit basy"
-
-#~ msgid "Standard 2"
-#~ msgstr "Standardní 2"
-
-#~ msgid "Automatically answer phone calls"
-#~ msgstr "Automaticky zvedat volání"
-
-#~ msgid "Enable low latency mode"
-#~ msgstr "Zapnout režim nízkého zpoždění"
-
-#~ msgid "Enhance Vocals"
-#~ msgstr "Vylepšit vokály"
-
-#~ msgid "Bass Boost Level"
-#~ msgstr "Úroveň posílení basů"
-
-#~ msgid "Enable Spatial Audio"
-#~ msgstr "Zapnout prostorový zvuk"
-
-#~ msgid "Enable in ear detection"
-#~ msgstr "Zapnout zjišťování zda vloženo do ucha"
-
-#~ msgid "Walkie Takie"
-#~ msgstr "Vysílačka"
-
-#~ msgid "Choose playback behavior for Ear detection"
-#~ msgstr "Zvolte chování přehrávání pro zjišťování nasazení do ucha"
-
-#~ msgid "Select any two toggles"
-#~ msgstr "Vyberte libovolné dva přepínače"
-
-#~ msgid "Heavy bass"
-#~ msgstr "Těžké basy"
-
-#~ msgid "Light bass"
-#~ msgstr "Lehké basy"
-
-#~ msgid "Vocal boost"
-#~ msgstr "Posílení vokálů"
-
-#~ msgid "Last saved"
-#~ msgstr "Naposledy uloženo"
-
-#~ msgid "Reduce audio latency while gaming"
-#~ msgstr "Při hraní her snížit prodlevu zvuku"
-
-#~ msgid "Let the earbuds detect when they are worn"
-#~ msgstr "Nechat sluchátka zjišťovat, kdy jsou nasazená"
-
-#~ msgid "Auto Pause"
-#~ msgstr "Automatické pozastavení"
-
-#~ msgid "Control media playback using in-ear detection"
-#~ msgstr "Ovládá přehrávání média pomocí zjišťování zda nasazeno v uchu"
-
-#~ msgid "Pause when both removed"
-#~ msgstr "Pozastavit, pokud sundány obě"
-
-#~ msgid "Pause when either removed"
-#~ msgstr "Pozastavit pokud sundáno některé z nich"
-
-#~ msgid "Automatically switch to Transparency mode when an earbud is removed"
-#~ msgstr ""
-#~ "Při sundání sluchátek automaticky přepnout na režim transparentnosti"
-
-#~ msgid "Enable Voice Prompts"
-#~ msgstr "Zapnout hlasové prompty"
-
-#~ msgid "Preset modes cannot be deleted."
-#~ msgstr "Přednastavené režimy není možné mazat."
-
-#~ msgid "At least 2 modes must be selected."
-#~ msgstr "Je třeba vybrat alespoň 2 režimy."
-
-#~ msgid "Maximum favorites limit reached."
-#~ msgstr "Dosaženo nejvyššího možného počtu oblíbených."
-
-#~ msgid "Vocal"
-#~ msgstr "Hlas"
-
-#~ msgid "Notification"
-#~ msgstr "Notifikace"
-
-#~ msgid "Voice Notification"
-#~ msgstr "Hlasová notifikace"
-
-#~ msgid "Enable voice notification"
-#~ msgstr "Zapnout zvukovou notifikaci"
-
-#~ msgid "Voice Notification Volume"
-#~ msgstr "Hlasitost zvukové notifikace"
-
-#~ msgid "Headset Take off"
-#~ msgstr "Sundání sluchátek"
-
-#~ msgid "Automatically Power Off"
-#~ msgstr "Automaticky vypnout"
-
-#~ msgid "Automatically power off when not worn."
-#~ msgstr "Pokud nenošeno, automaticky vypnout."
-
-#~ msgid "Pause when device is not worn"
-#~ msgstr "Pozastavit, pokud zařízení není nošeno"
-
-#~ msgid ""
-#~ "Pause playback when the device is removed,resume when it is put back on"
-#~ msgstr ""
-#~ "Pozastavit přehrávání pokud je zařízení sundáno, pokračovat pokud je opět "
-#~ "nasazeno"
-
-#~ msgid "Adjust the tone volume of sound effects played by AirPods"
-#~ msgstr ""
-#~ "Přizpůsobit tón hlasitosti zvukových efektů přehrávaných sluchátky AirPods"
-
-#~ msgid "Mac Address"
-#~ msgstr "MAC adresa"
-
-#~ msgid "Personalised ANC"
-#~ msgstr "Personalizované ANC"
-
-#~ msgid "AirPods / Beats Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení AirPods / Beats"
-
-#~ msgid "Sony Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Sony"
-
-#~ msgid "Samsung Galaxy Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Samsung Galaxy"
-
-#~ msgid "Nothing / CMF Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Nothing / CMF"
-
-#~ msgid "Google Pixel Buds Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Google Pixel Buds"
-
-#~ msgid "Redmi / Xiaomi Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Redmi / Xioami"
-
-#~ msgid "Sennheiser Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Sennheiser"
-
-#~ msgid "Bose Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Bose"
-
-#~ msgid "Edifier Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Edifier"
-
-#~ msgid "Google Fast Pair Bluetooth audio devices"
-#~ msgstr "Bluetooth zvuková zařízení Google Fast Pair"
-
-#, javascript-format
-#~ msgid "Could not access advanced features for %s."
-#~ msgstr "Nebylo možné přistupovat k pokročilým funkcím %s."
-
-#, javascript-format
-#~ msgid ""
-#~ "Another app or session is already using the Bluetooth socket/profile on "
-#~ "%s. Close any other apps using this device, then restart this app."
-#~ msgstr ""
-#~ "Jiná aplikace nebo relace právě používá Bluetooth soket/profil na %s. "
-#~ "Zavřete jinou aplikaci, používající toto zařízení a poté tuto aplikaci "
-#~ "restartujte."
-
-#~ msgid "Copyright © 2026 maniacx@github.com"
-#~ msgstr "Autorská práva © 2026 maniacx@github.com"
-
-#~ msgid "Bass Enhance"
-#~ msgstr "Posílit basy"
-
-#~ msgid "Enable Bass Enhance"
-#~ msgstr "Zapnout posílení basů"
-
-#~ msgid "Bass Enhance Level"
-#~ msgstr "Stupeň posílení basů"
-
-#~ msgid "Choose playback behaviour for Ear detection"
-#~ msgstr "Zvolte chování přehrávání pro zjišťování vložení sluchátka v uchu"
-
-#~ msgid "Spotify Spot On"
-#~ msgstr "Spotify Spot on"
-
-#~ msgid "Auto Power Off"
-#~ msgstr "Automatické vypnutí"
-
-#~ msgid "Sony audio devices"
-#~ msgstr "Sony zvuková zařízení"
-
-#~ msgid "Samsung Galaxy Buds"
-#~ msgstr "Samsung Galaxy Buds"
-
-#~ msgid "Nothing / CMF Buds"
-#~ msgstr "Nothing / MFS Buds"
