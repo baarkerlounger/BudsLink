@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:47-0600\n"
-"PO-Revision-Date: 2026-09-13 23:10+0000\n"
+"PO-Revision-Date: 2026-09-15 08:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: et\n"
@@ -75,7 +75,7 @@ msgstr "Aktsentvärv"
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Keel"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -83,11 +83,11 @@ msgstr "Andmepakettide logimine"
 
 #: src/appLibs/widgets/settingsButton.js:93
 msgid "Run in Background"
-msgstr ""
+msgstr "Käivita taustal"
 
 #: src/appLibs/widgets/settingsButton.js:100
 msgid "BudsLink Companion"
-msgstr ""
+msgstr "BudsLinki kaasnev rakendus"
 
 #: src/appLibs/widgets/settingsButton.js:107
 msgid "About BudsLink"
@@ -107,7 +107,7 @@ msgstr "Tume kujundus"
 
 #: src/appLibs/widgets/settingsButton.js:301
 msgid "Restart required to apply language change"
-msgstr ""
+msgstr "Rakenduse keele vahetamine eeldab rakenduse uuesti käivitamist"
 
 #: src/appLibs/widgets/settingsButton.js:304
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:242
@@ -121,7 +121,7 @@ msgstr "Katkesta"
 #: src/appLibs/widgets/settingsButton.js:305
 #: src/preferences/widgets/deviceMgmtRowWidget.js:305
 msgid "OK"
-msgstr ""
+msgstr "Sobib"
 
 #: src/appLibs/widgets/settingsButton.js:400
 #: src/appLibs/widgets/settingsButton.js:437
@@ -245,13 +245,13 @@ msgstr "Seadistused"
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
 #: src/preferences/devices/nothingBuds/configureWindow.js:365
 msgid "Game Mode"
-msgstr ""
+msgstr "Mängurežiim"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:72
 #: src/preferences/devices/redmiBuds/configureWindow.js:377
 #: src/preferences/devices/nothingBuds/configureWindow.js:366
 msgid "Reduces latency and enhances in-game audio"
-msgstr ""
+msgstr "Vähendab latentsust ja tagab mängu ajal parema heli"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:83
 #: src/preferences/devices/nothingBuds/configureWindow.js:380
@@ -453,11 +453,11 @@ msgstr "125%"
 #: src/preferences/devices/galaxyBuds/configureWindow.js:468
 #: src/preferences/devices/sony/configureWindow.js:315
 msgid "Volume Control"
-msgstr ""
+msgstr "Helivaljuse juhtimine"
 
 #: src/preferences/devices/airpods/configureWindow.js:312
 msgid "Volume Swipe"
-msgstr ""
+msgstr "Helivaljuse liugurnupp"
 
 #: src/preferences/devices/airpods/configureWindow.js:313
 msgid "Enable or disable volume adjustment by swiping on earbud stems"
@@ -578,17 +578,17 @@ msgstr "Sinu seadistatud"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:256
 msgid "Classic"
-msgstr ""
+msgstr "Klassikaline"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:257
 msgid "Audiophile"
-msgstr ""
+msgstr "Audiofiil"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:258
 #: src/preferences/devices/boseBuds/configureWindow.js:286
 #: src/preferences/devices/googleBuds/configureWindow.js:84
 msgid "Bass Reducer"
-msgstr ""
+msgstr "Bassivähendaja"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:259
 msgid "Harman EFX"
@@ -640,7 +640,7 @@ msgstr "Ekvalaiseri eelseadistused"
 #: src/preferences/devices/boseBuds/configureWindow.js:314
 #: src/preferences/devices/sony/configureWindow.js:243
 msgid "Change the sound signature"
-msgstr ""
+msgstr "Muuda helisignatuuri"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 msgid "62"
@@ -2055,7 +2055,7 @@ msgstr ""
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:352
 msgid "Disconnect"
-msgstr ""
+msgstr "Katkesta ühendus"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:467
 msgid "Manage Device Connections"
@@ -2296,15 +2296,3 @@ msgstr ""
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr ""
-
-#~ msgid "Audio Mode"
-#~ msgstr "Helirežiim"
-
-#~ msgid "Automatically Answer Calls When Worn"
-#~ msgstr "Kandmisel vasta kõnedele automaatselt"
-
-#~ msgid "Automatically Power Off When Not Worn"
-#~ msgstr "Lülita kõrvaklapid välja, kui nad pole kasutusel"
-
-#~ msgid "Mac Address"
-#~ msgstr "MAC-aadress"

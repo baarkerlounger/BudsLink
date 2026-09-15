@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-14 01:53+0000\n"
+"PO-Revision-Date: 2026-09-15 08:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: oc\n"
@@ -75,7 +75,7 @@ msgstr "Color afortida"
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Lenga"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -83,7 +83,7 @@ msgstr "Jornalizacion dels paquets"
 
 #: src/appLibs/widgets/settingsButton.js:93
 msgid "Run in Background"
-msgstr ""
+msgstr "Executar en rèireplan"
 
 #: src/appLibs/widgets/settingsButton.js:100
 msgid "BudsLink Companion"
@@ -168,7 +168,7 @@ msgstr "Inactiu"
 
 #: src/appLibs/widgets/settingsButton.js:500
 msgid "GNOME Extension"
-msgstr ""
+msgstr "Extension GNOME"
 
 #: src/appLibs/widgets/settingsButton.js:506
 msgid "Plasma Widget"
@@ -239,13 +239,13 @@ msgstr "Seleccionatz l’icòna utilizada per l’indicador e lo menú rapid"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:66
 msgid "Settings"
-msgstr ""
+msgstr "Paramètres"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:71
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
 #: src/preferences/devices/nothingBuds/configureWindow.js:365
 msgid "Game Mode"
-msgstr ""
+msgstr "Mòde jòc"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:72
 #: src/preferences/devices/redmiBuds/configureWindow.js:377
@@ -273,7 +273,7 @@ msgstr ""
 #: src/preferences/devices/galaxyBuds/configureWindow.js:115
 #: src/preferences/devices/boseBuds/configureWindow.js:437
 msgid "Playback Behavior"
-msgstr ""
+msgstr "Compòrtament de la lectura"
 
 #: src/preferences/devices/airpods/configureWindow.js:110
 #: src/preferences/devices/airpods/configureWindow.js:113
@@ -2296,63 +2296,3 @@ msgstr ""
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr ""
-
-#~ msgid "More Bass"
-#~ msgstr "Mai de bassas"
-
-#~ msgid "More Treble"
-#~ msgstr "Mai d’aguts"
-
-#~ msgid "Enable low latency mode"
-#~ msgstr "Activar lo mòde laténcia febla"
-
-#~ msgid "Enhance Vocals"
-#~ msgstr "Melhorar las voses"
-
-#~ msgid "Enable Spatial Audio"
-#~ msgstr "Activar l’àudio espacial"
-
-#~ msgid "Enable in ear detection"
-#~ msgstr "Activar la deteccion intra-auriculara"
-
-#~ msgid "Walkie Takie"
-#~ msgstr "Talky Walky"
-
-#~ msgid "Notification"
-#~ msgstr "Notificacion"
-
-#~ msgid "Voice Notification"
-#~ msgstr "Notificacion vocala"
-
-#~ msgid "Enable voice notification"
-#~ msgstr "Activar las notificacions vocalas"
-
-#~ msgid "Voice Notification Volume"
-#~ msgstr "Volum de notificacion vocala"
-
-#~ msgid "Automatically Power Off"
-#~ msgstr "Atudar automaticament"
-
-#~ msgid "Automatically power off when not worn."
-#~ msgstr "Atudar automaticament quand es pas portat."
-
-#~ msgid "Pause when device is not worn"
-#~ msgstr "Metre en pausa quand lo periferic es pas portat"
-
-#~ msgid "Mac Address"
-#~ msgstr "Adreça MAC"
-
-#~ msgid "Copyright © 2026 maniacx@github.com"
-#~ msgstr "Copyright © 2026 maniacx@github.com"
-
-#~ msgid "Bass Enhance"
-#~ msgstr "Melhorar las bassas"
-
-#~ msgid "Enable Bass Enhance"
-#~ msgstr "Activar lo melhorament de las bassas"
-
-#~ msgid "Bass Enhance Level"
-#~ msgstr "Nivèl de melhorament de las bassas"
-
-#~ msgid "Auto Power Off"
-#~ msgstr "Extincion auto"
