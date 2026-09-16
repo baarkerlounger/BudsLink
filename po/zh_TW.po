@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-15 08:52+0000\n"
+"PO-Revision-Date: 2026-09-16 18:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_TW\n"
@@ -33,8 +33,9 @@ msgid "Blue"
 msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:37
+#, fuzzy
 msgid "Teal"
-msgstr ""
+msgstr "藍綠色"
 
 #: src/appLibs/widgets/settingsButton.js:38
 #, fuzzy
@@ -42,8 +43,9 @@ msgid "Green"
 msgstr "綠色"
 
 #: src/appLibs/widgets/settingsButton.js:39
+#, fuzzy
 msgid "Yellow"
-msgstr ""
+msgstr "黃"
 
 #: src/appLibs/widgets/settingsButton.js:40
 msgid "Orange"
@@ -51,19 +53,21 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:41
 msgid "Red"
-msgstr ""
+msgstr "红色"
 
 #: src/appLibs/widgets/settingsButton.js:42
 msgid "Pink"
-msgstr ""
+msgstr "粉紅"
 
 #: src/appLibs/widgets/settingsButton.js:43
+#, fuzzy
 msgid "Purple"
-msgstr ""
+msgstr "紫色"
 
 #: src/appLibs/widgets/settingsButton.js:44
+#, fuzzy
 msgid "Slate"
-msgstr ""
+msgstr "板岩灰"
 
 #: src/appLibs/widgets/settingsButton.js:65
 msgid "Dark Mode"
@@ -95,8 +99,9 @@ msgid "About BudsLink"
 msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:118
+#, fuzzy
 msgid "Translation"
-msgstr ""
+msgstr "翻译"
 
 #: src/appLibs/widgets/settingsButton.js:200
 msgid "Light"

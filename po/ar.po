@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-15 08:51+0000\n"
+"PO-Revision-Date: 2026-09-16 18:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ar\n"
@@ -34,8 +34,9 @@ msgid "Blue"
 msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:37
+#, fuzzy
 msgid "Teal"
-msgstr ""
+msgstr "لون"
 
 #: src/appLibs/widgets/settingsButton.js:38
 #, fuzzy
@@ -48,20 +49,23 @@ msgid "Yellow"
 msgstr "أصفر"
 
 #: src/appLibs/widgets/settingsButton.js:40
+#, fuzzy
 msgid "Orange"
-msgstr ""
+msgstr "برتقالي"
 
 #: src/appLibs/widgets/settingsButton.js:41
+#, fuzzy
 msgid "Red"
-msgstr ""
+msgstr "أحمر"
 
 #: src/appLibs/widgets/settingsButton.js:42
+#, fuzzy
 msgid "Pink"
-msgstr ""
+msgstr "زهري"
 
 #: src/appLibs/widgets/settingsButton.js:43
 msgid "Purple"
-msgstr ""
+msgstr "أرجواني"
 
 #: src/appLibs/widgets/settingsButton.js:44
 msgid "Slate"
@@ -97,8 +101,9 @@ msgid "About BudsLink"
 msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:118
+#, fuzzy
 msgid "Translation"
-msgstr ""
+msgstr "ترجمة"
 
 #: src/appLibs/widgets/settingsButton.js:200
 msgid "Light"
@@ -212,7 +217,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:88
 #: src/preferences/devices/googleBuds/configureWindow.js:48
 msgid "Icon"
-msgstr ""
+msgstr "أيقونة"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:44
 #: src/preferences/devices/airpods/configureWindow.js:84
@@ -533,8 +538,9 @@ msgstr ""
 #: src/preferences/devices/galaxyBuds/configureWindow.js:270
 #: src/preferences/devices/sony/configureWindow.js:209
 #: src/preferences/devices/googleBuds/configureWindow.js:69
+#, fuzzy
 msgid "Equalizer"
-msgstr ""
+msgstr "تسوية"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:250
 #: src/preferences/devices/redmiBuds/configureWindow.js:261
