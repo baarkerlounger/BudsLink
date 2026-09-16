@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-13 23:10+0000\n"
+"PO-Revision-Date: 2026-09-16 18:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -49,16 +49,19 @@ msgid "Orange"
 msgstr "橙色"
 
 #: src/appLibs/widgets/settingsButton.js:41
+#, fuzzy
 msgid "Red"
-msgstr ""
+msgstr "红色"
 
 #: src/appLibs/widgets/settingsButton.js:42
+#, fuzzy
 msgid "Pink"
-msgstr ""
+msgstr "极致"
 
 #: src/appLibs/widgets/settingsButton.js:43
+#, fuzzy
 msgid "Purple"
-msgstr ""
+msgstr "紫色"
 
 #: src/appLibs/widgets/settingsButton.js:44
 msgid "Slate"
@@ -531,7 +534,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:209
 #: src/preferences/devices/googleBuds/configureWindow.js:69
 msgid "Equalizer"
-msgstr ""
+msgstr "等化器"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:250
 #: src/preferences/devices/redmiBuds/configureWindow.js:261
