@@ -75,7 +75,7 @@ class SettingsButton extends Gtk.MenuButton {
         ));
 
         box.append(this._createRow(
-            'preferences-desktop-locale-symbolic',
+            'bbm-locale-symbolic',
             _('Language'),
             true,
             btn => this._openSubPopover(() => this._createLanguagePopover(), btn)
