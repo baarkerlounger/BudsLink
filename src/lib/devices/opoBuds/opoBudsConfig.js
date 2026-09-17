@@ -161,18 +161,20 @@ export const FeatureId = {
     FIND_PHONE: 0x26,
 };
 
+/* eslint-disable max-len */
 export const FEATURE_CONFIG_MAP = [
-    { configKeys: ['inEarDetection'], defaultByte: FeatureId.IN_EAR, name: 'In-Ear Detection', callback: 'updateInEar' },
-    { configKeys: ['lowLatencyMode'], defaultByte: FeatureId.GAME_MODE, name: 'Low Latency Game Mode', callback: 'updateLatency' },
-    { configKeys: ['dualConnection'], defaultByte: FeatureId.DUAL_DEVICE, name: 'Dual Connection', callback: 'updateDualConnection' },
-    { configKeys: ['windNoiseReduction'], defaultByte: FeatureId.WIND_NOISE, name: 'Wind Noise Reduction', callback: 'updateWindNoise' },
-    { configKeys: ['volumeEnhancer'], defaultByte: FeatureId.VOLUME_ENHANCER, name: 'Volume Enhancer', callback: 'updateVolumeEnhancer' },
-    { configKeys: ['spatialAudio'], defaultByte: FeatureId.SPATIAL, name: 'Spatial Audio', callback: 'updateSpatialAudio' },
-    { configKeys: ['highResAudio'], defaultByte: FeatureId.HIGH_RES, name: 'High-Res LHDC', callback: 'updateHighRes' },
-    { configKeys: ['dynamicBass'], defaultByte: FeatureId.DYNAMIC_BASS, name: 'Dynamic Bass', callback: 'updateDynamicBass' },
-    { configKeys: ['autoAnswer'], defaultByte: FeatureId.AUTO_ANSWER, name: 'Auto Answer', callback: 'updateAutoAnswer' },
-    { configKeys: ['findMyPhone'], defaultByte: FeatureId.FIND_PHONE, name: 'Find My Phone', callback: 'updateFindPhone' },
+    {configKeys: ['inEarDetection'], defaultByte: FeatureId.IN_EAR, name: 'In-Ear Detection', callback: 'updateInEar'},
+    {configKeys: ['lowLatencyMode'], defaultByte: FeatureId.GAME_MODE, name: 'Low Latency Game Mode', callback: 'updateLatency'},
+    {configKeys: ['dualConnection'], defaultByte: FeatureId.DUAL_DEVICE, name: 'Dual Connection', callback: 'updateDualConnection'},
+    {configKeys: ['windNoiseReduction'], defaultByte: FeatureId.WIND_NOISE, name: 'Wind Noise Reduction', callback: 'updateWindNoise'},
+    {configKeys: ['volumeEnhancer'], defaultByte: FeatureId.VOLUME_ENHANCER, name: 'Volume Enhancer', callback: 'updateVolumeEnhancer'},
+    {configKeys: ['spatialAudio'], defaultByte: FeatureId.SPATIAL, name: 'Spatial Audio', callback: 'updateSpatialAudio'},
+    {configKeys: ['highResAudio'], defaultByte: FeatureId.HIGH_RES, name: 'High-Res LHDC', callback: 'updateHighRes'},
+    {configKeys: ['dynamicBass'], defaultByte: FeatureId.DYNAMIC_BASS, name: 'Dynamic Bass', callback: 'updateDynamicBass'},
+    {configKeys: ['autoAnswer'], defaultByte: FeatureId.AUTO_ANSWER, name: 'Auto Answer', callback: 'updateAutoAnswer'},
+    {configKeys: ['findMyPhone'], defaultByte: FeatureId.FIND_PHONE, name: 'Find My Phone', callback: 'updateFindPhone'},
 ];
+/* eslint-enable max-len */
 
 export function resolveFeatureByte(modelData, configKeys, defaultByte) {
     if (!modelData)
@@ -268,11 +270,11 @@ export function cycleEnumToMask(code) {
 
 export function widgetMaskToProtocolMask(widgetMask) {
     let mask = 0;
-    if (widgetMask & (1 << 0))
+    if (widgetMask & 1 << 0)
         mask |= 0x01;
-    if (widgetMask & (1 << 1))
+    if (widgetMask & 1 << 1)
         mask |= 0x02;
-    if (widgetMask & (1 << 2))
+    if (widgetMask & 1 << 2)
         mask |= 0x08;
     return mask;
 }

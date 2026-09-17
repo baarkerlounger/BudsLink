@@ -170,7 +170,7 @@ export const OpoBudsSocket = GObject.registerClass({
         ];
 
         const packet = [...header, ...payload];
-        this._log.bytes(`Send -> Cmd: 0x${cmd.toString(16).padStart(4, '0')} Seq: ${this._seq} Len: ${totalLen} Data: ${hexBytes(packet)}`);
+        this._log.info(`Send -> Cmd: 0x${hexBytes(cmd)} Data: ${hexBytes(packet)}`);
         this._sendPacket(packet);
         return true;
     }
@@ -262,7 +262,7 @@ export const OpoBudsSocket = GObject.registerClass({
 
     _handleMessage(msg) {
         const {cmd, seq, payload} = msg;
-        this._log.bytes(`Recv <- Cmd: 0x${cmd.toString(16).padStart(4, '0')} Seq: ${seq} PayLen: ${payload.length} Data: ${hexBytes(payload)}`);
+        this._log.info(`Recv <- Cmd: 0x${hexBytes(cmd)} Data: ${hexBytes(payload)}`);
 
         if (seq !== 0xFF && (cmd & 0x8000) !== 0)
             this._completePendingRequest(seq);
@@ -377,14 +377,16 @@ export const OpoBudsSocket = GObject.registerClass({
             case 0x050E:
             case 0x0513:
             case 0x0516:
-                this._log.info(`Multi-connect notify/ack (cmd=0x${cmd.toString(16)}): refreshing device list`);
+                this._log.info(`Multi-connect notify/ack (cmd=0x${hexBytes(cmd)}): ` +
+                        'refreshing device list');
                 this._getMultiConnectInfo();
                 break;
 
             case Cmd.GET_COMPACTNESS_INFO_RSP:
             case Cmd.START_COMPACTNESS_DETECT_RSP:
             case 0x840A:
-                this._log.info(`Compactness / Power cmd response (cmd=0x${cmd.toString(16)}): ${hexBytes(payload)}`);
+                this._log.info(`Compactness / Power cmd response (cmd=0x${hexBytes(cmd)}):` +
+                        `payload= ${hexBytes(payload)}`);
                 break;
 
             case Cmd.NOTIFICATION_EVENT:
@@ -392,7 +394,8 @@ export const OpoBudsSocket = GObject.registerClass({
                 break;
 
             default:
-                this._log.info(`Unhandled packet cmd=0x${cmd.toString(16)} payload=${hexBytes(payload)}`);
+                this._log.info(`Unhandled packet cmd=0x${hexBytes(cmd)} ` +
+                        `payload= ${hexBytes(payload)}`);
                 break;
         }
     }
@@ -446,12 +449,11 @@ export const OpoBudsSocket = GObject.registerClass({
                     let anyNotWorn = false;
                     for (let i = 1; i + 1 < eventData.length; i += 2) {
                         const wearState = eventData[i + 1];
-                        if (wearState === 0x00) {
+                        if (wearState === 0x00)
                             anyNotWorn = true;
-                        }
                     }
                     if (anyNotWorn) {
-                        this._log.info('In-ear status: at least one bud not worn; aborting fit test');
+                        this._log.info('Abort: In-ear status: at least one bud not worn;');
                         this._callbacks?.updateFitTestResult?.({left: 0, right: 0});
                     }
                 }
@@ -489,7 +491,9 @@ export const OpoBudsSocket = GObject.registerClass({
         if (payload.length < 2 || payload[0] !== 0x00)
             return;
 
-        const versionStr = new TextDecoder('utf-8').decode(new Uint8Array(payload.slice(2))).replace(/\0+$/, '');
+        const versionStr = new TextDecoder('utf-8').decode(new Uint8Array(payload.slice(2)))
+                .replace(/\0+$/, '');
+
         this._log.info(`Firmware string: ${versionStr}`);
 
         const parts = versionStr.split(',');
@@ -552,7 +556,7 @@ export const OpoBudsSocket = GObject.registerClass({
             return;
 
         const presetId = payload[1];
-        this._log.info(`Parsed EQ Preset Response: 0x${presetId.toString(16).padStart(2, '0')}`);
+        this._log.info(`Parsed EQ Preset Response: 0x${hexBytes(presetId)}`);
         this._callbacks?.updateEqPreset?.(presetId);
     }
 
@@ -561,7 +565,7 @@ export const OpoBudsSocket = GObject.registerClass({
             return;
 
         const presetId = payload.length >= 2 && payload[0] === 0x00 ? payload[1] : payload[0];
-        this._log.info(`Parsed EQ Preset Notify: 0x${presetId.toString(16).padStart(2, '0')}`);
+        this._log.info(`Parsed EQ Preset Notify: 0x${hexBytes(presetId)}`);
         this._callbacks?.updateEqPreset?.(presetId);
     }
 
@@ -594,8 +598,8 @@ export const OpoBudsSocket = GObject.registerClass({
                 break;
 
             const selected = payload[pos] === 0x01;
-            const min = (payload[pos + 1] << 24) >> 24;
-            const max = (payload[pos + 2] << 24) >> 24;
+            const min = payload[pos + 1] << 24 >> 24;
+            const max = payload[pos + 2] << 24 >> 24;
             const eqId = payload[pos + 3];
             const nameLen = payload[pos + 4];
             pos += 5;
@@ -603,7 +607,9 @@ export const OpoBudsSocket = GObject.registerClass({
             if (pos + nameLen > payload.length)
                 break;
 
-            const name = new TextDecoder('utf-8').decode(new Uint8Array(payload.slice(pos, pos + nameLen))).replace(/\0+$/, '');
+            const name = new TextDecoder('utf-8').decode(new Uint8Array(payload
+                    .slice(pos, pos + nameLen))).replace(/\0+$/, '');
+
             pos += nameLen;
 
             if (pos >= payload.length)
@@ -618,7 +624,7 @@ export const OpoBudsSocket = GObject.registerClass({
                     break;
 
                 freqs.push(payload[pos] | payload[pos + 1] << 8);
-                dbs.push((payload[pos + 2] << 24) >> 24);
+                dbs.push(payload[pos + 2] << 24 >> 24);
                 pos += 3;
             }
 
@@ -688,16 +694,20 @@ export const OpoBudsSocket = GObject.registerClass({
 
         if (action === 0x02) {
             if (payload.length < 4) {
-                this._log.info(`ANC cycle response without value byte (len=${payload.length}), ignoring`);
+                this._log.info(`ANC cycle response without value byte (len=${payload.length}),` +
+                        ' ignoring');
                 return;
             }
             const mask = cycleEnumToMask(valByte);
-            this._log.info(`Parsed ANC cycle response: raw=0x${valByte.toString(16)} -> mask=0x${mask.toString(16)}`);
+            this._log.info(`Parsed ANC cycle response: raw=0x${hexBytes(valByte)} -> ` +
+                    `mask=0x${hexBytes(mask)}`);
+
             this._callbacks?.updateNoiseControlCycle?.(mask);
         } else {
             const modeBytes = payload.length >= 4 ? payload.slice(3) : [valByte];
             this._log.info(`Parsed ANC mode response: ${hexBytes(modeBytes)}`);
-            this._callbacks?.updateNoiseControl?.(modeBytes.length === 1 ? modeBytes[0] : modeBytes);
+            this._callbacks?.updateNoiseControl?.(
+                modeBytes.length === 1 ? modeBytes[0] : modeBytes);
         }
     }
 
@@ -710,14 +720,17 @@ export const OpoBudsSocket = GObject.registerClass({
 
         if (action === 0x02) {
             const mask = cycleEnumToMask(valByte);
-            this._log.info(`Parsed ANC cycle event: raw=0x${valByte.toString(16)} -> mask=0x${mask.toString(16)}`);
+            this._log.info(`Parsed ANC cycle event: raw=0x${hexBytes(valByte)} -> ` +
+                    `mask=0x${hexBytes(mask)}`);
+
             this._callbacks?.updateNoiseControlCycle?.(mask);
         } else if (action === 0x04) {
             this._callbacks?.updateAdaptiveAncSubLevel?.(valByte);
         } else {
             const modeBytes = eventData.length >= 3 ? eventData.slice(2, 3) : [valByte];
             this._log.info(`Parsed ANC mode event: ${hexBytes(modeBytes)}`);
-            this._callbacks?.updateNoiseControl?.(modeBytes.length === 1 ? modeBytes[0] : modeBytes);
+            this._callbacks?.updateNoiseControl?.(
+                modeBytes.length === 1 ? modeBytes[0] : modeBytes);
         }
     }
 
@@ -739,8 +752,10 @@ export const OpoBudsSocket = GObject.registerClass({
                 featureBytes.push(byte);
         }
 
-        if (featureBytes.length > 0)
-            this._queuePacket(Cmd.FEATURE_SWITCH, [featureBytes.length, ...featureBytes], 'Query Features');
+        if (featureBytes.length > 0) {
+            this._queuePacket(Cmd.FEATURE_SWITCH, [featureBytes.length, ...featureBytes],
+                'Query Features');
+        }
     }
 
     _parseFeatureSwitchResponse(payload) {
@@ -768,7 +783,9 @@ export const OpoBudsSocket = GObject.registerClass({
             const val = payload[pos++] === 0x01;
 
             for (const feat of FEATURE_CONFIG_MAP) {
-                const byte = resolveFeatureByte(this._modelData, feat.configKeys, feat.defaultByte);
+                const byte =
+                         resolveFeatureByte(this._modelData, feat.configKeys, feat.defaultByte);
+
                 if (byte === featByte) {
                     this._callbacks?.[feat.callback]?.(val);
                     break;
@@ -805,13 +822,17 @@ export const OpoBudsSocket = GObject.registerClass({
     }
 
     setWindNoise(enable) {
-        const byte = resolveFeatureByte(this._modelData, 'windNoiseReduction', FeatureId.WIND_NOISE);
+        const byte = resolveFeatureByte(this._modelData, 'windNoiseReduction',
+            FeatureId.WIND_NOISE);
+
         if (byte !== null)
             this._setFeatureSwitch(byte, enable, 'Wind Noise');
     }
 
     setVolumeEnhancer(enable) {
-        const byte = resolveFeatureByte(this._modelData, 'volumeEnhancer', FeatureId.VOLUME_ENHANCER);
+        const byte = resolveFeatureByte(this._modelData, 'volumeEnhancer',
+            FeatureId.VOLUME_ENHANCER);
+
         if (byte !== null)
             this._setFeatureSwitch(byte, enable, 'Volume Enhancer');
     }
@@ -820,7 +841,8 @@ export const OpoBudsSocket = GObject.registerClass({
         const byte = resolveFeatureByte(this._modelData, 'spatialAudio', FeatureId.SPATIAL);
         if (byte !== null) {
             this._setFeatureSwitch(byte, enable, 'Spatial Audio');
-            this._queuePacket(Cmd.SET_SPATIAL_AUDIO, [enable ? 0x01 : 0x00], 'Set Spatial Audio Type');
+            this._queuePacket(Cmd.SET_SPATIAL_AUDIO, [enable ? 0x01 : 0x00],
+                'Set Spatial Audio Type');
         }
     }
 
@@ -849,7 +871,9 @@ export const OpoBudsSocket = GObject.registerClass({
     }
 
     setFindBuds(ringState) {
-        const ring = ringState === 'started' || ringState === 'playing' || ringState === true || ringState === 1;
+        const ring = ringState === 'started' || ringState === 'playing' ||
+             ringState === true || ringState === 1;
+
         this._log.info(`Set Find Buds: ${ring}`);
         const payload = [ring ? 0x01 : 0x00];
         this._queuePacket(Cmd.FIND_BUDS, payload, 'Set Find Buds');
@@ -866,7 +890,7 @@ export const OpoBudsSocket = GObject.registerClass({
         const isResponse = cmd === Cmd.GET_MULTI_CONNECT_INFO_RSP;
         if (isResponse) {
             if (payload.length < 2 || payload[0] !== 0x00) {
-                this._log.info(`Multi-connect query error status: 0x${payload[0]?.toString(16)}`);
+                this._log.info(`Multi-connect query error status: 0x${hexBytes(payload[0])}`);
                 return;
             }
         }
@@ -876,7 +900,7 @@ export const OpoBudsSocket = GObject.registerClass({
         const devices = [];
 
         if (count === 0) {
-            this._log.info(`Multi-Connect: 0 devices connected`);
+            this._log.info('Multi-Connect: 0 devices connected');
             this._callbacks?.updateMultiConnectDevices?.([]);
             return;
         }
@@ -896,7 +920,8 @@ export const OpoBudsSocket = GObject.registerClass({
             let deviceName = '';
             if (nameLen > 0 && pos + nameLen <= payload.length) {
                 const nameBytes = payload.slice(pos, pos + nameLen);
-                deviceName = new TextDecoder('utf-8').decode(new Uint8Array(nameBytes)).replace(/\0+$/, '');
+                deviceName = new TextDecoder('utf-8').decode(new Uint8Array(nameBytes))
+                        .replace(/\0+$/, '');
             } else {
                 deviceName = `Device ${mac.slice(-5)}`;
             }
@@ -916,10 +941,12 @@ export const OpoBudsSocket = GObject.registerClass({
                 connState,
             });
 
-            pos = elemLen > 0 ? entryEnd : (pos + Math.max(0, nameLen));
+            pos = elemLen > 0 ? entryEnd : pos + Math.max(0, nameLen);
         }
 
-        this._log.info(`Parsed Multi-Connect Devices (${devices.length}): ${JSON.stringify(devices)}`);
+        this._log.info(`Parsed Multi-Connect Devices (${devices.length}): ` +
+                `${JSON.stringify(devices)}`);
+
         this._callbacks?.updateMultiConnectDevices?.(devices);
     }
 
@@ -944,7 +971,8 @@ export const OpoBudsSocket = GObject.registerClass({
             action = 0x02;
 
         const payload = [0x01, ...macParts, action];
-        this._queuePacket(Cmd.OPERATE_MULTI_CONNECT, payload, `MultiConnect Action ${action} for ${macAddress}`);
+        this._queuePacket(Cmd.OPERATE_MULTI_CONNECT, payload,
+            `MultiConnect Action ${action} for ${macAddress}`);
 
         if (this._multiConnectRefreshTimeout) {
             GLib.source_remove(this._multiConnectRefreshTimeout);
@@ -1012,14 +1040,20 @@ export const OpoBudsSocket = GObject.registerClass({
 
     setNoiseControlCycle(maskByte) {
         this._log.info(`Set ANC cycle: mask=0x${maskByte.toString(16).padStart(2, '0')}`);
-        const cycleType = this._modelData?.noiseControl?.ancCycleType ?? this._modelData?.ancCycleType ?? 1;
+        const cycleType = this._modelData?.noiseControl?.ancCycleType ??
+                 this._modelData?.ancCycleType ?? 1;
+
         if (cycleType === 2) {
-            this._queuePacket(Cmd.SET_ANC, [0x02, 0x02, maskByte], 'Set ANC Cycle (Action 2, Type 2)');
+            this._queuePacket(Cmd.SET_ANC, [0x02, 0x02, maskByte],
+                'Set ANC Cycle (Action 2, Type 2)');
         } else if (cycleType === 'both') {
-            this._queuePacket(Cmd.SET_ANC, [0x02, 0x01, maskByte], 'Set ANC Cycle (Action 2, Type 1)');
-            this._queuePacket(Cmd.SET_ANC, [0x02, 0x02, maskByte], 'Set ANC Cycle (Action 2, Type 2)');
+            this._queuePacket(Cmd.SET_ANC, [0x02, 0x01, maskByte],
+                'Set ANC Cycle (Action 2, Type 1)');
+            this._queuePacket(Cmd.SET_ANC, [0x02, 0x02, maskByte],
+                'Set ANC Cycle (Action 2, Type 2)');
         } else {
-            this._queuePacket(Cmd.SET_ANC, [0x02, 0x01, maskByte], 'Set ANC Cycle (Action 2, Type 1)');
+            this._queuePacket(Cmd.SET_ANC, [0x02, 0x01, maskByte],
+                'Set ANC Cycle (Action 2, Type 1)');
         }
     }
 
@@ -1031,18 +1065,21 @@ export const OpoBudsSocket = GObject.registerClass({
         let rightStatus = 0;
 
         if (payload.length >= 4 && payload[0] === 0x01 && payload[2] === 0x02) {
-            leftStatus = (payload[1] === 0x01) ? 1 : 0;
-            rightStatus = (payload[3] === 0x01) ? 1 : 0;
+            leftStatus = payload[1] === 0x01 ? 1 : 0;
+            rightStatus = payload[3] === 0x01 ? 1 : 0;
         } else if (payload.length >= 2) {
-            leftStatus = (payload[0] === 0x01) ? 1 : 0;
-            rightStatus = (payload[1] === 0x01) ? 1 : 0;
+            leftStatus = payload[0] === 0x01 ? 1 : 0;
+            rightStatus = payload[1] === 0x01 ? 1 : 0;
         } else {
             const single = payload[payload.length - 1];
-            leftStatus = (single === 1 || single === 3) ? 1 : 0;
-            rightStatus = (single === 1 || single === 2) ? 1 : 0;
+            leftStatus = single === 1 || single === 3 ? 1 : 0;
+            rightStatus = single === 1 || single === 2 ? 1 : 0;
         }
 
-        this._log.info(`[FitTest Telemetry] Left=${leftStatus === 1 ? 'Good' : 'Not ideal'} (${leftStatus}), Right=${rightStatus === 1 ? 'Good' : 'Not ideal'} (${rightStatus}) (payload=${hexBytes(payload)})`);
+        this._log.info(`[FitTest Telemetry] Left=${leftStatus === 1 ? 'Good' : 'Not ideal'} ` +
+            `(${leftStatus}), Right=${rightStatus === 1 ? 'Good' : 'Not ideal'} ` +
+            `(${rightStatus}) (payload=${hexBytes(payload)})`);
+
         this._callbacks?.updateFitTestResult?.({left: leftStatus, right: rightStatus});
     }
 

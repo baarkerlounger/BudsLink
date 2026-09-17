@@ -130,7 +130,9 @@ export const ConfigureWindow = GObject.registerClass({
             if (this._isUpdatingUI)
                 return;
 
-            const list = this._settings.get_strv('opo-buds-list').map(safeJsonParse).filter(Boolean);
+            const list = this._settings.get_strv('opo-buds-list')
+                    .map(safeJsonParse).filter(Boolean);
+
             const item = list.find(d => d.path === this._devicePath);
 
             if (!item)
@@ -141,7 +143,9 @@ export const ConfigureWindow = GObject.registerClass({
                 this._settingsItems = item;
 
                 if (this._modelData.eqPreset && this._eqPresetDropdown) {
-                    const currentCustomJson = JSON.stringify(this._settingsItems['custom-eq-list'] ?? []);
+                    const currentCustomJson =
+                             JSON.stringify(this._settingsItems['custom-eq-list'] ?? []);
+
                     if (this._lastCustomEqListJson !== currentCustomJson) {
                         this._lastCustomEqListJson = currentCustomJson;
                         this._syncEqDropdownOptions();
@@ -220,7 +224,8 @@ export const ConfigureWindow = GObject.registerClass({
 
                 if (this._isTestingFit && this._modelData.fitTest) {
                     const res = this._settingsItems['fit-test-result'];
-                    if (res && typeof res === 'object' && res.left !== undefined && res.right !== undefined)
+                    if (res && typeof res === 'object' && res.left !== undefined &&
+                            res.right !== undefined)
                         this._onFitTestCompleted?.(res);
                 }
             } finally {
@@ -282,7 +287,9 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _updateGsettings(key, value) {
-        const currentList = this._settings.get_strv('opo-buds-list').map(safeJsonParse).filter(Boolean);
+        const currentList = this._settings.get_strv('opo-buds-list')
+                .map(safeJsonParse).filter(Boolean);
+
         const index = currentList.findIndex(d => d.path === this._devicePath);
 
         if (index !== -1) {
@@ -293,7 +300,9 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _updateMultipleGsettings(obj) {
-        const currentList = this._settings.get_strv('opo-buds-list').map(safeJsonParse).filter(Boolean);
+        const currentList = this._settings.get_strv('opo-buds-list')
+                .map(safeJsonParse).filter(Boolean);
+
         const index = currentList.findIndex(d => d.path === this._devicePath);
 
         if (index !== -1) {
@@ -430,7 +439,7 @@ export const ConfigureWindow = GObject.registerClass({
 
         const bandFreqs = this._modelData.eqBands?.frequencies ?? entry.freqs ?? [];
         const labels = bandFreqs.map(freq =>
-            freq >= 1000 ? (freq / 1000).toFixed(0) + 'k' : `${freq}`
+            freq >= 1000 ? `${(freq / 1000).toFixed(0)}k` : `${freq}`
         );
 
         if (this._eqEditor)
@@ -439,7 +448,9 @@ export const ConfigureWindow = GObject.registerClass({
         this._eqEditor = new EqualizerWidget({
             freqs: labels,
             initialValues: entry.dbs ?? [],
-            range: Math.max(this._modelData.eqBands?.range ?? 6, Math.abs(entry.min ?? 6), Math.abs(entry.max ?? 6)),
+            range: Math.max(this._modelData.eqBands?.range ?? 6, Math.abs(entry.min ?? 6),
+                Math.abs(entry.max ?? 6)),
+
             topBarTitle: entry.name || _('Custom'),
             bottomBarTitle: _('Gain (dB)'),
         });
@@ -542,7 +553,9 @@ export const ConfigureWindow = GObject.registerClass({
 
     _nextCustomEqId() {
         const entries = this._settingsItems['custom-eq-list'] ?? [];
-        const baseOffset = this._modelData.eqPreset ? Object.values(this._modelData.eqPreset).length : 4;
+        const baseOffset = this._modelData.eqPreset
+            ? Object.values(this._modelData.eqPreset).length : 4;
+
         let next = baseOffset;
         for (const entry of entries) {
             if (entry.eqId >= next)
@@ -639,7 +652,8 @@ export const ConfigureWindow = GObject.registerClass({
         const _ = this._gettext;
         const dialog = new Adw.AlertDialog({
             heading: _('Delete Custom Preset?'),
-            body: _('"%s" will be removed from the device').replace('%s', entry.name || _('Custom')),
+            body: _('"%s" will be removed from the device')
+                    .replace('%s', entry.name || _('Custom')),
         });
 
         dialog.add_response('cancel', _('Cancel'));
@@ -938,14 +952,16 @@ export const ConfigureWindow = GObject.registerClass({
                     });
 
                     if (!this._multiDevicePollId) {
-                        this._multiDevicePollId = GLib.timeout_add_seconds(GLib.PRIORITY_DEFAULT, 3, () => {
-                            this._updateGsettings('multi-device-op', {
-                                op: 'refresh',
-                                mac: '',
-                                ts: Date.now(),
+                        this._multiDevicePollId = GLib.timeout_add_seconds(
+                            GLib.PRIORITY_DEFAULT, 3, () => {
+                                this._updateGsettings('multi-device-op', {
+                                    op: 'refresh',
+                                    mac: '',
+                                    ts: Date.now(),
+                                }
+                                );
+                                return GLib.SOURCE_CONTINUE;
                             });
-                            return GLib.SOURCE_CONTINUE;
-                        });
                     }
                 });
 
@@ -1112,7 +1128,8 @@ export const ConfigureWindow = GObject.registerClass({
                 this._settingsItems['fit-test-result'] = null;
             };
 
-            const onFitTestCompleted = (res) => {
+            /* eslint-disable max-len */
+            const onFitTestCompleted = res => {
                 if (!this._isTestingFit)
                     return;
 
@@ -1132,8 +1149,8 @@ export const ConfigureWindow = GObject.registerClass({
                 let leftGood = false;
                 let rightGood = false;
                 if (res && typeof res === 'object' && res.left !== undefined && res.right !== undefined) {
-                    leftGood = (res.left === 1);
-                    rightGood = (res.right === 1);
+                    leftGood = res.left === 1;
+                    rightGood = res.right === 1;
                 } else {
                     this._fitLeftBadge.label = _('Failed');
                     this._fitLeftBadge.css_classes = ['error', 'heading'];
@@ -1174,6 +1191,8 @@ export const ConfigureWindow = GObject.registerClass({
                     descRow.subtitle = _('Ensure both earbuds are worn in your ears, then test again');
                 }
             };
+            /* eslint-enable max-len */
+
             this._onFitTestCompleted = onFitTestCompleted;
 
             fitExpander.connect('notify::expanded', () => {
@@ -1312,13 +1331,13 @@ export const ConfigureWindow = GObject.registerClass({
                 const slotKey =
                     `${slot.device}_${btnId}_${gesturesConfig.mapping.gestureTypes[slot.type]}`;
 
-                const currentFuncCode =
-                     this._gestureSlotMap[slotKey] !== undefined ? this._gestureSlotMap[slotKey] : values[0];
+                const currentFuncCode = this._gestureSlotMap[slotKey] !== undefined
+                    ? this._gestureSlotMap[slotKey] : values[0];
 
                 const isPress = slot.group === 'mfb' || gestureDef?.type === 'press';
-                const rowTitle = (isPress && pressSlotNames[slot.type])
+                const rowTitle = isPress && pressSlotNames[slot.type]
                     ? pressSlotNames[slot.type]
-                    : (gestureSlotNames[slot.type] ?? slot.type);
+                    : gestureSlotNames[slot.type] ?? slot.type;
 
                 const dropdown = new DropDownRowWidget({
                     title: rowTitle,
