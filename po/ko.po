@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-13 23:09+0000\n"
+"PO-Revision-Date: 2026-09-18 10:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ko\n"
@@ -1118,7 +1118,7 @@ msgstr "에센셜 스페이스"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:230
 msgid "Podcast"
-msgstr ""
+msgstr "팟캐스트"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:231
 msgid "Sound personalization"
@@ -2304,112 +2304,3 @@ msgstr "자동 주변음"
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr "자동 주변음 감도"
-
-#~ msgid "More Bass"
-#~ msgstr "저음 강화"
-
-#~ msgid "More Treble"
-#~ msgstr "고음 강화"
-
-#~ msgid "Enable low latency mode"
-#~ msgstr "저지연 모드 활성화"
-
-#~ msgid "Enhance Vocals"
-#~ msgstr "보컬 강화"
-
-#~ msgid "Enable Spatial Audio"
-#~ msgstr "공간 음향 활성화"
-
-#~ msgid "Enable in ear detection"
-#~ msgstr "이어폰 착용 감지 활성화"
-
-#~ msgid "Walkie Takie"
-#~ msgstr "워키토키"
-
-#~ msgid "Select any two toggles"
-#~ msgstr "두 개의 토글을 선택하세요"
-
-#~ msgid "Vocal"
-#~ msgstr "보컬"
-
-#~ msgid "Notification"
-#~ msgstr "알림"
-
-#~ msgid "Voice Notification"
-#~ msgstr "음성 알림"
-
-#~ msgid "Enable voice notification"
-#~ msgstr "음성 알림 활성화"
-
-#~ msgid "Voice Notification Volume"
-#~ msgstr "음성 알림 볼륨"
-
-#~ msgid "Headset Take off"
-#~ msgstr "헤드셋 탈착"
-
-#~ msgid "Automatically Power Off"
-#~ msgstr "자동 전원 끄기"
-
-#~ msgid "Automatically power off when not worn."
-#~ msgstr "착용하지 않을 때 자동으로 전원을 끕니다."
-
-#~ msgid "Pause when device is not worn"
-#~ msgstr "기기를 착용하지 않으면 일시정지"
-
-#~ msgid ""
-#~ "Pause playback when the device is removed,resume when it is put back on"
-#~ msgstr "기기를 제거하면 재생을 일시정지하고, 다시 착용하면 재개합니다"
-
-#~ msgid "Adjust the tone volume of sound effects played by AirPods"
-#~ msgstr "AirPods에서 재생되는 음향 효과의 톤 볼륨을 조절합니다"
-
-#~ msgid "Mac Address"
-#~ msgstr "MAC 주소"
-
-#~ msgid "Personalised ANC"
-#~ msgstr "맞춤형 ANC"
-
-#, javascript-format
-#~ msgid "Could not access advanced features for %s."
-#~ msgstr "%s의 고급 기능에 접근할 수 없습니다."
-
-#, javascript-format
-#~ msgid ""
-#~ "Another app or session is already using the Bluetooth socket/profile on "
-#~ "%s. Close any other apps using this device, then restart this app."
-#~ msgstr ""
-#~ "%s의 블루투스 소켓/프로파일이 다른 앱이나 세션에서 이미 사용 중입니다. 이 "
-#~ "기기를 사용하는 모든 앱을 종료하고, 이 앱을 다시 시작하세요."
-
-#~ msgid "Copyright © 2026 maniacx@github.com"
-#~ msgstr "Copyright © 2026 maniacx@github.com"
-
-#~ msgid "Bass Enhance"
-#~ msgstr "저음 강화"
-
-#~ msgid "Enable Bass Enhance"
-#~ msgstr "저음 강화 활성화"
-
-#~ msgid "Bass Enhance Level"
-#~ msgstr "저음 강화 레벨"
-
-#~ msgid "Choose playback behaviour for Ear detection"
-#~ msgstr "착용 감지 시 재생 동작 선택"
-
-#~ msgid "Spotify Spot On"
-#~ msgstr "Spotify Spot On"
-
-#~ msgid "Auto Power Off"
-#~ msgstr "자동 전원 끄기"
-
-#~ msgid "Settings don't reflect current state"
-#~ msgstr "설정이 현재 상태를 반영하지 않습니다"
-
-#~ msgid "Sony audio devices"
-#~ msgstr "Sony 오디오 기기"
-
-#~ msgid "Samsung Galaxy Buds"
-#~ msgstr "삼성 갤럭시 버즈"
-
-#~ msgid "Nothing / CMF Buds"
-#~ msgstr "Nothing / CMF 버즈"
