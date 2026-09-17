@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-16 18:51+0000\n"
+"PO-Revision-Date: 2026-09-18 10:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: hu\n"
@@ -948,7 +948,7 @@ msgstr "Dirac"
 #: src/preferences/devices/nothingBuds/configureWindow.js:221
 #: src/preferences/devices/senhBuds/configureWindow.js:265
 msgid "Rock"
-msgstr ""
+msgstr "Rock"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:222
 msgid "Electronic"
