@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-16 18:52+0000\n"
+"PO-Revision-Date: 2026-09-18 10:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -49,27 +49,24 @@ msgid "Orange"
 msgstr "橙色"
 
 #: src/appLibs/widgets/settingsButton.js:41
-#, fuzzy
 msgid "Red"
 msgstr "红色"
 
 #: src/appLibs/widgets/settingsButton.js:42
-#, fuzzy
 msgid "Pink"
-msgstr "极致"
+msgstr "粉色"
 
 #: src/appLibs/widgets/settingsButton.js:43
-#, fuzzy
 msgid "Purple"
 msgstr "紫色"
 
 #: src/appLibs/widgets/settingsButton.js:44
 msgid "Slate"
-msgstr ""
+msgstr "蓝灰色"
 
 #: src/appLibs/widgets/settingsButton.js:65
 msgid "Dark Mode"
-msgstr ""
+msgstr "深色模式"
 
 #: src/appLibs/widgets/settingsButton.js:72
 msgid "Accent Color"
@@ -187,11 +184,11 @@ msgstr "BudsLink"
 
 #: src/appLibs/widgets/deviceRow.js:98
 msgid "Configure"
-msgstr ""
+msgstr "配置"
 
 #: src/appLibs/widgets/deviceRow.js:110
 msgid "Battery Level"
-msgstr ""
+msgstr "电池水平"
 
 #: src/app.js:237
 msgid "Devices"
@@ -248,7 +245,7 @@ msgstr ""
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
 #: src/preferences/devices/nothingBuds/configureWindow.js:365
 msgid "Game Mode"
-msgstr ""
+msgstr "游戏模式"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:72
 #: src/preferences/devices/redmiBuds/configureWindow.js:377
@@ -1115,7 +1112,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:230
 msgid "Podcast"
-msgstr ""
+msgstr "播客"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:231
 msgid "Sound personalization"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-13 23:09+0000\n"
+"PO-Revision-Date: 2026-09-18 10:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: fr\n"
@@ -75,7 +75,7 @@ msgstr "Couleur d'accentuation"
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -2316,113 +2316,3 @@ msgstr "Son ambiant automatique"
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr "Sensibilité du son ambiant automatique"
-
-#~ msgid "More Bass"
-#~ msgstr "Plus de basses"
-
-#~ msgid "More Treble"
-#~ msgstr "Plus d'aigus"
-
-#~ msgid "Enable low latency mode"
-#~ msgstr "Activer le mode faible latence"
-
-#~ msgid "Enhance Vocals"
-#~ msgstr "Améliorer les voix"
-
-#~ msgid "Enable Spatial Audio"
-#~ msgstr "Activer l'audio spatial"
-
-#~ msgid "Enable in ear detection"
-#~ msgstr "Activer la détection intra-auriculaire"
-
-#~ msgid "Walkie Takie"
-#~ msgstr "Talkie-walkie"
-
-#~ msgid "Select any two toggles"
-#~ msgstr "Sélectionnez deux options"
-
-#~ msgid "Vocal"
-#~ msgstr "Vocal"
-
-#~ msgid "Notification"
-#~ msgstr "Notification"
-
-#~ msgid "Voice Notification"
-#~ msgstr "Notification vocale"
-
-#~ msgid "Enable voice notification"
-#~ msgstr "Activer la notification vocale"
-
-#~ msgid "Voice Notification Volume"
-#~ msgstr "Volume de la notification vocale"
-
-#~ msgid "Headset Take off"
-#~ msgstr "Retrait du casque"
-
-#~ msgid "Automatically Power Off"
-#~ msgstr "Extinction automatique"
-
-#~ msgid "Automatically power off when not worn."
-#~ msgstr "Éteindre automatiquement lorsqu'il n'est pas porté."
-
-#~ msgid "Pause when device is not worn"
-#~ msgstr "Mettre en pause lorsque l'appareil n'est pas porté"
-
-#~ msgid ""
-#~ "Pause playback when the device is removed,resume when it is put back on"
-#~ msgstr ""
-#~ "Mettre la lecture en pause lorsque l'appareil est retiré, puis la "
-#~ "reprendre lorsqu'il est remis"
-
-#~ msgid "Adjust the tone volume of sound effects played by AirPods"
-#~ msgstr "Ajuster le volume des sons d'effet joués par les AirPods"
-
-#~ msgid "Mac Address"
-#~ msgstr "Adresse MAC"
-
-#~ msgid "Personalised ANC"
-#~ msgstr "ANC personnalisé"
-
-#, javascript-format
-#~ msgid "Could not access advanced features for %s."
-#~ msgstr "Impossible d'accéder aux fonctionnalités avancées pour %s."
-
-#, javascript-format
-#~ msgid ""
-#~ "Another app or session is already using the Bluetooth socket/profile on "
-#~ "%s. Close any other apps using this device, then restart this app."
-#~ msgstr ""
-#~ "Une autre application ou session utilise déjà le socket/profil Bluetooth "
-#~ "sur %s. Fermez toutes les autres applications utilisant cet appareil, "
-#~ "puis redémarrez cette application."
-
-#~ msgid "Copyright © 2026 maniacx@github.com"
-#~ msgstr "Copyright © 2026 maniacx@github.com"
-
-#~ msgid "Bass Enhance"
-#~ msgstr "Amélioration des basses"
-
-#~ msgid "Enable Bass Enhance"
-#~ msgstr "Activer l'amélioration des basses"
-
-#~ msgid "Bass Enhance Level"
-#~ msgstr "Niveau d'amélioration des basses"
-
-#~ msgid "Choose playback behaviour for Ear detection"
-#~ msgstr ""
-#~ "Choisir le comportement de lecture pour la détection intra-auriculaire"
-
-#~ msgid "Spotify Spot On"
-#~ msgstr "Spotify Spot On"
-
-#~ msgid "Auto Power Off"
-#~ msgstr "Extinction automatique"
-
-#~ msgid "Sony audio devices"
-#~ msgstr "Appareils audio Sony"
-
-#~ msgid "Samsung Galaxy Buds"
-#~ msgstr "Samsung Galaxy Buds"
-
-#~ msgid "Nothing / CMF Buds"
-#~ msgstr "Nothing / CMF Buds"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-13 23:09+0000\n"
+"PO-Revision-Date: 2026-09-18 10:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -1123,7 +1123,7 @@ msgstr "Essential Space"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:230
 msgid "Podcast"
-msgstr ""
+msgstr "Podcast"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:231
 msgid "Sound personalization"
@@ -2310,112 +2310,3 @@ msgstr "Automatisch omgevingsgeluid"
 #: src/lib/devices/sony/sonyDevice.js:196
 msgid "Auto Ambient Sensitivity"
 msgstr "Gevoeligheid van automatisch omgevingsgeluid"
-
-#~ msgid "More Bass"
-#~ msgstr "Meer bas"
-
-#~ msgid "More Treble"
-#~ msgstr "Meer hoge tonen"
-
-#~ msgid "Enable low latency mode"
-#~ msgstr "Lage latentiemodus inschakelen"
-
-#~ msgid "Enhance Vocals"
-#~ msgstr "Stemmen verbeteren"
-
-#~ msgid "Enable Spatial Audio"
-#~ msgstr "Ruimtelijk geluid inschakelen"
-
-#~ msgid "Enable in ear detection"
-#~ msgstr "Oordetectie inschakelen"
-
-#~ msgid "Walkie Takie"
-#~ msgstr "Walkie talkie"
-
-#~ msgid "Select any two toggles"
-#~ msgstr "Selecteer twee schakelaars"
-
-#~ msgid "Vocal"
-#~ msgstr "Zang"
-
-#~ msgid "Notification"
-#~ msgstr "Melding"
-
-#~ msgid "Voice Notification"
-#~ msgstr "Stemmelding"
-
-#~ msgid "Enable voice notification"
-#~ msgstr "Stemmelding inschakelen"
-
-#~ msgid "Voice Notification Volume"
-#~ msgstr "Stemmeldingsvolume"
-
-#~ msgid "Headset Take off"
-#~ msgstr "Koptelefoon afdoen"
-
-#~ msgid "Automatically Power Off"
-#~ msgstr "Automatisch uitschakelen"
-
-#~ msgid "Automatically power off when not worn."
-#~ msgstr "Automatisch pauzeren wanneer het apparaat niet wordt gedragen."
-
-#~ msgid "Pause when device is not worn"
-#~ msgstr "Pauzeren wanneer het apparaat niet wordt gedragen"
-
-#~ msgid ""
-#~ "Pause playback when the device is removed,resume when it is put back on"
-#~ msgstr ""
-#~ "Afspelen pauzeren wanneer het apparaat van je af is, hervatten wanneer "
-#~ "weer erop"
-
-#~ msgid "Adjust the tone volume of sound effects played by AirPods"
-#~ msgstr "Pas het toonvolume van AirPods-geluidseffecten aan"
-
-#~ msgid "Mac Address"
-#~ msgstr "MAC-adres"
-
-#~ msgid "Personalised ANC"
-#~ msgstr "Gepersonaliseerde ruisonderdrukking"
-
-#, javascript-format
-#~ msgid "Could not access advanced features for %s."
-#~ msgstr "Kon geen toegang krijgen tot geavanceerde functies voor %s."
-
-#, javascript-format
-#~ msgid ""
-#~ "Another app or session is already using the Bluetooth socket/profile on "
-#~ "%s. Close any other apps using this device, then restart this app."
-#~ msgstr ""
-#~ "Een andere app of sessie gebruikt al de Bluetooth-socket of profiel op "
-#~ "%s. Sluit andere apps die van het apparaat gebruik maken, herstart daarna "
-#~ "de app."
-
-#~ msgid "Copyright © 2026 maniacx@github.com"
-#~ msgstr "Copyright © 2026 maniacx@github.com"
-
-#~ msgid "Bass Enhance"
-#~ msgstr "Bas verbeteren"
-
-#~ msgid "Enable Bass Enhance"
-#~ msgstr "Bas verbeteren inschakelen"
-
-#~ msgid "Bass Enhance Level"
-#~ msgstr "Hoeveelheid van bas verbeteren"
-
-#~ msgid "Choose playback behaviour for Ear detection"
-#~ msgstr "Afspeelgedrag kiezen voor oordetectie"
-
-#~ msgid "Spotify Spot On"
-#~ msgstr "Spotify Spot On"
-
-#~ msgid "Auto Power Off"
-#~ msgstr "Automatisch uitschakelen"
-
-#~ msgid "Sony audio devices"
-#~ msgstr "Audioapparaten van Sony"
-
-#~ msgid "Samsung Galaxy Buds"
-#~ msgstr "Automatisch omgevingsgeluid"
-
-#~ msgid "Nothing / CMF Buds"
-#~ msgstr "Nothing/CMF Buds"
