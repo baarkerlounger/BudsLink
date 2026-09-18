@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-18 10:52+0000\n"
+"PO-Revision-Date: 2026-09-18 14:01+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: sv\n"
@@ -20,17 +20,17 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:26
 msgid "Application Settings"
-msgstr ""
+msgstr "Programinställningar"
 
 #: src/appLibs/widgets/settingsButton.js:35
 #: src/appLibs/widgets/settingsButton.js:199
 #: src/appLibs/widgets/settingsButton.js:273
 msgid "System Default"
-msgstr ""
+msgstr "Systemstandard"
 
 #: src/appLibs/widgets/settingsButton.js:36
 msgid "Blue"
-msgstr ""
+msgstr "Blå"
 
 #: src/appLibs/widgets/settingsButton.js:37
 #, fuzzy
@@ -63,15 +63,15 @@ msgstr "Purpur"
 
 #: src/appLibs/widgets/settingsButton.js:44
 msgid "Slate"
-msgstr ""
+msgstr "Skiffergrå"
 
 #: src/appLibs/widgets/settingsButton.js:65
 msgid "Dark Mode"
-msgstr ""
+msgstr "Mörkt läge"
 
 #: src/appLibs/widgets/settingsButton.js:72
 msgid "Accent Color"
-msgstr ""
+msgstr "Accentfärg"
 
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
@@ -80,7 +80,7 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
-msgstr ""
+msgstr "Paketloggning"
 
 #: src/appLibs/widgets/settingsButton.js:93
 msgid "Run in Background"
@@ -88,11 +88,11 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:100
 msgid "BudsLink Companion"
-msgstr ""
+msgstr "BudsLink-kompanjon"
 
 #: src/appLibs/widgets/settingsButton.js:107
 msgid "About BudsLink"
-msgstr ""
+msgstr "Om BudsLink"
 
 #: src/appLibs/widgets/settingsButton.js:118
 msgid "Translation"
@@ -100,11 +100,11 @@ msgstr "Översättning"
 
 #: src/appLibs/widgets/settingsButton.js:200
 msgid "Light"
-msgstr ""
+msgstr "Ljust"
 
 #: src/appLibs/widgets/settingsButton.js:201
 msgid "Dark"
-msgstr ""
+msgstr "Mörkt"
 
 #: src/appLibs/widgets/settingsButton.js:301
 msgid "Restart required to apply language change"
@@ -130,7 +130,7 @@ msgstr ""
 #: src/lib/devices/galaxyBuds/galaxyBudsDevice.js:691
 #: src/lib/devices/sony/sonyDevice.js:213
 msgid "On"
-msgstr ""
+msgstr "På"
 
 #: src/appLibs/widgets/settingsButton.js:401
 #: src/appLibs/widgets/settingsButton.js:438
@@ -165,19 +165,19 @@ msgstr ""
 #: src/lib/devices/sony/sonyDevice.js:215
 #: src/lib/devices/googleBuds/googleBudsDevice.js:211
 msgid "Off"
-msgstr ""
+msgstr "Av"
 
 #: src/appLibs/widgets/settingsButton.js:500
 msgid "GNOME Extension"
-msgstr ""
+msgstr "GNOME-tillägg"
 
 #: src/appLibs/widgets/settingsButton.js:506
 msgid "Plasma Widget"
-msgstr ""
+msgstr "Plasma-widget"
 
 #: src/appLibs/widgets/settingsButton.js:512
 msgid "Cinnamon Spice"
-msgstr ""
+msgstr "Cinnamon-krydda"
 
 #: src/appLibs/widgets/deviceRow.js:56 src/app.js:227
 msgid "BudsLink"
@@ -185,11 +185,11 @@ msgstr "BudsLink"
 
 #: src/appLibs/widgets/deviceRow.js:98
 msgid "Configure"
-msgstr ""
+msgstr "Konfigurera"
 
 #: src/appLibs/widgets/deviceRow.js:110
 msgid "Battery Level"
-msgstr ""
+msgstr "Batterinivå"
 
 #: src/app.js:237
 msgid "Devices"
@@ -197,7 +197,7 @@ msgstr ""
 
 #: src/app.js:239
 msgid "No compatible device found"
-msgstr ""
+msgstr "Ingen kompatibel enhet hittades"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:43
 #: src/preferences/devices/airpods/configureWindow.js:83
@@ -223,7 +223,7 @@ msgstr "Ikon"
 #: src/preferences/devices/sony/configureWindow.js:89
 #: src/preferences/devices/googleBuds/configureWindow.js:49
 msgid "Select Icon"
-msgstr ""
+msgstr "Välj ikon"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:45
 #: src/preferences/devices/airpods/configureWindow.js:85
@@ -236,7 +236,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:90
 #: src/preferences/devices/googleBuds/configureWindow.js:50
 msgid "Select the icon used for the indicator and quick menu"
-msgstr ""
+msgstr "Välj ikonen som används för indikatorn och snabbmenyn"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:66
 msgid "Settings"
@@ -274,7 +274,7 @@ msgstr ""
 #: src/preferences/devices/galaxyBuds/configureWindow.js:115
 #: src/preferences/devices/boseBuds/configureWindow.js:437
 msgid "Playback Behavior"
-msgstr ""
+msgstr "Uppspelningsbeteende"
 
 #: src/preferences/devices/airpods/configureWindow.js:110
 #: src/preferences/devices/airpods/configureWindow.js:113
@@ -575,7 +575,7 @@ msgstr ""
 #: src/preferences/devices/boseBuds/configureWindow.js:301
 #: src/preferences/devices/googleBuds/configureWindow.js:89
 msgid "Custom"
-msgstr ""
+msgstr "Anpassad"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:256
 msgid "Classic"
@@ -621,7 +621,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:249
 #: src/preferences/devices/googleBuds/configureWindow.js:111
 msgid "Custom Equalizer"
-msgstr ""
+msgstr "Anpassad equalizer"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:281
 #: src/preferences/devices/nothingBuds/configureWindow.js:243
@@ -632,7 +632,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:242
 #: src/preferences/devices/googleBuds/configureWindow.js:105
 msgid "Equalizer Preset"
-msgstr ""
+msgstr "Equalizerförinställning"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:282
 #: src/preferences/devices/nothingBuds/configureWindow.js:244
@@ -670,43 +670,43 @@ msgstr "500"
 #: src/preferences/devices/sony/configureWindow.js:260
 #: src/preferences/devices/sony/configureWindow.js:262
 msgid "1k"
-msgstr ""
+msgstr "1 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:314
 #: src/preferences/devices/sony/configureWindow.js:262
 msgid "2k"
-msgstr ""
+msgstr "2 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 #: src/preferences/devices/senhBuds/configureWindow.js:317
 #: src/preferences/devices/sony/configureWindow.js:262
 msgid "4k"
-msgstr ""
+msgstr "4 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:299
 #: src/preferences/devices/senhBuds/configureWindow.js:320
 #: src/preferences/devices/sony/configureWindow.js:262
 msgid "8k"
-msgstr ""
+msgstr "8 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:299
 #: src/preferences/devices/senhBuds/configureWindow.js:321
 msgid "12k"
-msgstr ""
+msgstr "12 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:299
 #: src/preferences/devices/senhBuds/configureWindow.js:322
 #: src/preferences/devices/sony/configureWindow.js:260
 #: src/preferences/devices/sony/configureWindow.js:262
 msgid "16k"
-msgstr ""
+msgstr "16 k"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:308
 #: src/preferences/devices/senhBuds/configureWindow.js:339
 #: src/preferences/devices/sony/configureWindow.js:271
 msgid "Frequency (Hz)"
-msgstr ""
+msgstr "Frekvens (Hz)"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:309
 #: src/preferences/devices/nothingBuds/configureWindow.js:269
@@ -715,7 +715,7 @@ msgstr ""
 #: src/preferences/devices/sony/configureWindow.js:272
 #: src/preferences/devices/googleBuds/configureWindow.js:142
 msgid "Gain (dB)"
-msgstr ""
+msgstr "Förstärkning (dB)"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:326
 #: src/preferences/devices/nothingBuds/configureWindow.js:359
@@ -940,7 +940,7 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:221
 #: src/preferences/devices/boseBuds/configureWindow.js:275
 msgid "Sound Settings"
-msgstr ""
+msgstr "Ljudinställningar"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:220
 msgid "Dirac"
@@ -958,7 +958,7 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:223
 #: src/preferences/devices/senhBuds/configureWindow.js:266
 msgid "Pop"
-msgstr ""
+msgstr "Pop"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:224
 #: src/preferences/devices/googleBuds/configureWindow.js:86
@@ -968,7 +968,7 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:225
 #: src/preferences/devices/senhBuds/configureWindow.js:269
 msgid "Classical"
-msgstr ""
+msgstr "Klassiskt"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:260
 #: src/preferences/devices/nothingBuds/configureWindow.js:681
@@ -1117,13 +1117,13 @@ msgstr "Poddradio"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:231
 msgid "Sound personalization"
-msgstr ""
+msgstr "Ljudanpassning"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:232
 #: src/preferences/widgets/peqRowWidget.js:883
 #: src/preferences/widgets/peqRowWidget.js:1308
 msgid "Parametric Equalizer"
-msgstr ""
+msgstr "Parametrisk equalizer"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:243
 msgid "Sound Customization"
@@ -1136,23 +1136,23 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:264
 #: src/preferences/devices/boseBuds/configureWindow.js:284
 msgid "Flat"
-msgstr ""
+msgstr "Platt"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:267
 msgid "Dance"
-msgstr ""
+msgstr "Dans"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:268
 msgid "Hip Hop"
-msgstr ""
+msgstr "Hiphop"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:270
 msgid "Movie"
-msgstr ""
+msgstr "Film"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "Jazz"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1175,20 +1175,20 @@ msgstr "800"
 #: src/preferences/devices/senhBuds/configureWindow.js:315
 #: src/preferences/devices/sony/configureWindow.js:260
 msgid "2.5k"
-msgstr ""
+msgstr "2,5 k"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:316
 msgid "3k"
-msgstr ""
+msgstr "3 k"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:318
 #: src/preferences/devices/sony/configureWindow.js:260
 msgid "6.3k"
-msgstr ""
+msgstr "6,3 k"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:319
 msgid "7k"
-msgstr ""
+msgstr "7 k"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:445
 #: src/preferences/devices/boseBuds/configureWindow.js:497
@@ -1198,7 +1198,7 @@ msgstr ""
 #: src/lib/devices/boseBuds/boseBudsDevice.js:682
 #: src/lib/devices/sony/sonyDevice.js:197
 msgid "Low"
-msgstr ""
+msgstr "Låg"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:446
 #: src/preferences/devices/boseBuds/configureWindow.js:499
@@ -1208,11 +1208,11 @@ msgstr ""
 #: src/lib/devices/boseBuds/boseBudsDevice.js:683
 #: src/lib/devices/sony/sonyDevice.js:197
 msgid "High"
-msgstr ""
+msgstr "Hög"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:457
 msgid "Crossfeed"
-msgstr ""
+msgstr "Crossfeed"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:458
 msgid "Blend channels for natural sound"
@@ -1221,12 +1221,12 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:564
 #: src/preferences/devices/boseBuds/configureWindow.js:375
 msgid "In Ear Settings"
-msgstr ""
+msgstr "Inställningar för i örat"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:564
 #: src/preferences/devices/boseBuds/configureWindow.js:376
 msgid "On Head Settings"
-msgstr ""
+msgstr "Inställningar för på huvudet"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:570
 #: src/preferences/devices/boseBuds/configureWindow.js:383
@@ -1236,32 +1236,32 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:584
 #: src/preferences/devices/boseBuds/configureWindow.js:397
 msgid "Pause Media When Not Worn"
-msgstr ""
+msgstr "Pausa media när de inte bärs"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:585
 #: src/preferences/devices/boseBuds/configureWindow.js:398
 msgid "Playback controlled by the OEM app"
-msgstr ""
+msgstr "Uppspelningen styrs av OEM-appen"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:610
 #: src/preferences/devices/boseBuds/configureWindow.js:581
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:611
 msgid "After 15 minutes"
-msgstr ""
+msgstr "Efter 15 minuter"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:612
 #: src/preferences/devices/sony/configureWindow.js:480
 msgid "After 30 minutes"
-msgstr ""
+msgstr "Efter 30 minuter"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:613
 #: src/preferences/devices/boseBuds/configureWindow.js:585
 #: src/preferences/devices/sony/configureWindow.js:481
 msgid "After 1 hour"
-msgstr ""
+msgstr "Efter 1 timme"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:621
 #: src/preferences/devices/sony/configureWindow.js:463
@@ -1277,7 +1277,7 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:638
 #: src/preferences/devices/boseBuds/configureWindow.js:438
 msgid "Playback controlled by the BudsLink"
-msgstr ""
+msgstr "Uppspelningen styrs av BudsLink"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:652
 #: src/preferences/devices/boseBuds/configureWindow.js:452
