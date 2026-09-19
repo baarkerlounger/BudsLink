@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-18 10:52+0000\n"
+"PO-Revision-Date: 2026-09-20 11:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -1104,7 +1104,7 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "无线对讲机"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
@@ -1138,8 +1138,9 @@ msgid "Flat"
 msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:267
+#, fuzzy
 msgid "Dance"
-msgstr ""
+msgstr "舞"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:268
 msgid "Hip Hop"
