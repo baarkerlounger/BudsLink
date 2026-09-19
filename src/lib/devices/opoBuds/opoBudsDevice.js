@@ -564,13 +564,13 @@ export const OpoBudsDevice = GObject.registerClass({
                 const levelKeys = Object.keys(levelsObj);
 
                 const levelNames = {
-                    'smart': _('Smart'),
+                    'smart': _('Auto'),
                     'auto': _('Auto'),
-                    'mild': _('Mild'),
+                    'mild': _('Low'),
                     'low': _('Low'),
-                    'moderate': _('Moderate'),
-                    'mid': _('Moderate'),
-                    'deep': _('Max'),
+                    'moderate': _('Mid'),
+                    'mid': _('Mid'),
+                    'deep': _('High'),
                     'high': _('High'),
                     'max': _('Max'),
                 };
@@ -612,18 +612,18 @@ export const OpoBudsDevice = GObject.registerClass({
             this._config.optionsBox1.push('radio-button');
         if (this._modelData.windNoiseReduction) {
             this._config.optionsBox1.push('check-button');
-            this._config.box1CheckButton = [_('Smart Wind Noise Reduction')];
+            this._config.box1CheckButton = [_('Wind Noise Reduction')];
         }
 
         this._config.optionsBox2 = [];
         this._box2Map = [];
         const box2Labels = [];
         if (this._modelData.volumeEnhancer) {
-            box2Labels.push(_('Enhance Voice'));
+            box2Labels.push(_('Focus on Voice'));
             this._box2Map.push('volumeEnhancer');
         }
         if (this._modelData.windNoiseReduction) {
-            box2Labels.push(_('Smart Wind Noise Reduction'));
+            box2Labels.push(_('Wind Noise Reduction'));
             this._box2Map.push('windNoise');
         }
 
@@ -914,9 +914,9 @@ export const OpoBudsDevice = GObject.registerClass({
 
     updateAdaptiveAncSubLevel(subByte) {
         const subNames = {
-            0x04: _('Mild'),
-            0x10: _('Moderate'),
-            0x08: _('Max (Deep)'),
+            0x04: _('Low'),
+            0x10: _('Mid'),
+            0x08: _('High'),
         };
         const subName = subNames[subByte] ?? '';
         this._log.info(`Real-Time Adaptive ANC Level: ${subName} (0x${subByte.toString(16)})`);

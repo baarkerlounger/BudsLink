@@ -324,15 +324,10 @@ export const ConfigureWindow = GObject.registerClass({
         });
 
         const presetLabels = {
-            original_sound: _('Original Sound (Balanced)'),
-            original: _('Original Sound (Balanced)'),
-            deep_bass: _('Deep Bass'),
-            serenade: _('Serenade (Vocal)'),
-            clear_bass: _('Clear Bass'),
-            bassPlus: _('Bass Plus'),
-            bass_plus: _('Bass Plus'),
-            pulseBass: _('Pulse Bass'),
-            pulse_bass: _('Pulse Bass'),
+            originalSound: _('Balanced'),
+            deepBass: _('Deep Bass'),
+            serenade: _('Vocal'),
+            clearBass: _('Clear Bass'),
             vocal: _('Vocal'),
             rock: _('Rock'),
             pop: _('Pop'),
@@ -363,7 +358,7 @@ export const ConfigureWindow = GObject.registerClass({
 
         this._eqPresetDropdown = new DropDownRowWidget({
             title: _('Equalizer Preset'),
-            subtitle: _('Select audio profile'),
+            subtitle: _('Change the sound signature'),
             options,
             values,
             initialValue: this._settingsItems['eq-preset'] ?? values[0],
@@ -794,7 +789,7 @@ export const ConfigureWindow = GObject.registerClass({
         if (this._modelData.spatialAudio) {
             this._spatialAudioSwitch = new Adw.SwitchRow({
                 title: _('Spatial Audio'),
-                subtitle: _('Immersive 3D surround sound experience'),
+                subtitle: _('Add depth for a more immersive experience'),
                 active: this._settingsItems['spatial'],
             });
 
@@ -858,7 +853,7 @@ export const ConfigureWindow = GObject.registerClass({
         if (this._modelData.lowLatencyMode) {
             this._lowLatencySwitch = new Adw.SwitchRow({
                 title: _('Game Mode'),
-                subtitle: _('Reduce audio latency for responsive gaming'),
+                subtitle: _('Reduces latency and enhances in-game audio'),
                 active: this._settingsItems['lowlatency'],
             });
 
@@ -874,7 +869,7 @@ export const ConfigureWindow = GObject.registerClass({
         if (this._modelData.inEarDetection) {
             this._inEarSwitch = new Adw.SwitchRow({
                 title: _('In-Ear Detection'),
-                subtitle: _('Auto-pause audio playback when earbud is removed'),
+                subtitle: _('Pause Media When Not Worn'),
                 active: this._settingsItems['inear-enable'],
             });
 
@@ -977,8 +972,8 @@ export const ConfigureWindow = GObject.registerClass({
 
         if (this._modelData.autoAnswer) {
             this._autoAnswerSwitch = new Adw.SwitchRow({
-                title: _('Auto Answer Calls'),
-                subtitle: _('Automatically answer incoming calls when putting on earbuds'),
+                title: _('Answer Calls Automatically'),
+                subtitle: _('Answer calls when the earbuds are worn'),
                 active: this._settingsItems['auto-answer'],
             });
 
@@ -1040,7 +1035,7 @@ export const ConfigureWindow = GObject.registerClass({
                 pixel_size: 20,
             });
             const leftName = new Gtk.Label({
-                label: _('Left (L):'),
+                label: _('Left'),
                 css_classes: ['dim-label'],
             });
             this._fitLeftBadge = new Gtk.Label({
@@ -1061,7 +1056,7 @@ export const ConfigureWindow = GObject.registerClass({
                 pixel_size: 20,
             });
             const rightName = new Gtk.Label({
-                label: _('Right (R):'),
+                label: _('Right'),
                 css_classes: ['dim-label'],
             });
             this._fitRightBadge = new Gtk.Label({
@@ -1267,12 +1262,12 @@ export const ConfigureWindow = GObject.registerClass({
         this._ncCycleSwitches = null;
 
         const gestureGroup = new Adw.PreferencesGroup({
-            title: _('Gesture &amp; Button Controls'),
+            title: _('Gesture and Button Controls'),
             description: _('Customize actions for buttons and touch gestures'),
         });
 
         const gestureActionNames = {
-            'none': _('None'),
+            'none': _('No Action'),
             'play-pause': _('Play / Pause'),
             'skip-forward': _('Next Track'),
             'skip-back': _('Previous Track'),
@@ -1281,24 +1276,24 @@ export const ConfigureWindow = GObject.registerClass({
             'voice-assistant': _('Voice Assistant'),
             'noise-control': _('Noise Control'),
             'game-mode': _('Game Mode'),
-            'device-switch': _('Switch Device'),
+            'device-switch': _('Switch Devices'),
         };
 
         const gestureSlotNames = {
-            'single': _('Single-tap'),
-            'double': _('Double-tap'),
-            'triple': _('Triple-tap'),
-            'action-hold': _('Touch &amp; Hold'),
-            'anc-single': _('Single-tap'),
-            'double-action-hold': _('Double Tap &amp; Hold'),
+            'single': _('Single Tap'),
+            'double': _('Double Tap'),
+            'triple': _('Triple Tap'),
+            'action-hold': _('Touch and Hold'),
+            'anc-single': _('Single Tap'),
+            'double-action-hold': _('Double Tap and Hold'),
         };
 
         const pressSlotNames = {
-            'single': _('Single-press'),
-            'double': _('Double-press'),
-            'triple': _('Triple-press'),
-            'action-hold': _('Press &amp; Hold'),
-            'double-action-hold': _('Double Press &amp; Hold'),
+            'single': _('Single Press'),
+            'double': _('Double Press'),
+            'triple': _('Triple Press'),
+            'action-hold': _('Press and Hold'),
+            'double-action-hold': _('Double Press and Hold'),
         };
 
         const currentGesturesHex = this._settingsItems['gestures'] ||
@@ -1423,9 +1418,9 @@ export const ConfigureWindow = GObject.registerClass({
             case 'mfb':
                 return _('Multi-Function Button');
             case 'anc':
-                return _('Noise Control (ANC) Button');
+                return _('Noise Control Button');
             default:
-                return _('Button &amp; Gesture Controls');
+                return _('Gesture and Button Controls');
         }
     }
 

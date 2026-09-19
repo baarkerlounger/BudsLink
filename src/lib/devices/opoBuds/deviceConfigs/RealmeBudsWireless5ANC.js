@@ -8,10 +8,10 @@ export default {
     batteryCase: false,
 
     eqPreset: {
-        original_sound: 0x00,
-        deep_bass: 0x01,
+        originalSound: 0x00,
+        deepBass: 0x01,
         serenade: 0x02,
-        clear_bass: 0x03,
+        clearBass: 0x03,
     },
 
     noiseControl: {
