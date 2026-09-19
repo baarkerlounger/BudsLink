@@ -75,7 +75,7 @@ msgstr ""
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Lenguaje"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -1104,7 +1104,7 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "Walkie-talkie"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
@@ -1139,7 +1139,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:267
 msgid "Dance"
-msgstr ""
+msgstr "Baile"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:268
 msgid "Hip Hop"
