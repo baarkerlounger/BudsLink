@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:47-0600\n"
-"PO-Revision-Date: 2026-09-16 18:52+0000\n"
+"PO-Revision-Date: 2026-09-20 11:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: et\n"
@@ -1104,7 +1104,7 @@ msgstr "Mikrofon sisse/välja"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "Raadiotelefon"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
