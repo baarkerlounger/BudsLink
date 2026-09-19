@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-18 10:52+0000\n"
+"PO-Revision-Date: 2026-09-20 11:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl\n"
@@ -75,7 +75,7 @@ msgstr "Accentkleur"
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Sprache"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -1115,7 +1115,7 @@ msgstr "Microfoon aan/uit"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "Portofoon"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
@@ -1150,7 +1150,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:267
 msgid "Dance"
-msgstr ""
+msgstr "Dansmuziek"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:268
 msgid "Hip Hop"
