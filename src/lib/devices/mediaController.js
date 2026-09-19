@@ -400,9 +400,9 @@ export const MediaController = GObject.registerClass({
         }
 
         this._mprisNames = names.filter(name => name.startsWith(MEDIA_PLAYER_PREFIX));
-        if (this._requestedState === 'play') {
-            if (this._lastPausedPlayer && this._mprisNames.includes(this._lastPausedPlayer))
-                this._initPlayerProxy(this._lastPausedPlayer);
+        
+        if (this._requestedState === 'play' && this._lastPausedPlayer && this._mprisNames.includes(this._lastPausedPlayer)) {
+            this._initPlayerProxy(this._lastPausedPlayer);
         } else {
             this._iteratePlayers();
         }
