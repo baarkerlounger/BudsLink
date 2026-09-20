@@ -498,7 +498,7 @@ class SettingsButton extends Gtk.MenuButton {
 
         addLink(
             _('GNOME Extension'),
-            'https://github.com/maniacx/BudsLink-Companion/tree/Gnome-Extension',
+            'https://github.com/maniacx/Bluetooth-Battery-Meter',
             'bbm-gnome-extension-symbolic'
         );
 
