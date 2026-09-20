@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-18 10:52+0000\n"
+"PO-Revision-Date: 2026-09-20 21:44+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: tr\n"
@@ -76,7 +76,7 @@ msgstr ""
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Dil"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -1105,7 +1105,7 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "El telsizi"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
@@ -1140,7 +1140,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:267
 msgid "Dance"
-msgstr ""
+msgstr "Dans"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:268
 msgid "Hip Hop"
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #: src/preferences/widgets/peqRowWidget.js:641
 msgid "Frequency"
-msgstr ""
+msgstr "Frekans"
 
 #: src/preferences/widgets/peqRowWidget.js:649
 msgid "Quality Factor"
@@ -2287,7 +2287,7 @@ msgstr ""
 
 #: src/lib/devices/boseBuds/boseBudsDevice.js:684
 msgid "Wind"
-msgstr ""
+msgstr "Rüzgâr"
 
 #: src/lib/devices/sony/sonyDevice.js:193
 #: src/lib/devices/sony/sonyDevice.js:195

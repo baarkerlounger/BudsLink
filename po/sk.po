@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Bluetooth Battery Meter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-16 18:52+0000\n"
+"PO-Revision-Date: 2026-09-20 21:44+0000\n"
 "Last-Translator: Jozef Gaal <preklady@mayday.sk>\n"
 "Language-Team: Slovak <preklady@mayday.sk>\n"
 "Language: sk\n"
@@ -75,7 +75,7 @@ msgstr ""
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 #: src/appLibs/widgets/settingsButton.js:86
 msgid "Packet Logging"
@@ -2110,7 +2110,7 @@ msgstr "Koeficient kvality"
 
 #: src/preferences/widgets/peqRowWidget.js:657
 msgid "Gain"
-msgstr "Gain"
+msgstr "Zisk"
 
 #: src/preferences/widgets/peqRowWidget.js:782
 msgid "Bypass"
