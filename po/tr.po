@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-20 11:52+0000\n"
+"PO-Revision-Date: 2026-09-20 21:44+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: tr\n"
@@ -2088,7 +2088,7 @@ msgstr ""
 
 #: src/preferences/widgets/peqRowWidget.js:641
 msgid "Frequency"
-msgstr ""
+msgstr "Frekans"
 
 #: src/preferences/widgets/peqRowWidget.js:649
 msgid "Quality Factor"
@@ -2287,7 +2287,7 @@ msgstr ""
 
 #: src/lib/devices/boseBuds/boseBudsDevice.js:684
 msgid "Wind"
-msgstr ""
+msgstr "Rüzgâr"
 
 #: src/lib/devices/sony/sonyDevice.js:193
 #: src/lib/devices/sony/sonyDevice.js:195
