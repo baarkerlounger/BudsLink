@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Bluetooth Battery Meter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-20 21:44+0000\n"
+"PO-Revision-Date: 2026-09-21 14:18+0000\n"
 "Last-Translator: Jozef Gaal <preklady@mayday.sk>\n"
 "Language-Team: Slovak <preklady@mayday.sk>\n"
 "Language: sk\n"
@@ -20,13 +20,13 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:26
 msgid "Application Settings"
-msgstr ""
+msgstr "Nastavenia aplikácie"
 
 #: src/appLibs/widgets/settingsButton.js:35
 #: src/appLibs/widgets/settingsButton.js:199
 #: src/appLibs/widgets/settingsButton.js:273
 msgid "System Default"
-msgstr ""
+msgstr "Predvolené systémom"
 
 #: src/appLibs/widgets/settingsButton.js:36
 msgid "Blue"
@@ -83,15 +83,15 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:93
 msgid "Run in Background"
-msgstr ""
+msgstr "Spustiť na pozadí"
 
 #: src/appLibs/widgets/settingsButton.js:100
 msgid "BudsLink Companion"
-msgstr ""
+msgstr "BudsLink Companion"
 
 #: src/appLibs/widgets/settingsButton.js:107
 msgid "About BudsLink"
-msgstr ""
+msgstr "O aplikácii BudsLink"
 
 #: src/appLibs/widgets/settingsButton.js:118
 msgid "Translation"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:301
 msgid "Restart required to apply language change"
-msgstr ""
+msgstr "Na uplatnenie zmeny jazyka je potrebné reštartovať systém"
 
 #: src/appLibs/widgets/settingsButton.js:304
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:242
@@ -168,35 +168,35 @@ msgstr "Vypnuté"
 
 #: src/appLibs/widgets/settingsButton.js:500
 msgid "GNOME Extension"
-msgstr ""
+msgstr "GNOME rozšírenie"
 
 #: src/appLibs/widgets/settingsButton.js:506
 msgid "Plasma Widget"
-msgstr ""
+msgstr "Miniaplikácia Plasma"
 
 #: src/appLibs/widgets/settingsButton.js:512
 msgid "Cinnamon Spice"
-msgstr ""
+msgstr "Cinnamon Spice"
 
 #: src/appLibs/widgets/deviceRow.js:56 src/app.js:227
 msgid "BudsLink"
-msgstr ""
+msgstr "BudsLink"
 
 #: src/appLibs/widgets/deviceRow.js:98
 msgid "Configure"
-msgstr ""
+msgstr "Nastaviť"
 
 #: src/appLibs/widgets/deviceRow.js:110
 msgid "Battery Level"
-msgstr ""
+msgstr "Úroveň batérie"
 
 #: src/app.js:237
 msgid "Devices"
-msgstr ""
+msgstr "Zariadenia"
 
 #: src/app.js:239
 msgid "No compatible device found"
-msgstr ""
+msgstr "Nenašlo sa žiadne kompatibilné zariadenie"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:43
 #: src/preferences/devices/airpods/configureWindow.js:83
@@ -239,7 +239,7 @@ msgstr "Vyberte ikonu použitú pre indikátor a rýchlu ponuku"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:66
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:71
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
@@ -2216,7 +2216,7 @@ msgstr ""
 
 #: src/lib/devices/notifier.js:31
 msgid "Nothing / CMF"
-msgstr ""
+msgstr "Nothing / CMF"
 
 #: src/lib/devices/notifier.js:33
 msgid "Google Pixel Buds"
@@ -2224,7 +2224,7 @@ msgstr "Google Pixel Buds"
 
 #: src/lib/devices/notifier.js:35
 msgid "Redmi / Xiaomi"
-msgstr ""
+msgstr "Redmi / Xiaomi"
 
 #: src/lib/devices/notifier.js:37
 msgid "Sennheiser"
