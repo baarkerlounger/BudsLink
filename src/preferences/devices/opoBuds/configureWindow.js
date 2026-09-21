@@ -165,9 +165,6 @@ export const ConfigureWindow = GObject.registerClass({
                 if (this._modelData.volumeEnhancer && this._volumeEnhancerSwitch)
                     this._volumeEnhancerSwitch.active = this._settingsItems['volume-enhancer'];
 
-                if (this._modelData.highResAudio && this._highResSwitch)
-                    this._highResSwitch.active = this._settingsItems['high-res'];
-
                 if (this._modelData.lowLatencyMode && this._lowLatencySwitch)
                     this._lowLatencySwitch.active = this._settingsItems['lowlatency'];
 
@@ -690,7 +687,7 @@ export const ConfigureWindow = GObject.registerClass({
     _addAudioEffects() {
         const _ = this._gettext;
         const hasEffects = this._modelData.dynamicBass || this._modelData.spatialAudio ||
-            this._modelData.volumeEnhancer || this._modelData.highResAudio;
+            this._modelData.volumeEnhancer;
 
         if (!hasEffects)
             return;
@@ -822,22 +819,6 @@ export const ConfigureWindow = GObject.registerClass({
             });
 
             effectsGroup.add(this._volumeEnhancerSwitch);
-        }
-
-        if (this._modelData.highResAudio) {
-            this._highResSwitch = new Adw.SwitchRow({
-                title: _('High-Res Audio (LHDC / LDAC)'),
-                subtitle: _('Enable high-definition Bluetooth audio codec streaming'),
-                active: this._settingsItems['high-res'],
-            });
-
-            this._highResSwitch.connect('notify::active', () => {
-                if (this._isUpdatingUI)
-                    return;
-                this._updateGsettings('high-res', this._highResSwitch.active);
-            });
-
-            effectsGroup.add(this._highResSwitch);
         }
 
         this._page.add(effectsGroup);
