@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Bluetooth Battery Meter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-21 16:47+0000\n"
+"PO-Revision-Date: 2026-09-22 17:52+0000\n"
 "Last-Translator: Jozef Gaal <preklady@mayday.sk>\n"
 "Language-Team: Slovak <preklady@mayday.sk>\n"
 "Language: sk\n"
@@ -87,7 +87,7 @@ msgstr "Spustiť na pozadí"
 
 #: src/appLibs/widgets/settingsButton.js:100
 msgid "BudsLink Companion"
-msgstr "BudsLink Companion"
+msgstr "Doplnok BudsLink"
 
 #: src/appLibs/widgets/settingsButton.js:107
 msgid "About BudsLink"
@@ -251,7 +251,7 @@ msgstr "Herný režim"
 #: src/preferences/devices/redmiBuds/configureWindow.js:377
 #: src/preferences/devices/nothingBuds/configureWindow.js:366
 msgid "Reduces latency and enhances in-game audio"
-msgstr ""
+msgstr "Znižuje oneskorenie a zlepšuje zvuk v hre"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:83
 #: src/preferences/devices/nothingBuds/configureWindow.js:380
@@ -1532,7 +1532,7 @@ msgstr "Obľúbené"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:74
 msgid "Preset modes cannot be deleted"
-msgstr ""
+msgstr "Prednastavené režimy nie je možné vymazať"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:75
 msgid "Delete"
@@ -2238,7 +2238,7 @@ msgstr "Bose"
 
 #: src/lib/devices/notifier.js:41
 msgid "Edifier"
-msgstr ""
+msgstr "Edifier"
 
 #: src/lib/devices/notifier.js:43
 msgid "Google Fast Pair"
@@ -2292,7 +2292,7 @@ msgstr "Úroveň priehľadnosti"
 
 #: src/lib/devices/nothingBuds/nothingBudsDevice.js:429
 msgid "Personalized ANC"
-msgstr ""
+msgstr "Personalizované aktívne potlačenie hluku (ANC)"
 
 #: src/lib/devices/senhBuds/senhBudsDevice.js:590
 msgid "Max"
