@@ -89,6 +89,9 @@ export const SocketHandler = GObject.registerClass({
 
             this._receiveLoop();
         } catch (e) {
+            if (e && e.code === Gio.IOErrorEnum.CANCELLED)
+                return;
+
             this._socketLog.error(e, 'SocketHandler Disconnected');
             this.destroy();
         }
