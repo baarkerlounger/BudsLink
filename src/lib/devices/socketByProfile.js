@@ -143,12 +143,6 @@ export const SocketHandler = GObject.registerClass({
         this._socketLog.info('Destroying socket');
 
         try {
-            this._socket.shutdown(true, true);
-        } catch (e) {
-            this._socketLog.error(e, 'Error shutting down Bluetooth socket');
-        }
-
-        try {
             this._connection?.close(null);
         } catch (e) {
             this._socketLog.error(e, 'Error closing Gio.SocketConnection');
