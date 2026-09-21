@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:47-0600\n"
-"PO-Revision-Date: 2026-09-20 21:44+0000\n"
+"PO-Revision-Date: 2026-09-21 13:25+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: et\n"
@@ -2259,7 +2259,7 @@ msgstr ""
 
 #: src/lib/devices/redmiBuds/redmiBudsDevice.js:650
 msgid "Voice"
-msgstr ""
+msgstr "Inimhääl"
 
 #: src/lib/devices/redmiBuds/redmiBudsDevice.js:671
 msgid "Transparency Strength"
