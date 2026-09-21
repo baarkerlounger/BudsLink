@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Bluetooth Battery Meter\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-21 14:18+0000\n"
+"PO-Revision-Date: 2026-09-21 16:47+0000\n"
 "Last-Translator: Jozef Gaal <preklady@mayday.sk>\n"
 "Language-Team: Slovak <preklady@mayday.sk>\n"
 "Language: sk\n"
@@ -30,7 +30,7 @@ msgstr "Predvolené systémom"
 
 #: src/appLibs/widgets/settingsButton.js:36
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: src/appLibs/widgets/settingsButton.js:37
 msgid "Teal"
@@ -66,11 +66,11 @@ msgstr ""
 
 #: src/appLibs/widgets/settingsButton.js:65
 msgid "Dark Mode"
-msgstr ""
+msgstr "Tmavý režim"
 
 #: src/appLibs/widgets/settingsButton.js:72
 msgid "Accent Color"
-msgstr ""
+msgstr "Farba zvýraznenia"
 
 #: src/appLibs/widgets/settingsButton.js:79
 #: src/appLibs/widgets/settingsButton.js:300
@@ -99,11 +99,11 @@ msgstr "Preklad"
 
 #: src/appLibs/widgets/settingsButton.js:200
 msgid "Light"
-msgstr ""
+msgstr "Svetlá"
 
 #: src/appLibs/widgets/settingsButton.js:201
 msgid "Dark"
-msgstr ""
+msgstr "Tmavý"
 
 #: src/appLibs/widgets/settingsButton.js:301
 msgid "Restart required to apply language change"
@@ -245,7 +245,7 @@ msgstr "Nastavenia"
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
 #: src/preferences/devices/nothingBuds/configureWindow.js:365
 msgid "Game Mode"
-msgstr ""
+msgstr "Herný režim"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:72
 #: src/preferences/devices/redmiBuds/configureWindow.js:377
@@ -258,14 +258,14 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:570
 #: src/preferences/devices/boseBuds/configureWindow.js:383
 msgid "In-Ear Detection"
-msgstr ""
+msgstr "Detekcia v uchu"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:84
 #: src/preferences/devices/nothingBuds/configureWindow.js:381
 #: src/preferences/devices/senhBuds/configureWindow.js:571
 #: src/preferences/devices/boseBuds/configureWindow.js:384
 msgid "Enable features based on wearing detection"
-msgstr ""
+msgstr "Povoliť funkcie na základe detekcie nosenia"
 
 #: src/preferences/devices/airpods/configureWindow.js:106
 #: src/preferences/devices/redmiBuds/configureWindow.js:212
@@ -312,7 +312,7 @@ msgstr "Pokračovať s ktorýmkoľvek slúchadlom, pozastaviť ak sú obe odstr�
 #: src/preferences/devices/senhBuds/configureWindow.js:651
 #: src/preferences/devices/boseBuds/configureWindow.js:451
 msgid "Choose Playback Behavior for In-Ear Detection"
-msgstr ""
+msgstr "Vyberte správanie prehrávania pre detekciu v uchu"
 
 #: src/preferences/devices/airpods/configureWindow.js:120
 #: src/preferences/devices/redmiBuds/configureWindow.js:223
@@ -329,11 +329,12 @@ msgstr "Úroveň hlasitosti"
 
 #: src/preferences/devices/airpods/configureWindow.js:140
 msgid "Lower volume during conversation awareness"
-msgstr ""
+msgstr "Znížiť hlasitosť počas rozpoznávania rozhovoru"
 
 #: src/preferences/devices/airpods/configureWindow.js:141
 msgid "Automatically lower the volume when conversation awareness is active"
 msgstr ""
+"Automaticky znížiť hlasitosť, keď je zapnutá funkcia rozpoznávania rozhovoru"
 
 #: src/preferences/devices/airpods/configureWindow.js:159
 msgid "Conversation awareness volume limit"
@@ -536,7 +537,7 @@ msgstr "Nastavte, ako dlho musíte stlačiť a podržať, kým dôjde k akcii"
 #: src/preferences/devices/redmiBuds/configureWindow.js:222
 #: src/preferences/devices/galaxyBuds/configureWindow.js:125
 msgid "Choose Playback Behavior for Ear Detection"
-msgstr ""
+msgstr "Vyberte správanie prehrávania pre detekciu ucha"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:244
 #: src/preferences/devices/senhBuds/configureWindow.js:229
@@ -558,7 +559,7 @@ msgstr "Štandardné"
 #: src/preferences/devices/nothingBuds/configureWindow.js:217
 #: src/preferences/devices/sony/configureWindow.js:217
 msgid "Vocals"
-msgstr ""
+msgstr "Vokály"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:252
 #: src/preferences/devices/nothingBuds/configureWindow.js:219
@@ -653,7 +654,7 @@ msgstr "Predvoľba ekvalizéra"
 #: src/preferences/devices/boseBuds/configureWindow.js:314
 #: src/preferences/devices/sony/configureWindow.js:243
 msgid "Change the sound signature"
-msgstr ""
+msgstr "Zmeniť zvukový charakter"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:298
 msgid "62"
@@ -746,13 +747,13 @@ msgstr "Povoliť pripojenie k viacerým zariadeniam"
 #: src/preferences/devices/senhBuds/configureWindow.js:597
 #: src/preferences/devices/boseBuds/configureWindow.js:410
 msgid "Answer Calls Automatically"
-msgstr ""
+msgstr "Automaticky prijať telefónne hovory"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:347
 #: src/preferences/devices/senhBuds/configureWindow.js:598
 #: src/preferences/devices/boseBuds/configureWindow.js:411
 msgid "Answer calls when the earbuds are worn"
-msgstr ""
+msgstr "Prijať hovory, keď sú slúchadlá nasadené"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:361
 msgid "Adaptive Sound"
@@ -760,7 +761,7 @@ msgstr "Adaptívny zvuk"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:362
 msgid "Automatically adjust sound to your ear shape"
-msgstr ""
+msgstr "Automaticky prispôsobiť zvuk tvaru vášho ucha"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:409
 #: src/preferences/devices/nothingBuds/configureWindow.js:417
@@ -975,7 +976,7 @@ msgstr "Pop"
 #: src/preferences/devices/nothingBuds/configureWindow.js:224
 #: src/preferences/devices/googleBuds/configureWindow.js:86
 msgid "Vocal Boost"
-msgstr ""
+msgstr "Zosilnenie vokálov"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:225
 #: src/preferences/devices/senhBuds/configureWindow.js:269
@@ -1016,16 +1017,16 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:288
 #: src/preferences/devices/senhBuds/configureWindow.js:368
 msgid "Bass Enhancement"
-msgstr ""
+msgstr "Zvýraznenie basov"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:289
 #: src/preferences/devices/senhBuds/configureWindow.js:369
 msgid "Enhances bass in real time"
-msgstr ""
+msgstr "Zvýrazňuje basy v reálnom čase"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:301
 msgid "Bass Enhancement Level"
-msgstr ""
+msgstr "Úroveň zvýraznenia basov"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:304
 msgid "-"
@@ -1117,7 +1118,7 @@ msgstr "Mikrofón Zap/Vyp"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:678
 msgid "Walkie-Talkie"
-msgstr ""
+msgstr "Vysielačka"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:690
 msgid "Essential Space"
@@ -1139,11 +1140,11 @@ msgstr "Parametrický ekvalizér"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:243
 msgid "Sound Customization"
-msgstr ""
+msgstr "Prispôsobenie zvuku"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:244
 msgid "Customize your listening experience"
-msgstr ""
+msgstr "Prispôsobte si svoj zážitok z počúvania"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:264
 #: src/preferences/devices/boseBuds/configureWindow.js:284
@@ -1228,7 +1229,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:458
 msgid "Blend channels for natural sound"
-msgstr ""
+msgstr "Zlúčiť kanály pre dosiahnutie prirodzeného zvuku"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:564
 #: src/preferences/devices/boseBuds/configureWindow.js:375
@@ -1243,7 +1244,7 @@ msgstr "Nastavenia režimu na hlave"
 #: src/preferences/devices/senhBuds/configureWindow.js:570
 #: src/preferences/devices/boseBuds/configureWindow.js:383
 msgid "On Head Detection"
-msgstr ""
+msgstr "Detekcia na hlave"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:584
 #: src/preferences/devices/boseBuds/configureWindow.js:397
@@ -1284,7 +1285,7 @@ msgstr "Automatické vypnutie"
 #: src/preferences/devices/boseBuds/configureWindow.js:595
 #: src/preferences/devices/sony/configureWindow.js:464
 msgid "Automatically power off when not worn"
-msgstr ""
+msgstr "Automaticky vypnúť, keď nie je nosené"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:638
 #: src/preferences/devices/boseBuds/configureWindow.js:438
@@ -1294,7 +1295,7 @@ msgstr "Prehrávanie ovládané prostredníctvom BudsLink"
 #: src/preferences/devices/senhBuds/configureWindow.js:652
 #: src/preferences/devices/boseBuds/configureWindow.js:452
 msgid "Choose Playback Behavior for On-Head Detection"
-msgstr ""
+msgstr "Vyberte správanie prehrávania pre detekciu na hlave"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:689
 #: src/preferences/devices/boseBuds/configureWindow.js:492
@@ -1310,7 +1311,7 @@ msgstr "Okolitý zvuk počas hovorov"
 #: src/preferences/devices/senhBuds/configureWindow.js:702
 #: src/preferences/devices/boseBuds/configureWindow.js:507
 msgid "Adjust your voice feedback level"
-msgstr ""
+msgstr "Nastaviť úroveň hlasovej spätnej väzby"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:720
 msgid "Comfort Calls"
@@ -1318,7 +1319,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:721
 msgid "Make phone calls sound more natural"
-msgstr ""
+msgstr "Vylepšiť zvuk telefonátov, aby zneli prirodzenejšie"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:742
 msgid "Pause Media in Transparency Mode"
@@ -1327,6 +1328,7 @@ msgstr ""
 #: src/preferences/devices/senhBuds/configureWindow.js:743
 msgid "Automatically pause media when transparency mode is enabled"
 msgstr ""
+"Pri zapnutom režime priehľadnosti automaticky pozastaviť prehrávanie médií"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:760
 #: src/preferences/devices/boseBuds/configureWindow.js:526
@@ -1599,11 +1601,11 @@ msgstr "Je možné vybrať maximálne 4 režimy"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:510
 msgid "At least 2 modes must be selected"
-msgstr ""
+msgstr "Je potrebné vybrať aspoň 2 režimy"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:551
 msgid "Maximum favorites limit reached"
-msgstr ""
+msgstr "Bol dosiahnutý maximálny limit obľúbených položiek"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:566
 msgid "At least 2 favorites are required."
@@ -1668,11 +1670,11 @@ msgstr "Redukcia výšok"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:423
 msgid "Automatic Transparency Mode"
-msgstr ""
+msgstr "Režim automatickej priehľadnosti"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:424
 msgid "Switch to Transparency mode when an earbud is removed"
-msgstr ""
+msgstr "Pri vyňatí slúchadla sa prepne do režimu priehľadnosti"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:498
 msgid "Medium"
@@ -1699,12 +1701,12 @@ msgstr "Po 3 hodinách"
 #: src/preferences/devices/boseBuds/configureWindow.js:594
 #: src/preferences/devices/sony/configureWindow.js:493
 msgid "Automatic Power Off Duration"
-msgstr ""
+msgstr "Doba do automatického vypnutia"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:617
 #: src/preferences/devices/sony/configureWindow.js:393
 msgid "Voice Prompt Settings"
-msgstr ""
+msgstr "Nastavenia hlasových pokynov"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:633
 msgid "Voice Prompts"
@@ -1713,7 +1715,7 @@ msgstr "Hlasové pokyny"
 #: src/preferences/devices/boseBuds/configureWindow.js:634
 #: src/preferences/devices/sony/configureWindow.js:398
 msgid "Enable voice prompts for guidance and status updates"
-msgstr ""
+msgstr "Povoliť hlasové pokyny pre navigáciu a informácie o stave"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:662
 msgid "Prompt Language"
@@ -1721,7 +1723,7 @@ msgstr "Jazyk pokynov"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:663
 msgid "Select the language for voice prompts"
-msgstr ""
+msgstr "Vyberte jazyk hlasových pokynov"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:676
 msgid "Announce Battery Level at Startup"
@@ -1729,7 +1731,7 @@ msgstr "Oznámiť stav batérie pri spustení"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:677
 msgid "Announce the battery level when powered on"
-msgstr ""
+msgstr "Pri zapnutí oznámiť stav nabitia batérie"
 
 #: src/preferences/devices/boseBuds/configureWindow.js:811
 msgid "Cycle Through Modes"
@@ -1928,15 +1930,15 @@ msgstr "Vyberte režimy, ktoré sa majú prepínať pri stlačení tlačidla"
 
 #: src/preferences/devices/sony/configureWindow.js:397
 msgid "Voice Prompt"
-msgstr ""
+msgstr "Hlasový pokyn"
 
 #: src/preferences/devices/sony/configureWindow.js:416
 msgid "Voice Prompt Volume"
-msgstr ""
+msgstr "Hlasitosť hlasových pokynov"
 
 #: src/preferences/devices/sony/configureWindow.js:417
 msgid "Adjust the volume of voice prompts"
-msgstr ""
+msgstr "Nastaviť hlasitosť hlasových pokynov"
 
 #: src/preferences/devices/sony/configureWindow.js:419
 msgid "-2"
@@ -1972,11 +1974,11 @@ msgstr "Ekvalizér hlasitosti"
 
 #: src/preferences/devices/googleBuds/configureWindow.js:87
 msgid "Clarity"
-msgstr ""
+msgstr "Čistota"
 
 #: src/preferences/devices/googleBuds/configureWindow.js:88
 msgid "Last Saved"
-msgstr ""
+msgstr "Naposledy uložené"
 
 #: src/preferences/devices/googleBuds/configureWindow.js:130
 msgid "Low Bass"
@@ -2074,7 +2076,7 @@ msgstr "Odpojiť"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:467
 msgid "Manage Device Connections"
-msgstr ""
+msgstr "Spravovať pripojenia zariadení"
 
 #: src/preferences/widgets/deviceMgmtRowWidget.js:479
 msgid "Manage Devices"
@@ -2191,7 +2193,7 @@ msgstr "Informácie o zariadení"
 
 #: src/preferences/widgets/iconSelectorWidget.js:103
 msgid "MAC Address"
-msgstr ""
+msgstr "MAC adresa"
 
 #: src/preferences/widgets/iconSelectorWidget.js:106
 msgid "Firmware Version"
@@ -2204,7 +2206,7 @@ msgstr "Sériové číslo"
 
 #: src/lib/devices/notifier.js:25
 msgid "AirPods / Beats"
-msgstr ""
+msgstr "AirPods / Beats"
 
 #: src/lib/devices/notifier.js:27
 msgid "Sony"
@@ -2212,7 +2214,7 @@ msgstr "Sony"
 
 #: src/lib/devices/notifier.js:29
 msgid "Samsung Galaxy"
-msgstr ""
+msgstr "Samsung Galaxy"
 
 #: src/lib/devices/notifier.js:31
 msgid "Nothing / CMF"
@@ -2246,6 +2248,8 @@ msgstr "Google Fast Pair"
 #, javascript-format
 msgid "Could not access advanced features for %s Bluetooth audio devices."
 msgstr ""
+"Nepodarilo sa získať prístup k pokročilým funkciám pre Bluetooth audio "
+"zariadenia %s."
 
 #: src/lib/devices/notifier.js:53
 #, javascript-format
@@ -2254,6 +2258,9 @@ msgid ""
 "Bluetooth audio devices. Close any other apps using this device, then "
 "restart this app."
 msgstr ""
+"Bluetooth socket/profil pre %s Bluetooth audio zariadenia už používa iná "
+"aplikácia alebo relácia. Zatvorte všetky ostatné aplikácie, ktoré toto "
+"zariadenie používajú, a potom túto aplikáciu reštartujte."
 
 #: src/lib/devices/airpods/airpodsDevice.js:233
 #: src/lib/devices/galaxyBuds/galaxyBudsDevice.js:665
