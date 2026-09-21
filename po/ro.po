@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-20 21:44+0000\n"
+"PO-Revision-Date: 2026-09-21 13:25+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ro\n"
@@ -583,7 +583,7 @@ msgstr ""
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:257
 msgid "Audiophile"
-msgstr ""
+msgstr "Audiofil"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:258
 #: src/preferences/devices/boseBuds/configureWindow.js:286
@@ -2260,7 +2260,7 @@ msgstr ""
 
 #: src/lib/devices/redmiBuds/redmiBudsDevice.js:650
 msgid "Voice"
-msgstr ""
+msgstr "Vocea"
 
 #: src/lib/devices/redmiBuds/redmiBudsDevice.js:671
 msgid "Transparency Strength"
