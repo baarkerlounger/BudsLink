@@ -70,3 +70,18 @@ if compile_schemas.found()
     suite: ['lint'],
   )
 endif
+
+install_subdir(
+  'icons/hicolor/scalable/actions',
+  install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable'
+)
+
+install_data(
+  'icons/hicolor/scalable/apps/io.github.maniacx.BudsLink.svg',
+  install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+)
+
+install_data(
+  'icons/hicolor/symbolic/apps/io.github.maniacx.BudsLink-symbolic.svg',
+  install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'symbolic' / 'apps'
+)
