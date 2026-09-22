@@ -132,7 +132,7 @@ export const RedmiBudsSocket = GObject.registerClass({
     }
 
     _encode(type, opcode, seq, payload) {
-        const isRequest = (type & 0x40) !== 0;
+        const isRequest = (type & 0x80) !== 0;
         const payloadLength = payload.length + (isRequest ? 1 : 2);
         const out = [...HEADER, type, opcode, payloadLength >> 8 & 0xFF, payloadLength & 0xFF];
 
