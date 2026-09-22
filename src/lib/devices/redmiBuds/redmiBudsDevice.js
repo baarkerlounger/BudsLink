@@ -360,9 +360,11 @@ export const RedmiBudsDevice = GObject.registerClass({
 
         if (this._modelData.immersiveSound) {
             const enableImmersive = this._settingsItems['immersive-sound'];
-            const enableHeadTracking = this._modelData.headTracking ? this._settingsItems['head-tracking'] : false;
+            const enableHeadTracking = this._modelData.headTracking
+                ? this._settingsItems['head-tracking'] : false;
 
-            if (this._immersiveSound !== enableImmersive || this._headTracking !== enableHeadTracking) {
+            if (this._immersiveSound !== enableImmersive ||
+                     this._headTracking !== enableHeadTracking) {
                 this._immersiveSound = enableImmersive;
                 this._headTracking = enableHeadTracking;
                 this._setImmersiveSound(enableImmersive, enableHeadTracking);

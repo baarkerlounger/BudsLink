@@ -148,8 +148,10 @@ export const ConfigureWindow = GObject.registerClass({
             if (this._modelData.headTracking && this._headTrackingSwitch)
                 this._headTrackingSwitch.active = this._settingsItems['head-tracking'];
 
-            if (this._modelData.spatialAudioScenes && this._spatialAudioSceneDropdown)
-                this._spatialAudioSceneDropdown.selected_item = this._settingsItems['spatial-audio-scene'];
+            if (this._modelData.spatialAudioScenes && this._spatialAudioSceneDropdown) {
+                this._spatialAudioSceneDropdown.selected_item =
+                         this._settingsItems['spatial-audio-scene'];
+            }
 
             if (this._modelData.ring && this._ringBudsRow) {
                 this._ringBudsRow.status = this._settingsItems['ring-state'];
@@ -413,7 +415,7 @@ export const ConfigureWindow = GObject.registerClass({
             });
 
             miscGroup.add(this._headTrackingSwitch);
-            
+
             this._immersiveSoundSwitch.bind_property('active',
                 this._headTrackingSwitch, 'visible',
                 GObject.BindingFlags.SYNC_CREATE);
@@ -423,7 +425,7 @@ export const ConfigureWindow = GObject.registerClass({
             const scenes = this._modelData.spatialAudioScenes;
             const sceneNames = Object.keys(scenes).map(k => _(k));
             const sceneValues = Object.values(scenes);
-            
+
             this._spatialAudioSceneDropdown = new DropDownRowWidget({
                 title: _('Spatial Audio Scene'),
                 subtitle: _('Select the sound environment'),
@@ -433,11 +435,12 @@ export const ConfigureWindow = GObject.registerClass({
             });
 
             this._spatialAudioSceneDropdown.connect('notify::selected-item', () => {
-                this._updateGsettings('spatial-audio-scene', this._spatialAudioSceneDropdown.selected_item);
+                this._updateGsettings('spatial-audio-scene',
+                    this._spatialAudioSceneDropdown.selected_item);
             });
 
             miscGroup.add(this._spatialAudioSceneDropdown);
-            
+
             this._immersiveSoundSwitch.bind_property('active',
                 this._spatialAudioSceneDropdown, 'visible',
                 GObject.BindingFlags.SYNC_CREATE);

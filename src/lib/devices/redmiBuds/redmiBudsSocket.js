@@ -896,7 +896,8 @@ export const RedmiBudsSocket = GObject.registerClass({
 
     _parseSpatialAudioScene(data) {
         this._log.info('Parse Spatial Audio Scene');
-        if (data.length < 2) return;
+        if (data.length < 2)
+            return;
         const scene = data[1];
         this._callbacks?.updateSpatialAudioScene?.(scene);
     }
@@ -904,7 +905,11 @@ export const RedmiBudsSocket = GObject.registerClass({
     setImmersiveSound(enabled, headTracking = false) {
         const loginfo = `Set Immersive Sound: ${enabled}, HeadTracking: ${headTracking}`;
         if (this._modelData.headTracking) {
-            const val = enabled ? (headTracking ? 0x0B : 0x03) : 0x02;
+            let val = 0x02;
+
+            if (enabled)
+                val = headTracking ? 0x0B : 0x03;
+
             this._setConfig(ConfigType.SPATIAL_AUDIO_STATE, [val], loginfo);
         } else {
             this._setConfig(ConfigType.SPATIAL_AUDIO, [enabled ? 0x01 : 0x00], loginfo);
