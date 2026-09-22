@@ -86,9 +86,6 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         const iconSelector = new IconSelectorWidget({
-            grpTitle: _('Icon'),
-            rowTitle: _('Select Icon'),
-            rowSubtitle: _('Select the icon used for the indicator and quick menu'),
             iconList,
             initialIcon: this._settingsItems['icon'],
             caseIconList,

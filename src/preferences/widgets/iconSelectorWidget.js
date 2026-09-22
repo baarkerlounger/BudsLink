@@ -25,9 +25,9 @@ export const IconSelectorWidget = GObject.registerClass({
 }, class IconSelectorWidget extends Adw.PreferencesGroup {
     _init(params = {}) {
         const {
-            grpTitle = '',
-            rowTitle = '',
-            rowSubtitle = '',
+            grpTitle = _('Icon'),
+            rowTitle = _('Select Icon'),
+            rowSubtitle = _('Choose the icon used to represent this device'),
             iconList = [],
             initialIcon = '',
             caseIconList = [],
