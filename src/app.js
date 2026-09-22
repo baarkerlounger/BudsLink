@@ -9,12 +9,12 @@ import GLibUnix from 'gi://GLibUnix';
 import {gettext as _} from 'gettext';
 
 import {initLogger, createLogger} from './lib/devices/logger.js';
-import {DeviceRowNavPage} from './appLibs/widgets/deviceRow.js';
-import {SettingsButton} from './appLibs/widgets/settingsButton.js';
-import {ThemeManager} from './appLibs/themeManager.js';
-import {DbusService} from './appLibs/dbusService.js';
-import {BluetoothClient} from './appLibs/bluetoothClient.js';
-import {initConfigureWindowLauncher} from './appLibs/confirueWindowlauncher.js';
+import {DeviceRowNavPage} from './lib/widgets/deviceRow.js';
+import {SettingsButton} from './lib/widgets/settingsButton.js';
+import {ThemeManager} from './lib/themeManager.js';
+import {DbusService} from './lib/dbusService.js';
+import {BluetoothClient} from './lib/bluetoothClient.js';
+import {initConfigureWindowLauncher} from './lib/confirueWindowlauncher.js';
 import {EnhancedDeviceSupportManager} from './lib/enhancedDeviceSupportManager.js';
 
 Gio._promisify(Gio, 'bus_get');

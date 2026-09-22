@@ -4,7 +4,7 @@ import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 
 import {createLogger} from './logger.js';
-import {Gvc, Volume} from '../../appLibs/gvcProvider.js';
+import {Gvc, Volume} from '../gvcProvider.js';
 
 const MEDIA_PLAYER_PREFIX = 'org.mpris.MediaPlayer2.';
 

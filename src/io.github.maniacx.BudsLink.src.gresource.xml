@@ -2,34 +2,34 @@
 <gresources>
     <gresource prefix="/io/github/maniacx/BudsLink/js">
         <file>app.js</file>
-        <file>appLibs/bluetoothClient.js</file>
-        <file>appLibs/confirueWindowlauncher.js</file>
-        <file>appLibs/dbusService.js</file>
-        <file>appLibs/gvcProvider.js</file>
-        <file>appLibs/themeManager.js</file>
-        <file>appLibs/widgets/batterySetWidget.js</file>
-        <file>appLibs/widgets/checkButtonBin.js</file>
-        <file>appLibs/widgets/circleBatteryIconWidget.js</file>
-        <file>appLibs/widgets/circularBatteryVectorImages.js</file>
-        <file>appLibs/widgets/colorHelpers.js</file>
-        <file>appLibs/widgets/deviceRow.js</file>
-        <file>appLibs/widgets/optionsBox.js</file>
-        <file>appLibs/widgets/radioButtonBin.js</file>
-        <file>appLibs/widgets/settingsButton.js</file>
-        <file>appLibs/widgets/sliderBin.js</file>
-        <file>appLibs/widgets/toggleButtonsSet.js</file>
         <file>lib/bluezDeviceProxy.js</file>
+        <file>lib/bluetoothClient.js</file>
+        <file>lib/confirueWindowlauncher.js</file>
         <file>lib/dataHandler.js</file>
-        <file>lib/enhancedDeviceSupportManager.js</file>
+        <file>lib/dbusService.js</file>
         <file>lib/devices/commonEmuns.js</file>
         <file>lib/devices/deviceUtils.js</file>
         <file>lib/devices/logger.js</file>
         <file>lib/devices/mediaController.js</file>
         <file>lib/devices/notifier.js</file>
         <file>lib/devices/profileManager.js</file>
-        <file>lib/devices/socketByProfile.js</file>
         <file>lib/devices/socketByGatt.js</file>
+        <file>lib/devices/socketByProfile.js</file>
+        <file>lib/enhancedDeviceSupportManager.js</file>
+        <file>lib/gvcProvider.js</file>
+        <file>lib/themeManager.js</file>
+        <file>lib/widgets/batterySetWidget.js</file>
+        <file>lib/widgets/checkButtonBin.js</file>
+        <file>lib/widgets/circleBatteryIconWidget.js</file>
+        <file>lib/widgets/circularBatteryVectorImages.js</file>
+        <file>lib/widgets/colorHelpers.js</file>
+        <file>lib/widgets/deviceRow.js</file>
         <file>lib/widgets/iconGroups.js</file>
+        <file>lib/widgets/optionsBox.js</file>
+        <file>lib/widgets/radioButtonBin.js</file>
+        <file>lib/widgets/settingsButton.js</file>
+        <file>lib/widgets/sliderBin.js</file>
+        <file>lib/widgets/toggleButtonsSet.js</file>
         <file>main.js</file>
         <file>preferences/widgets/checkBoxesRowWidget.js</file>
         <file>preferences/widgets/deviceMgmtRowWidget.js</file>
