@@ -2,6 +2,7 @@
 import Adw from 'gi://Adw';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
+import {gettext as _} from 'gettext';
 
 import {
     supportedAudioSingleIcons, supportedAudioDualIcons, supportedCaseIcons
@@ -16,7 +17,7 @@ import {IconSelectorWidget} from './../../widgets/iconSelectorWidget.js';
 export const  ConfigureWindow = GObject.registerClass({
     GTypeName: 'BudsLink_AirpodsConfigureWindow',
 }, class ConfigureWindow extends Adw.Window {
-    _init(settings, mac, devicePath, parentWindow, _, modal = false) {
+    _init(settings, mac, devicePath, parentWindow, modal = false) {
         super._init({
             default_width: 650,
             default_height: 650,
@@ -79,7 +80,6 @@ export const  ConfigureWindow = GObject.registerClass({
         }
 
         const iconSelector = new IconSelectorWidget({
-            gtxt: _,
             grpTitle: _('Icon'),
             rowTitle: _('Select Icon'),
             rowSubtitle: _('Select the icon used for the indicator and quick menu'),

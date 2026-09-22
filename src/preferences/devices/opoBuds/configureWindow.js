@@ -3,6 +3,7 @@ import Adw from 'gi://Adw';
 import GLib from 'gi://GLib';
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
+import {gettext as _} from 'gettext';
 
 import {DropDownRowWidget} from '../../widgets/dropDownRowWidget.js';
 import {EqualizerWidget} from '../../widgets/equalizerWidget.js';
@@ -25,7 +26,7 @@ import {
 export const ConfigureWindow = GObject.registerClass({
     GTypeName: 'BudsLink_OpoBudsConfigureWindow',
 }, class ConfigureWindow extends Adw.Window {
-    _init(settings, mac, devicePath, parentWindow, _, modal = false) {
+    _init(settings, mac, devicePath, parentWindow, modal = false) {
         super._init({
             default_width: 650,
             default_height: 650,
@@ -56,7 +57,6 @@ export const ConfigureWindow = GObject.registerClass({
 
         this._settings = settings;
         this._devicePath = devicePath;
-        this._gettext = _;
 
         const pathsString = settings.get_strv('opo-buds-list').map(safeJsonParse).filter(Boolean);
         this._settingsItems = pathsString.find(info => info.path === devicePath);
@@ -92,7 +92,6 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         const iconSelector = new IconSelectorWidget({
-            gtxt: _,
             grpTitle: _('Icon'),
             rowTitle: _('Select Icon'),
             rowSubtitle: _('Select the icon used for the indicator and quick menu'),
@@ -321,7 +320,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData.eqPreset)
             return;
 
-        const _ = this._gettext;
         const eqGroup = new Adw.PreferencesGroup({
             title: _('Equalizer'),
         });
@@ -404,7 +402,7 @@ export const ConfigureWindow = GObject.registerClass({
         for (const entry of this._settingsItems['custom-eq-list'] ?? []) {
             if (entry.eqId === undefined)
                 continue;
-            options.push(entry.name || this._gettext('Custom'));
+            options.push(entry.name || _('Custom'));
             values.push(entry.eqId);
         }
 
@@ -433,8 +431,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _presentEqEditor(entry) {
-        const _ = this._gettext;
-
         const bandFreqs = this._modelData.eqBands?.frequencies ?? entry.freqs ?? [];
         const labels = bandFreqs.map(freq =>
             freq >= 1000 ? `${(freq / 1000).toFixed(0)}k` : `${freq}`
@@ -474,8 +470,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _addCustomEqManagement() {
-        const _ = this._gettext;
-
         const addRow = new Adw.ActionRow({
             title: _('Add Custom Preset'),
             subtitle: _('Create a new custom equalizer profile'),
@@ -499,8 +493,6 @@ export const ConfigureWindow = GObject.registerClass({
     _syncCustomEqRows() {
         if (!this._customEqGroup)
             return;
-
-        const _ = this._gettext;
 
         for (const row of this._customEqRows ?? [])
             this._customEqGroup.remove(row);
@@ -563,7 +555,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _promptForNewPreset() {
-        const _ = this._gettext;
         const dialog = new Adw.AlertDialog({
             heading: _('Add Custom Preset'),
             body: _('Enter a name for the new custom equalizer profile'),
@@ -612,7 +603,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _promptRenamePreset(entry) {
-        const _ = this._gettext;
         const dialog = new Adw.AlertDialog({
             heading: _('Rename Custom Preset'),
             body: _('Enter a new name for "%s"').replace('%s', entry.name || _('Custom')),
@@ -647,7 +637,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _confirmDeletePreset(entry) {
-        const _ = this._gettext;
         const dialog = new Adw.AlertDialog({
             heading: _('Delete Custom Preset?'),
             body: _('"%s" will be removed from the device')
@@ -685,7 +674,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _addAudioEffects() {
-        const _ = this._gettext;
         const hasEffects = this._modelData.dynamicBass || this._modelData.spatialAudio ||
             this._modelData.volumeEnhancer;
 
@@ -825,7 +813,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _addMiscSetting() {
-        const _ = this._gettext;
         const hasMisc = this._modelData.lowLatencyMode || this._modelData.inEarDetection ||
             this._modelData.dualConnection || this._modelData.autoAnswer ||
             this._modelData.fitTest || this._modelData.findMyPhone || this._modelData.ring;
@@ -892,7 +879,6 @@ export const ConfigureWindow = GObject.registerClass({
 
             this._dualConnSwitch = new DeviceManagementRow(
                 this,
-                _,
                 devArr,
                 ownDevice,
                 '',
@@ -1043,7 +1029,7 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         if (this._modelData.ring) {
-            const ringRow = new RingMyBudsRow(_, {dual: false});
+            const ringRow = new RingMyBudsRow({dual: false});
 
             ringRow.connect('notify::status', () => {
                 if (this._isUpdatingUI)
@@ -1061,7 +1047,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData.gestureOptions)
             return;
 
-        const _ = this._gettext;
         const gesturesConfig = this._modelData.gestureOptions;
         this._gestureDropdowns = {};
         this._ncCycleSwitches = null;
@@ -1212,7 +1197,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _getGroupTitle(group) {
-        const _ = this._gettext;
         switch (group) {
             case 'left':
                 return _('Left Earbud');

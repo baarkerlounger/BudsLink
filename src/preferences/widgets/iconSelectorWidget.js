@@ -2,6 +2,7 @@
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
+import {gettext as _} from 'gettext';
 
 export const IconSelectorWidget = GObject.registerClass({
     GTypeName: 'BudsLink_IconSelectorWidget',
@@ -24,7 +25,6 @@ export const IconSelectorWidget = GObject.registerClass({
 }, class IconSelectorWidget extends Adw.PreferencesGroup {
     _init(params = {}) {
         const {
-            gtxt,
             grpTitle = '',
             rowTitle = '',
             rowSubtitle = '',
@@ -41,8 +41,6 @@ export const IconSelectorWidget = GObject.registerClass({
         } = params;
 
         super._init({title: grpTitle});
-
-        const _ = gtxt;
 
         const infoButton = new Gtk.MenuButton({
             icon_name: 'bbm-help-about-symbolic',

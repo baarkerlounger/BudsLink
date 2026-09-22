@@ -12,11 +12,9 @@ import * as OpoBuds from '../preferences/devices/opoBuds/configureWindow.js';
 import * as Gfps from '../preferences/devices/gfps/configureWindow.js';
 
 let _settings = null;
-let _gettext = null;
 
-export function initConfigureWindowLauncher(settings, gettext) {
+export function initConfigureWindowLauncher(settings) {
     _settings = settings;
-    _gettext = gettext;
 }
 
 function pathToMac(path) {
@@ -100,7 +98,6 @@ export function createConfigureWindow({
         mac,
         devicePath,
         null,
-        _gettext,
         false
     );
 }

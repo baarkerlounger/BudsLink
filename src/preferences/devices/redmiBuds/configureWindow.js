@@ -1,6 +1,7 @@
 'use strict';
 import Adw from 'gi://Adw';
 import GObject from 'gi://GObject';
+import {gettext as _} from 'gettext';
 
 import {
     supportedAudioSingleIcons, supportedAudioDualIcons, supportedCaseIcons
@@ -16,7 +17,7 @@ import {RedmiBudsModelList} from '../../../lib/devices/redmiBuds/redmiBudsConfig
 export const ConfigureWindow = GObject.registerClass({
     GTypeName: 'BudsLink_RedmiBudsConfigureWindow',
 }, class ConfigureWindow extends Adw.Window {
-    _init(settings, mac, devicePath, parentWindow, _, modal = false) {
+    _init(settings, mac, devicePath, parentWindow, modal = false) {
         super._init({
             default_width: 650,
             default_height: 650,
@@ -51,7 +52,6 @@ export const ConfigureWindow = GObject.registerClass({
 
         this._settings = settings;
         this._devicePath = devicePath;
-        this._gettext = _;
         this.checkBoxWidgets = [];
 
         const pathsString = settings.get_strv('redmi-buds-list').map(JSON.parse);
@@ -90,7 +90,6 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         const iconSelector = new IconSelectorWidget({
-            gtxt: _,
             grpTitle: _('Icon'),
             rowTitle: _('Select Icon'),
             rowSubtitle: _('Select the icon used for the indicator and quick menu'),
@@ -206,8 +205,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData.inEarDetection)
             return;
 
-        const _ = this._gettext;
-
         const inEarSettingsGroup = new Adw.PreferencesGroup({
             title: _('Playback Behavior'),
         });
@@ -238,8 +235,6 @@ export const ConfigureWindow = GObject.registerClass({
     _addEq() {
         if (!this._modelData.eqPreset)
             return;
-
-        const _ = this._gettext;
 
         const eqGroup = new Adw.PreferencesGroup({title: _('Equalizer')});
         this._page.add(eqGroup);
@@ -318,8 +313,6 @@ export const ConfigureWindow = GObject.registerClass({
 
     _addMiscSetting() {
         let miscGroup;
-        const _ = this._gettext;
-
         if (this._modelData.ring || this._modelData.dualConnection ||
                 this._modelData.autoAnswer || this._modelData.adaptiveSound ||
                 this._modelData.lowLatencyMode) {
@@ -387,7 +380,7 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         if (this._modelData.ring) {
-            this._ringBudsRow = new RingMyBudsRow(_, {dual: true});
+            this._ringBudsRow = new RingMyBudsRow({dual: true});
 
             this._ringBudsRow.connect('notify::status', () => {
                 this._updateGsettings('ring-state', this._ringBudsRow.status);
@@ -402,8 +395,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _buildNoiseControlRow(title, initialValue) {
-        const _ = this._gettext;
-
         const items = [
             {name: _('Off'), icon: 'bbm-anc-off-symbolic'},
             {name: _('Ambient'), icon: 'bbm-transperancy-symbolic'},
@@ -428,8 +419,6 @@ export const ConfigureWindow = GObject.registerClass({
         const gc = this._modelData.gestureOptions;
         if (!gc)
             return;
-
-        const _ = this._gettext;
 
         this._gestureRows = {};
         this._noiseControlRows = {};

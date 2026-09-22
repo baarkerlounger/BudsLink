@@ -2,6 +2,7 @@
 import GObject from 'gi://GObject';
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
+import {gettext as _} from 'gettext';
 
 export const RingMyBudsRow = GObject.registerClass({
     GTypeName: 'BudsLink_RingMyBudsRow',
@@ -18,10 +19,8 @@ export const RingMyBudsRow = GObject.registerClass({
         ),
     },
 }, class RingMyBudsRow extends Adw.ActionRow {
-    _init(_, config = {}) {
+    _init(config = {}) {
         super._init();
-
-        this._gettext = _;
 
         const {
             dual = false,
@@ -94,7 +93,6 @@ export const RingMyBudsRow = GObject.registerClass({
     }
 
     _updateStatus(state, isLeft = false) {
-        const _ = this._gettext;
         const buttonContent = isLeft ? this._buttonContentLeft : this._buttonContent;
 
         if (state === 'playing') {
@@ -136,7 +134,6 @@ export const RingMyBudsRow = GObject.registerClass({
     }
 
     _confirmAndPlay(isLeft = false) {
-        const _ = this._gettext;
         const dialog = new Adw.AlertDialog({
             heading: _('Continue?'),
             body: _(

@@ -1,6 +1,7 @@
 'use strict';
 import Adw from 'gi://Adw';
 import GObject from 'gi://GObject';
+import {gettext as _} from 'gettext';
 
 import {
     supportedAudioSingleIcons, supportedAudioDualIcons, supportedCaseIcons
@@ -32,7 +33,7 @@ const NC_BYTE_TO_BITMASK = {
 export const ConfigureWindow = GObject.registerClass({
     GTypeName: 'BudsLink_NothingBudsConfigureWindow',
 }, class ConfigureWindow extends Adw.Window {
-    _init(settings, mac, devicePath, parentWindow, _, modal = false) {
+    _init(settings, mac, devicePath, parentWindow, modal = false) {
         super._init({
             default_width: 650,
             default_height: 650,
@@ -67,7 +68,6 @@ export const ConfigureWindow = GObject.registerClass({
 
         this._settings = settings;
         this._devicePath = devicePath;
-        this._gettext = _;
         this.checkBoxWidgets = [];
 
         const pathsString = settings.get_strv('nothing-buds-list').map(JSON.parse);
@@ -103,7 +103,6 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         const iconSelector = new IconSelectorWidget({
-            gtxt: _,
             grpTitle: _('Icon'),
             rowTitle: _('Select Icon'),
             rowSubtitle: _('Select the icon used for the indicator and quick menu'),
@@ -205,8 +204,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData?.eqPreset)
             return;
 
-        const _ = this._gettext;
-
         const eqGroup = new Adw.PreferencesGroup({title: _('Sound Settings')});
         this._page.add(eqGroup);
 
@@ -282,8 +279,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData?.bassEnhanceLevel)
             return;
 
-        const _ = this._gettext;
-
         this._bassEnhanceSwitch = new Adw.SwitchRow({
             title: _('Bass Enhancement'),
             subtitle: _('Enhances bass in real time'),
@@ -331,8 +326,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!this._modelData?.spatialAudioSwitch)
             return;
 
-        const _ = this._gettext;
-
         const spatialAudioGroup = new Adw.PreferencesGroup({title: _('Immersive Audio')});
         this._page.add(spatialAudioGroup);
 
@@ -352,7 +345,6 @@ export const ConfigureWindow = GObject.registerClass({
 
     _addMiscSetting() {
         let miscGroup;
-        const _ = this._gettext;
 
         if (this._modelData?.lowLatencyMode || this._modelData?.inEarDetection ||
                 this._modelData?.ring) {
@@ -393,7 +385,7 @@ export const ConfigureWindow = GObject.registerClass({
         if (this._modelData?.ring) {
             const dual = !this._modelData.ringLegacy && !this._modelData.batterySingle;
 
-            this._ringBudsRow = new RingMyBudsRow(_, {dual});
+            this._ringBudsRow = new RingMyBudsRow({dual});
 
             this._ringBudsRow.connect('notify::status', () => {
                 this._updateGsettings('ring-state', this._ringBudsRow.status);
@@ -410,8 +402,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _buildNoiseControlRow(title, savedSlot)  {
-        const _ = this._gettext;
-
         const items = [
             {name: _('Off'), icon: 'bbm-anc-off-symbolic'},
             {name: _('Ambient'), icon: 'bbm-transperancy-symbolic'},
@@ -442,7 +432,6 @@ export const ConfigureWindow = GObject.registerClass({
         if (!gc)
             return;
 
-        const _ = this._gettext;
         const allSlots = this._settingsItems.gestures ?? [];
 
         const GESTURE_DISPLAY = {
@@ -599,7 +588,6 @@ export const ConfigureWindow = GObject.registerClass({
     }
 
     _getGroupTitle(group) {
-        const _ = this._gettext;
         switch (group) {
             case 'single':
                 return _('Gesture Controls');

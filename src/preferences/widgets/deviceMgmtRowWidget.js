@@ -3,6 +3,7 @@ import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
 import Gtk from 'gi://Gtk';
 import GObject from 'gi://GObject';
+import {gettext as _} from 'gettext';
 
 import {BtDeviceState, DeviceManagementAction} from '../../lib/devices/commonEmuns.js';
 
@@ -16,7 +17,6 @@ const DeviceManagementDialog = GObject.registerClass({
             content_height: 700,
         });
 
-        const _ = mgmtRow.gtxt;
         this._mgmtRow = mgmtRow;
         this._ownDevice = ownDevice;
         this._routeDevice = routeDevice;
@@ -109,7 +109,6 @@ const DeviceManagementDialog = GObject.registerClass({
     }
 
     updateDevices() {
-        const _ = this._mgmtRow.gtxt;
         const devices = this._mgmtRow.deviceArr.map(device => ({...device}));
 
         devices.sort((a, b) => {
@@ -240,7 +239,6 @@ const DeviceManagementDialog = GObject.registerClass({
     }
 
     _createDeviceRow(device) {
-        const _ = this._mgmtRow.gtxt;
         const isOwnDevice = device.id === this._ownDevice;
         const isInitializing = device.state === BtDeviceState.NotInitialized;
         const isProcessing = device.state === BtDeviceState.Processing;
@@ -322,8 +320,6 @@ const DeviceManagementDialog = GObject.registerClass({
 
         const removeAction = new Gio.SimpleAction({name: 'remove'});
         removeAction.connect('activate', () => {
-            const _ = this._mgmtRow.gtxt;
-
             const dialog = new Adw.AlertDialog({
                 heading: _('Remove Device?'),
                 body: _('The device will be removed from the paired devices list.'),
@@ -444,7 +440,7 @@ export const DeviceManagementRow = GObject.registerClass({
             GObject.ParamFlags.READWRITE, false),
     },
 }, class DeviceManagementRow extends Adw.ActionRow {
-    _init(window, gtxt, deviceArr, ownDevice, routeDevice, config = {}) {
+    _init(window, deviceArr, ownDevice, routeDevice, config = {}) {
         super._init();
         this.config = {
             hasMultipointSwitch: true,
@@ -458,8 +454,6 @@ export const DeviceManagementRow = GObject.registerClass({
             ...config,
         };
 
-        const _ = gtxt;
-        this.gtxt = gtxt;
         this.deviceArr = deviceArr.map(device => ({...device}));
         this._active = false;
 

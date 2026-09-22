@@ -146,7 +146,7 @@ export const BudsLinkApplication = GObject.registerClass({
         this.settings = new Gio.Settings({schema_id: AppId});
         initLogger(this.settings);
         this._themeManager = new ThemeManager(this, this.settings);
-        initConfigureWindowLauncher(this.settings, _);
+        initConfigureWindowLauncher(this.settings);
 
         const provider = new Gtk.CssProvider();
         provider.load_from_resource('/io/github/maniacx/BudsLink/stylesheet.css');
