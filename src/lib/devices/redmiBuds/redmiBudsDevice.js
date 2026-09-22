@@ -65,6 +65,9 @@ export const RedmiBudsDevice = GObject.registerClass({
             updateLongGestures: this.updateLongGestures.bind(this),
             updateAdaptiveSound: this.updateAdaptiveSound.bind(this),
             updateLowLatency: this.updateLowLatency.bind(this),
+            updateImmersiveSound: this.updateImmersiveSound.bind(this),
+            updateHeadTracking: this.updateHeadTracking.bind(this),
+            updateSpatialAudioScene: this.updateSpatialAudioScene.bind(this),
             updateCustomEq: this.updateCustomEq.bind(this),
         };
 
@@ -164,6 +167,18 @@ export const RedmiBudsDevice = GObject.registerClass({
                 'low-latency': false,
             },
 
+            ...this._modelData.immersiveSound && {
+                'immersive-sound': false,
+            },
+
+            ...this._modelData.headTracking && {
+                'head-tracking': false,
+            },
+
+            ...this._modelData.spatialAudioScenes && {
+                'spatial-audio-scene': 0x01,
+            },
+
             ...this._modelData.gestureOptions?.gestureTypes?.single !== undefined && {
                 'single-left': getDefaultAction('single'),
                 'single-right': getDefaultAction('single'),
@@ -239,6 +254,15 @@ export const RedmiBudsDevice = GObject.registerClass({
 
         if (this._modelData.lowLatencyMode)
             this._lowLatency = this._settingsItems['low-latency'];
+
+        if (this._modelData.immersiveSound)
+            this._immersiveSound = this._settingsItems['immersive-sound'];
+
+        if (this._modelData.headTracking)
+            this._headTracking = this._settingsItems['head-tracking'];
+
+        if (this._modelData.spatialAudioScenes)
+            this._spatialAudioScene = this._settingsItems['spatial-audio-scene'];
 
         const gestureTypes = this._modelData.gestureOptions?.gestureTypes;
 
@@ -333,6 +357,26 @@ export const RedmiBudsDevice = GObject.registerClass({
                 this._setLowLatency(enable);
             }
         }
+
+        if (this._modelData.immersiveSound) {
+            const enableImmersive = this._settingsItems['immersive-sound'];
+            const enableHeadTracking = this._modelData.headTracking ? this._settingsItems['head-tracking'] : false;
+
+            if (this._immersiveSound !== enableImmersive || this._headTracking !== enableHeadTracking) {
+                this._immersiveSound = enableImmersive;
+                this._headTracking = enableHeadTracking;
+                this._setImmersiveSound(enableImmersive, enableHeadTracking);
+            }
+        }
+
+        if (this._modelData.spatialAudioScenes) {
+            const scene = this._settingsItems['spatial-audio-scene'];
+            if (this._spatialAudioScene !== scene) {
+                this._spatialAudioScene = scene;
+                this._setSpatialAudioScene(scene);
+            }
+        }
+
 
         if (this._modelData.dualConnection) {
             const enable = this._settingsItems['dual-conn'];
@@ -1059,6 +1103,62 @@ export const RedmiBudsDevice = GObject.registerClass({
 
     _setLowLatency(enable) {
         this._redmiBudsSocket?.setLowLatency(enable);
+    }
+
+    updateImmersiveSound(enable) {
+        this._log.info(`updateImmersiveSound : ${enable}`);
+        if (!this._modelData?.immersiveSound)
+            return;
+
+        if (this._immersiveSound === enable)
+            return;
+
+        this._immersiveSound = enable;
+
+        if (this._settingsItems) {
+            this._settingsItems['immersive-sound'] = enable;
+            this._updateGsettings();
+        }
+    }
+
+    updateHeadTracking(enable) {
+        this._log.info(`updateHeadTracking : ${enable}`);
+        if (!this._modelData?.headTracking)
+            return;
+
+        if (this._headTracking === enable)
+            return;
+
+        this._headTracking = enable;
+
+        if (this._settingsItems) {
+            this._settingsItems['head-tracking'] = enable;
+            this._updateGsettings();
+        }
+    }
+
+    updateSpatialAudioScene(scene) {
+        this._log.info(`updateSpatialAudioScene : ${scene}`);
+        if (!this._modelData?.spatialAudioScenes)
+            return;
+
+        if (this._spatialAudioScene === scene)
+            return;
+
+        this._spatialAudioScene = scene;
+
+        if (this._settingsItems) {
+            this._settingsItems['spatial-audio-scene'] = scene;
+            this._updateGsettings();
+        }
+    }
+
+    _setImmersiveSound(enable, headTracking = false) {
+        this._redmiBudsSocket?.setImmersiveSound(enable, headTracking);
+    }
+
+    _setSpatialAudioScene(scene) {
+        this._redmiBudsSocket?.setSpatialAudioScene(scene);
     }
 
     updateGestureSingle(left, right) {
