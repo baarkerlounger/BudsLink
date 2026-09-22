@@ -1043,11 +1043,7 @@ export const ConfigureWindow = GObject.registerClass({
         }
 
         if (this._modelData.ring) {
-            const ringRow = new RingMyBudsRow(_, {
-                title: _('Find My Buds'),
-                subtitle: _('Play a tone to locate your misplaced earbuds'),
-                dual: false,
-            });
+            const ringRow = new RingMyBudsRow(_, {dual: false});
 
             ringRow.connect('notify::status', () => {
                 if (this._isUpdatingUI)
