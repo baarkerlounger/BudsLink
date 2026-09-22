@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-21 13:25+0000\n"
+"PO-Revision-Date: 2026-09-22 17:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: vi\n"
@@ -954,8 +954,9 @@ msgid "Rock"
 msgstr "Rock"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:222
+#, fuzzy
 msgid "Electronic"
-msgstr ""
+msgstr "Nhạc điện tử"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:223
 #: src/preferences/devices/senhBuds/configureWindow.js:266
@@ -969,8 +970,9 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:225
 #: src/preferences/devices/senhBuds/configureWindow.js:269
+#, fuzzy
 msgid "Classical"
-msgstr ""
+msgstr "Nhạc cổ điển"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:260
 #: src/preferences/devices/nothingBuds/configureWindow.js:681
@@ -1154,7 +1156,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "Jazz"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1613,11 +1615,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:625
 msgid "Home"
-msgstr ""
+msgstr "Chỗ ở"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:626
 msgid "Music"
-msgstr ""
+msgstr "Âm nhạc"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:628
 msgid "Relax"
@@ -1633,11 +1635,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:631
 msgid "Work"
-msgstr ""
+msgstr "Làm việc"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:632
 msgid "Workout"
-msgstr ""
+msgstr "Thể dục"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:633
 msgid "Stereo"
@@ -1813,7 +1815,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:156
 msgid "Cinema"
-msgstr ""
+msgstr "Rạp chiếu phim"
 
 #: src/preferences/devices/sony/configureWindow.js:181
 msgid "My Room"
@@ -1825,7 +1827,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:183
 msgid "Cafe"
-msgstr ""
+msgstr "Quán cà phê"
 
 #: src/preferences/devices/sony/configureWindow.js:193
 msgid "Background Music Effects"
@@ -1849,7 +1851,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:220
 msgid "Speech"
-msgstr ""
+msgstr "Nói chuyện"
 
 #: src/preferences/devices/sony/configureWindow.js:221
 msgid "Manual"

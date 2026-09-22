@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-21 13:25+0000\n"
+"PO-Revision-Date: 2026-09-22 17:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es\n"
@@ -952,7 +952,7 @@ msgstr "Rock"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:222
 msgid "Electronic"
-msgstr ""
+msgstr "Electrónica"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:223
 #: src/preferences/devices/senhBuds/configureWindow.js:266
@@ -967,7 +967,7 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:225
 #: src/preferences/devices/senhBuds/configureWindow.js:269
 msgid "Classical"
-msgstr ""
+msgstr "Clásica"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:260
 #: src/preferences/devices/nothingBuds/configureWindow.js:681
@@ -1151,7 +1151,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "Jazz"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1610,11 +1610,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:625
 msgid "Home"
-msgstr ""
+msgstr "Hogar"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:626
 msgid "Music"
-msgstr ""
+msgstr "Música"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:628
 msgid "Relax"
@@ -1630,11 +1630,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:631
 msgid "Work"
-msgstr ""
+msgstr "Trabajo"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:632
 msgid "Workout"
-msgstr ""
+msgstr "Ejercicio"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:633
 msgid "Stereo"
@@ -1810,7 +1810,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:156
 msgid "Cinema"
-msgstr ""
+msgstr "Cine"
 
 #: src/preferences/devices/sony/configureWindow.js:181
 msgid "My Room"
@@ -1822,7 +1822,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:183
 msgid "Cafe"
-msgstr ""
+msgstr "Cafetería"
 
 #: src/preferences/devices/sony/configureWindow.js:193
 msgid "Background Music Effects"
@@ -1846,7 +1846,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:220
 msgid "Speech"
-msgstr ""
+msgstr "Habla"
 
 #: src/preferences/devices/sony/configureWindow.js:221
 msgid "Manual"

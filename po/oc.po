@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-20 21:43+0000\n"
+"PO-Revision-Date: 2026-09-22 17:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: oc\n"
@@ -1151,7 +1151,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "Jazz"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1614,7 +1614,7 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:626
 msgid "Music"
-msgstr ""
+msgstr "Musica"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:628
 msgid "Relax"
@@ -1630,11 +1630,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:631
 msgid "Work"
-msgstr ""
+msgstr "Trabalh"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:632
 msgid "Workout"
-msgstr ""
+msgstr "Exercici"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:633
 msgid "Stereo"
@@ -1846,7 +1846,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:220
 msgid "Speech"
-msgstr ""
+msgstr "Paraula"
 
 #: src/preferences/devices/sony/configureWindow.js:221
 msgid "Manual"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:54-0600\n"
-"PO-Revision-Date: 2026-09-21 13:25+0000\n"
+"PO-Revision-Date: 2026-09-22 17:52+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: zh_CN\n"
@@ -239,7 +239,7 @@ msgstr ""
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:66
 msgid "Settings"
-msgstr ""
+msgstr "设置"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:71
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
@@ -952,7 +952,7 @@ msgstr ""
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:222
 msgid "Electronic"
-msgstr ""
+msgstr "電子"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:223
 #: src/preferences/devices/senhBuds/configureWindow.js:266
@@ -967,7 +967,7 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:225
 #: src/preferences/devices/senhBuds/configureWindow.js:269
 msgid "Classical"
-msgstr ""
+msgstr "古典音乐"
 
 #: src/preferences/devices/nothingBuds/configureWindow.js:260
 #: src/preferences/devices/nothingBuds/configureWindow.js:681
@@ -1152,7 +1152,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "爵士乐"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1611,11 +1611,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:625
 msgid "Home"
-msgstr ""
+msgstr "家"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:626
 msgid "Music"
-msgstr ""
+msgstr "音乐"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:628
 msgid "Relax"
@@ -1631,11 +1631,12 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:631
 msgid "Work"
-msgstr ""
+msgstr "劳动"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:632
+#, fuzzy
 msgid "Workout"
-msgstr ""
+msgstr "體能鍛煉"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:633
 msgid "Stereo"
@@ -1811,7 +1812,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:156
 msgid "Cinema"
-msgstr ""
+msgstr "電影院"
 
 #: src/preferences/devices/sony/configureWindow.js:181
 msgid "My Room"
@@ -1823,7 +1824,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:183
 msgid "Cafe"
-msgstr ""
+msgstr "咖啡店"
 
 #: src/preferences/devices/sony/configureWindow.js:193
 msgid "Background Music Effects"
@@ -1847,7 +1848,7 @@ msgstr ""
 
 #: src/preferences/devices/sony/configureWindow.js:220
 msgid "Speech"
-msgstr ""
+msgstr "說話"
 
 #: src/preferences/devices/sony/configureWindow.js:221
 msgid "Manual"
