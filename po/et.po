@@ -768,47 +768,47 @@ msgstr ""
 #: src/preferences/devices/galaxyBuds/configureWindow.js:357
 #: src/preferences/devices/boseBuds/configureWindow.js:710
 msgid "Single Tap"
-msgstr ""
+msgstr "Üksik puudutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:439
 #: src/preferences/devices/nothingBuds/configureWindow.js:450
 #: src/preferences/devices/galaxyBuds/configureWindow.js:370
 #: src/preferences/devices/boseBuds/configureWindow.js:711
 msgid "Double Tap"
-msgstr ""
+msgstr "Topeltpuudutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:440
 #: src/preferences/devices/nothingBuds/configureWindow.js:451
 #: src/preferences/devices/galaxyBuds/configureWindow.js:383
 #: src/preferences/devices/boseBuds/configureWindow.js:712
 msgid "Triple Tap"
-msgstr ""
+msgstr "Kolmikpuudutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:441
 #: src/preferences/devices/nothingBuds/configureWindow.js:452
 msgid "Tap and Hold"
-msgstr ""
+msgstr "Puudutus ja hoidmine"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:443
 #: src/preferences/devices/nothingBuds/configureWindow.js:455
 #: src/preferences/devices/nothingBuds/configureWindow.js:470
 #: src/preferences/devices/boseBuds/configureWindow.js:716
 msgid "Single Press"
-msgstr ""
+msgstr "Üksik vajutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:444
 #: src/preferences/devices/nothingBuds/configureWindow.js:456
 #: src/preferences/devices/nothingBuds/configureWindow.js:471
 #: src/preferences/devices/boseBuds/configureWindow.js:717
 msgid "Double Press"
-msgstr ""
+msgstr "Topeltvajutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:445
 #: src/preferences/devices/nothingBuds/configureWindow.js:457
 #: src/preferences/devices/nothingBuds/configureWindow.js:472
 #: src/preferences/devices/boseBuds/configureWindow.js:718
 msgid "Triple Press"
-msgstr ""
+msgstr "Kolmikvajutus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:446
 #: src/preferences/devices/nothingBuds/configureWindow.js:458
@@ -816,7 +816,7 @@ msgstr ""
 #: src/preferences/devices/nothingBuds/configureWindow.js:473
 #: src/preferences/devices/boseBuds/configureWindow.js:719
 msgid "Press and Hold"
-msgstr ""
+msgstr "Vajutamine ja hoidmine"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:448
 #: src/preferences/devices/nothingBuds/configureWindow.js:461
@@ -912,23 +912,23 @@ msgstr "Heli vaiksemaks"
 #: src/lib/devices/sony/sonyDevice.js:180
 #: src/lib/devices/googleBuds/googleBudsDevice.js:199
 msgid "Noise Control"
-msgstr ""
+msgstr "Mürahaldus"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:549
 #: src/preferences/devices/nothingBuds/configureWindow.js:657
 #: src/preferences/devices/boseBuds/configureWindow.js:808
 msgid "No Action"
-msgstr ""
+msgstr "Tegevust pole"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:552
 #: src/preferences/devices/nothingBuds/configureWindow.js:660
 msgid "Change Volume"
-msgstr ""
+msgstr "Muuda helivaljust"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:555
 #: src/preferences/devices/nothingBuds/configureWindow.js:687
 msgid "Toggle Low Latency"
-msgstr ""
+msgstr "Lülita madal latentsus sise/välja"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:558
 #: src/preferences/devices/nothingBuds/configureWindow.js:693
