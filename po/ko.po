@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: BudsLink\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-12 00:26-0600\n"
-"PO-Revision-Date: 2026-09-21 13:25+0000\n"
+"PO-Revision-Date: 2026-09-22 17:51+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ko\n"
@@ -239,7 +239,7 @@ msgstr "표시기 및 빠른 메뉴에 사용할 아이콘을 선택하세요"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:66
 msgid "Settings"
-msgstr ""
+msgstr "설정"
 
 #: src/preferences/devices/edifierBuds/configureWindow.js:71
 #: src/preferences/devices/redmiBuds/configureWindow.js:376
@@ -607,7 +607,7 @@ msgstr ""
 #: src/preferences/devices/redmiBuds/configureWindow.js:262
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:627
 msgid "Outdoor"
-msgstr ""
+msgstr "아웃도어"
 
 #: src/preferences/devices/redmiBuds/configureWindow.js:263
 msgid "Underwater"
@@ -1158,7 +1158,7 @@ msgstr ""
 
 #: src/preferences/devices/senhBuds/configureWindow.js:271
 msgid "Jazz"
-msgstr ""
+msgstr "재즈"
 
 #: src/preferences/devices/senhBuds/configureWindow.js:306
 msgid "50"
@@ -1617,11 +1617,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:625
 msgid "Home"
-msgstr ""
+msgstr "가정"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:626
 msgid "Music"
-msgstr ""
+msgstr "음악"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:628
 msgid "Relax"
@@ -1637,11 +1637,11 @@ msgstr ""
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:631
 msgid "Work"
-msgstr ""
+msgstr "노동"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:632
 msgid "Workout"
-msgstr ""
+msgstr "운동"
 
 #: src/preferences/devices/boseBuds/modesGroupWidget.js:633
 msgid "Stereo"
