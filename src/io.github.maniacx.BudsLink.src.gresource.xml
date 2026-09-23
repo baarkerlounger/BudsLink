@@ -169,7 +169,6 @@
         <file>lib/devices/redmiBuds/deviceConfigs/RedmiBuds8Lite.js</file>
         <file>lib/devices/redmiBuds/deviceConfigs/RedmiBuds8Pro.js</file>
         <file>lib/devices/redmiBuds/deviceConfigs/RedmiBudsSE.js</file>
-        <file>lib/devices/redmiBuds/deviceConfigs/RedmiTemplate.js</file>
         <file>lib/devices/redmiBuds/deviceConfigs/XiaomiAirSE.js</file>
         <file>lib/devices/redmiBuds/deviceConfigs/XiaomiBuds3.js</file>
         <file>lib/devices/redmiBuds/deviceConfigs/XiaomiBuds3Pro.js</file>
@@ -236,6 +235,7 @@
         <file>lib/devices/opoBuds/opoBudsSocket.js</file>
         <file>lib/devices/opoBuds/deviceConfigs/RealmeBudsAir7.js</file>
         <file>lib/devices/opoBuds/deviceConfigs/RealmeBudsWireless5ANC.js</file>
+        <file>lib/devices/opoBuds/deviceConfigs/RealmeBudsAir7Pro.js</file>
         <file>preferences/devices/opoBuds/configureWindow.js</file>
     </gresource>
 </gresources>
