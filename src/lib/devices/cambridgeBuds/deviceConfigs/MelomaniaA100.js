@@ -20,7 +20,10 @@ export default {
     ldac: true,
 
     autoPowerOff: [0, 30, 60],
-    voicePrompts: ['off', 'tones', 'english', 'german', 'french'],
+    voicePrompts: [
+        'off', 'tones', 'english', 'german', 'french', 'spanish', 'italian', 'mandarin',
+        'cantonese', 'korean', 'southwark',
+    ],
     touchControls: true,
 
     albumArtIcon: 'earbuds',

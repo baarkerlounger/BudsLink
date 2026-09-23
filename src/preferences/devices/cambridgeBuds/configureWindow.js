@@ -120,9 +120,16 @@ export const ConfigureWindow = GObject.registerClass({
 
         this._addDropdown(settingsGroup, 'voice-prompt', _('Audible Feedback'),
             _('Voice prompt language'),
-            [_('Off'), _('Tones'), _('English'), _('German'), _('French')],
-            [VoicePrompt.OFF, VoicePrompt.TONES, VoicePrompt.ENGLISH, VoicePrompt.GERMAN,
-                VoicePrompt.FRENCH]);
+            [
+                _('Off'), _('Tones'), _('English'), _('German'), _('French'), _('Spanish'),
+                _('Italian'), _('Mandarin'), _('Cantonese'), _('Korean'), _('Southwark'),
+            ],
+            [
+                VoicePrompt.OFF, VoicePrompt.TONES, VoicePrompt.ENGLISH, VoicePrompt.GERMAN,
+                VoicePrompt.FRENCH, VoicePrompt.SPANISH, VoicePrompt.ITALIAN,
+                VoicePrompt.MANDARIN, VoicePrompt.CANTONESE, VoicePrompt.KOREAN,
+                VoicePrompt.SOUTHWARK,
+            ]);
 
         this._addDropdown(settingsGroup, 'auto-power-off', _('Auto Power Off'),
             _('Turn off when not in use'),

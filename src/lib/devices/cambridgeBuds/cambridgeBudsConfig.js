@@ -111,7 +111,13 @@ export const VoicePrompt = {
     TONES: 0x00,
     ENGLISH: 0x01,
     GERMAN: 0x02,
+    SPANISH: 0x03,
+    ITALIAN: 0x04,
+    KOREAN: 0x06,
+    CANTONESE: 0x07,
+    MANDARIN: 0x08,
     FRENCH: 0x09,
+    SOUTHWARK: 0x0A,
 };
 
 export const AutoPowerOff = {
