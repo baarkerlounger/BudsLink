@@ -18,7 +18,12 @@ export const DeviceTypeCambridgeBuds = 'cambridgeBuds';
 
 const SettingsKey = 'cambridge-buds-list';
 
-const QualcommVendorUuidSuffix = '-d102-11e1-9b23-00025b00a5a5';
+const QualcommVendorUuids = [
+    '0000eb04-d102-11e1-9b23-00025b00a5a5',
+    '0000eb05-d102-11e1-9b23-00025b00a5a5',
+    '0000eb06-d102-11e1-9b23-00025b00a5a5',
+    '0000eb07-d102-11e1-9b23-00025b00a5a5',
+];
 
 const ToggleKeys = [
     {key: 'dynamic-eq', flag: 'dynamicEq'},
@@ -50,8 +55,9 @@ export function isCambridgeBuds(bluezDeviceProxy, uuids) {
     const bluezProps = ['Name'];
     let supported = 'no';
 
-    if (!uuids.includes(SppUUid) ||
-            !uuids.some(u => u.toLowerCase().endsWith(QualcommVendorUuidSuffix)))
+    const deviceUuids = uuids.map(u => u.toLowerCase());
+    if (!deviceUuids.includes(SppUUid) ||
+            !QualcommVendorUuids.every(u => deviceUuids.includes(u)))
         return {supported, bluezProps};
 
     const name = bluezDeviceProxy.Name;
