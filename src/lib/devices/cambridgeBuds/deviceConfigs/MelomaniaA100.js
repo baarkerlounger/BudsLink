@@ -7,6 +7,21 @@ export default {
     batteryMultiple: true,
     batteryCase: true,
 
+    eq: {
+        range: 6,
+        bands: 7,
+        freq: [60, 120, 500, 1000, 2000, 4000, 10000],
+        custom: true,
+        presets: {
+            flat: [0, 0, 0, 0, 0, 0, 0],
+            blues: [-4.2, -1.7, -1.0, -1.4, 1.2, 2.4, 2.8],
+            electronic: [0.9, 1.7, 0.9, -0.7, 0.2, 0.9, -1.2],
+            natural: [-0.3, -0.2, -0.1, 0, 0, -0.1, -3.6],
+            rock: [1.4, 4.8, 1.1, 0.4, 1.4, 0.8, -1.7],
+            voice: [-6.0, -4.6, -1.0, 0.4, 3.0, 3.8, -4.7],
+        },
+    },
+
     noiseControl: {
         modes: ['off', 'anc', 'transparency'],
     },

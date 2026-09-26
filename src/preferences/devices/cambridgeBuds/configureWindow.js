@@ -8,8 +8,9 @@ import {
 } from '../../../lib/widgets/iconGroups.js';
 import {IconSelectorWidget} from './../../widgets/iconSelectorWidget.js';
 import {DropDownRowWidget} from './../../widgets/dropDownRowWidget.js';
+import {EqualizerWidget} from './../../widgets/equalizerWidget.js';
 import {
-    EqPresets, EqPresetCustom, VoicePrompt, TouchActionCustom
+    VoicePrompt, TouchActionCustom, CambridgeBudsModelList
 } from '../../../lib/devices/cambridgeBuds/cambridgeBudsConfig.js';
 
 const SettingsKey = 'cambridge-buds-list';
@@ -33,7 +34,14 @@ export const ConfigureWindow = GObject.registerClass({
         this._dropdowns = {};
 
         this._settingsItems = this._readSettingsItems();
+
         if (!this._settingsItems)
+            return;
+
+        this._modelData = CambridgeBudsModelList.find(m =>
+            m.name === this._settingsItems.modelId) ?? null;
+
+        if (!this._modelData)
             return;
 
         this.title = this._settingsItems.alias;
@@ -78,10 +86,23 @@ export const ConfigureWindow = GObject.registerClass({
                 natural: _('Natural'),
                 rock: _('Rock'),
                 voice: _('Voice'),
-                [EqPresetCustom]: _('Custom'),
+                custom: _('Custom'),
             };
 
-            const values = [...EqPresets.map(p => p.id), EqPresetCustom];
+            let customEqButton = {};
+            const values = [...Object.keys(this._modelData.eq.presets)];
+
+            if (this._modelData.eq?.custom) {
+                values.push('custom');
+
+                customEqButton =  {
+                    hasButton: true,
+                    buttonIcon: 'bbm-eq-symbolic',
+                    buttonTooltip: _('Custom Equalizer'),
+                    buttonVisibleFor: ['custom'],
+                };
+            }
+
             const options = values.map(v => this._eqPresetLabels[v]);
             this._eqDropdown = new DropDownRowWidget({
                 title: _('Equalizer Preset'),
@@ -89,16 +110,67 @@ export const ConfigureWindow = GObject.registerClass({
                 options,
                 values,
                 initialValue: this._settingsItems['eq-preset'],
+                ...customEqButton,
             });
+
+            soundGroup.add(this._eqDropdown);
+
+            if (this._modelData.eq?.custom) {
+                const freqLabels = {
+                    60: _('60'),
+                    120: _('120'),
+                    500: _('500'),
+                    1000: _('1k'),
+                    2000: _('2k'),
+                    4000: _('4k'),
+                    10000: _('10k'),
+                };
+
+                const freqs = this._modelData.eq.freq.map(
+                    freq => freqLabels[freq] ?? `${freq}`
+                );
+
+                const range = this._modelData.eq.range;
+
+                const initialValues = this._settingsItems['eq-custom'];
+
+                this._eq = new EqualizerWidget({
+                    freqs,
+                    initialValues,
+                    range,
+                    step: 0.1,
+                    digits: 1,
+                    topBarTitle: _('Frequency (Hz)'),
+                    bottomBarTitle: _('Gain (dB)'),
+                });
+
+                this._eq.connect('eq-changed', (_w, arr) => {
+                    this._eqDropdown.selected_item = 'custom';
+                    this._updateGsettings('eq-custom', arr);
+                });
+
+                this._eqDropdown.connect('button-clicked', () => {
+                    this._eq.present(this);
+                });
+            }
+
+
             this._eqDropdown.connect('notify::selected-item', () => {
                 const preset = this._eqDropdown.selected_item;
-                if (preset === undefined || preset === EqPresetCustom ||
-                        preset === this._settingsItems['eq-preset'])
+                if (preset === undefined || preset === this._settingsItems['eq-preset'])
                     return;
 
                 this._updateGsettings('eq-preset', preset);
+
+                if (preset === 'custom')
+                    return;
+
+                const eqValues = this._modelData.eq?.presets?.[preset];
+                if (eqValues) {
+                    this._updateGsettings('eq-custom', eqValues);
+                    this._eq.setValues(eqValues);
+                }
             });
-            soundGroup.add(this._eqDropdown);
         }
 
         this._addSwitch(soundGroup, 'dynamic-eq', _('Dynamic EQ'),
