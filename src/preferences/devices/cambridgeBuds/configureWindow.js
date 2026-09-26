@@ -67,7 +67,7 @@ export const ConfigureWindow = GObject.registerClass({
 
         page.add(iconSelector);
 
-        const soundGroup = new Adw.PreferencesGroup({title: _('Sound')});
+        const soundGroup = new Adw.PreferencesGroup({title: _('Sound Settings')});
         page.add(soundGroup);
 
         if ('eq-preset' in this._settingsItems) {
@@ -108,18 +108,18 @@ export const ConfigureWindow = GObject.registerClass({
         this._addSwitch(soundGroup, 'ldac', _('LDAC'),
             _('High resolution codec. The earbuds reconnect when this changes'));
         this._addSwitch(soundGroup, 'gaming-mode', _('Gaming Mode'),
-            _('Reduces audio latency'));
+            _('Reduces latency and enhances in-game audio'));
 
         const settingsGroup = new Adw.PreferencesGroup({title: _('Settings')});
         page.add(settingsGroup);
 
         this._addSwitch(settingsGroup, 'wear-detection', _('Wear Detection'),
-            _('Pause playback when an earbud is removed'));
+            _('Pause Media When Not Worn'));
         this._addSwitch(settingsGroup, 'sleep-mode', _('Sleep Mode'),
             _('Disable touch controls and prompts while sleeping'));
 
         this._addDropdown(settingsGroup, 'voice-prompt', _('Audible Feedback'),
-            _('Voice prompt language'),
+            _('Select the language for voice prompts'),
             [
                 _('Off'), _('Tones'), _('English'), _('German'), _('French'), _('Spanish'),
                 _('Italian'), _('Mandarin'), _('Cantonese'), _('Korean'), _('Southwark'),
@@ -132,7 +132,7 @@ export const ConfigureWindow = GObject.registerClass({
             ]);
 
         this._addDropdown(settingsGroup, 'auto-power-off', _('Auto Power Off'),
-            _('Turn off when not in use'),
+            _('Automatically power off when not worn'),
             [_('Never'), _('30 minutes'), _('60 minutes')],
             [0, 30, 60]);
 
@@ -142,7 +142,7 @@ export const ConfigureWindow = GObject.registerClass({
         ];
         const touchActionLabels = [
             _('Play / Pause'), _('Next Track'), _('Previous Track'), _('Volume Up'),
-            _('Volume Down'), _('Noise Control'), _('Voice Assistant'), _('Unassigned'),
+            _('Volume Down'), _('Noise Control'), _('Voice Assistant'), _('No Action'),
             _('Custom'),
         ];
         const gestureRows = [
