@@ -8,7 +8,7 @@ import {
     GAIA_SOF, GAIA_VERSION_LEGACY, GAIA_VERSION_V3, GAIA_VERSION_V4,
     GAIA_FLAG_CHECKSUM, GAIA_FLAG_LENGTH_16, GAIA_HEADER_LEN,
     Vendor, QcCmd, QcRsp, QcNtf, QcNotificationFeatures, QcBatteryId, QcUserEqPreset,
-    QcEqBandCount, CaCmd, CaRsp, CodecListLdacOn, CodecListLdacOff, LdacCodecId,
+    CaCmd, CaRsp, CodecListLdacOn, CodecListLdacOff, LdacCodecId,
     Gesture, autoPowerOffToBytes, bytesToAutoPowerOff
 } from './cambridgeBudsConfig.js';
 
@@ -19,7 +19,7 @@ const BATTERY_UNAVAILABLE = 0xFF;
 export const CambridgeBudsSocket = GObject.registerClass({
     GTypeName: 'BudsLink_CambridgeBudsSocket',
 }, class CambridgeBudsSocket extends SocketHandler {
-    _init(devicePath, profileManager, profile, callbacks) {
+    _init(devicePath, profileManager, profile, callbacks, modelData) {
         super._init(devicePath, profileManager, profile);
         const identifier = getDeviceIdentifier(devicePath);
         this._log = createLogger(`CambridgeBudsSocket-${identifier}`);
@@ -29,6 +29,7 @@ export const CambridgeBudsSocket = GObject.registerClass({
         this._rxBuffer = [];
         this._txQueue = [];
         this._txTimeoutId = null;
+        this._modelData = modelData;
 
         this.startSocket();
     }
@@ -47,7 +48,7 @@ export const CambridgeBudsSocket = GObject.registerClass({
         this._qc(QcCmd.GET_APP_VERSION);
         this.requestBattery();
         this._qc(QcCmd.GET_SELECTED_EQ_PRESET);
-        this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, QcEqBandCount - 1]);
+        this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
         for (const gesture of Object.values(Gesture))
             this.requestGesture(gesture);
 
@@ -184,16 +185,18 @@ export const CambridgeBudsSocket = GObject.registerClass({
             }
 
             case QcNtf.USER_EQ_BANDS_CHANGED:
-                this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, QcEqBandCount - 1]);
+                this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
                 break;
 
             case QcRsp.GET_USER_EQ_BANDS: {
                 const gains = [];
                 for (let i = 2; i + 6 < payload.length; i += 7) {
                     const raw = payload[i + 5] << 8 | payload[i + 6];
-                    gains.push(raw > 0x7FFF ? raw - 0x10000 : raw);
+                    const value = raw > 0x7FFF ? raw - 0x10000 : raw;
+                    gains.push(value / 60);
                 }
-                if (gains.length === QcEqBandCount)
+
+                if (gains.length === this._modelData.eq.bands)
                     this._callbacks.updateEqGains(gains);
                 break;
             }
@@ -302,11 +305,19 @@ export const CambridgeBudsSocket = GObject.registerClass({
         this._qc(QcCmd.SET_GESTURE_CONFIG, payload);
     }
 
+    setPresetGains(preset) {
+        const gains = this._modelData.eq.presets[preset];
+
+        if (gains)
+            this.setEqGains(gains);
+    }
+
     setEqGains(gains) {
-        const payload = [0x00, QcEqBandCount - 1];
+        const payload = [0x00, this._modelData.eq.bands - 1];
         for (const gain of gains) {
-            const raw = gain < 0 ? gain + 0x10000 : gain;
-            payload.push(raw >> 8 & 0xFF, raw & 0xFF);
+            const raw = Math.round(gain * 60);
+            const value = raw < 0 ? raw + 0x10000 : raw;
+            payload.push(value >> 8 & 0xFF, value & 0xFF);
         }
         this._qc(QcCmd.SET_USER_EQ_BANDS, payload);
     }

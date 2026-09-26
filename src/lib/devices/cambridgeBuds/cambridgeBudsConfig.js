@@ -56,7 +56,6 @@ export const QcBatteryId = {
 };
 
 export const QcUserEqPreset = 0x3F;
-export const QcEqBandCount = 7;
 
 export const CaCmd = {
     SET_VOICE_PROMPT: 0x0007,
@@ -135,24 +134,6 @@ export function bytesToAutoPowerOff(bytes) {
         return null;
 
     return bytes[0] * 60 + bytes[1] + Math.round(bytes[2] / 60);
-}
-
-export const EqPresets = [
-    {id: 'flat', gains: [0, 0, 0, 0, 0, 0, 0]},
-    {id: 'blues', gains: [-252, -102, -60, -84, 72, 144, 168]},
-    {id: 'electronic', gains: [54, 102, 54, -42, 12, 54, -72]},
-    {id: 'natural', gains: [-18, -12, -6, 0, 0, -6, -216]},
-    {id: 'rock', gains: [84, 288, 66, 24, 84, 48, -102]},
-    {id: 'voice', gains: [-360, -276, -60, 24, 180, 228, -282]},
-];
-
-export const EqPresetCustom = 'custom';
-
-export function eqGainsToPreset(gains) {
-    const preset = EqPresets.find(p =>
-        p.gains.length === gains.length && p.gains.every((g, i) => g === gains[i]));
-
-    return preset ? preset.id : EqPresetCustom;
 }
 
 export const Gesture = {

@@ -4,14 +4,15 @@ import {gettext as _} from 'gettext';
 
 import {createLogger, getDeviceIdentifier, hexBytes} from '../logger.js';
 import {
-    buds2to1BatteryLevel, validateProperties, launchConfigureWindow, SppUUidType, SppUUid
+    buds2to1BatteryLevel, validateProperties, launchConfigureWindow, SppUUidType, SppUUid,
+    isArrayEqual
 } from '../deviceUtils.js';
 import {createConfig, createProperties, DataHandler} from '../../dataHandler.js';
 import {getBluezDeviceProxy} from '../../bluezDeviceProxy.js';
 import {CambridgeBudsSocket} from './cambridgeBudsSocket.js';
 import {
-    CambridgeBudsModelList, NoiseControl, EqPresets, eqGainsToPreset, VoicePrompt,
-    Gesture, Touchpad, TouchActions, gestureEntriesToAction, applyTouchAction
+    CambridgeBudsModelList, NoiseControl, VoicePrompt, Gesture, Touchpad, TouchActions,
+    gestureEntriesToAction, applyTouchAction
 } from './cambridgeBudsConfig.js';
 
 export const DeviceTypeCambridgeBuds = 'cambridgeBuds';
@@ -92,9 +93,13 @@ export const CambridgeBudsDevice = GObject.registerClass({
         this._fwVersion = '';
         this._state = {};
         this._gestureEntries = {};
+        this._eqInitialized = false;
 
         const name = getBluezDeviceProxy(devicePath).Name;
-        this._modelData = findModel(name) ?? findModel(alias) ?? CambridgeBudsModelList[0];
+        this._modelData = findModel(name) ?? findModel(alias);
+        if (!this._modelData)
+            return;
+
         this._log.info(`Model: ${this._modelData.name}`);
 
         this._initSettings();
@@ -115,7 +120,7 @@ export const CambridgeBudsDevice = GObject.registerClass({
 
         const profile = {type: SppUUidType, uuid: SppUUid};
         this._socket = new CambridgeBudsSocket(this._devicePath, profileManager, profile,
-            this._callbacks);
+            this._callbacks, this._modelData);
     }
 
     _initSettings() {
@@ -130,7 +135,11 @@ export const CambridgeBudsDevice = GObject.registerClass({
             icon: this._commonIcon,
             'fw-version': this._fwVersion,
             ...m.batteryCase && {'case': this._caseIcon},
-            ...m.eqPresets && {'eq-preset': 'flat'},
+            ...m.eq?.presets && {'eq-preset': 'flat'},
+            ...m.eq?.custom && {
+                'eq-custom':
+                    new Array(this._modelData.eq.bands).fill(0),
+            },
             ...m.ldac && {ldac: false},
             ...m.autoPowerOff && {'auto-power-off': 60},
             ...m.voicePrompts && {'voice-prompt': VoicePrompt.ENGLISH},
@@ -218,11 +227,22 @@ export const CambridgeBudsDevice = GObject.registerClass({
 
         if ('eq-preset' in items && this._state['eq-preset'] !== undefined &&
                 items['eq-preset'] !== this._state['eq-preset']) {
-            const preset = EqPresets.find(p => p.id === items['eq-preset']);
+            const preset = this._modelData.eq.presets[items['eq-preset']];
             if (preset) {
-                this._state['eq-preset'] = preset.id;
-                this._socket?.setEqGains(preset.gains);
+                this._state['eq-preset'] = items['eq-preset'];
+                this._socket?.setPresetGains(preset);
+            } else if (items['eq-preset'] === 'custom' && this._modelData.eq.custom) {
+                this._state['eq-preset'] = 'custom';
+                const gains = items['eq-custom'];
+                this._socket?.setEqGains(gains);
             }
+        }
+
+        if ('eq-custom' in items && this._state['eq-custom'] !== undefined &&
+                !isArrayEqual(items['eq-custom'], this._state['eq-custom'])) {
+            const gains = items['eq-custom'];
+            this._state['eq-custom'] = items['eq-custom'];
+            this._socket?.setEqGains(gains);
         }
 
         if ('ldac' in items && this._state['ldac'] !== undefined &&
@@ -382,7 +402,16 @@ export const CambridgeBudsDevice = GObject.registerClass({
     }
 
     updateEqGains(gains) {
-        this._reportState('eq-preset', eqGainsToPreset(gains));
+        if (!this._eqInitialized) {
+            this._eqInitialized = false;
+            const presetId = Object.entries(this._modelData.eq.presets).find(([, preset]) =>
+                preset.length === gains.length &&
+                preset.every((g, i) => g === gains[i]))?.[0] ?? 'custom';
+
+            this._reportState('eq-preset', presetId);
+        }
+
+        this._reportState('eq-custom', gains);
     }
 
     updateGesture(gesture, entries) {
