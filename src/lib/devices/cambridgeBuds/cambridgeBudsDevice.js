@@ -96,10 +96,7 @@ export const CambridgeBudsDevice = GObject.registerClass({
         this._eqInitialized = false;
 
         const name = getBluezDeviceProxy(devicePath).Name;
-        this._modelData = findModel(name) ?? findModel(alias);
-        if (!this._modelData)
-            return;
-
+        this._modelData = findModel(name) ?? findModel(alias) ?? CambridgeBudsModelList[0];
         this._log.info(`Model: ${this._modelData.name}`);
 
         this._initSettings();
@@ -227,14 +224,13 @@ export const CambridgeBudsDevice = GObject.registerClass({
 
         if ('eq-preset' in items && this._state['eq-preset'] !== undefined &&
                 items['eq-preset'] !== this._state['eq-preset']) {
-            const preset = this._modelData.eq.presets[items['eq-preset']];
-            if (preset) {
+            const gains = this._modelData.eq?.presets?.[items['eq-preset']];
+            if (gains) {
                 this._state['eq-preset'] = items['eq-preset'];
-                this._socket?.setPresetGains(preset);
-            } else if (items['eq-preset'] === 'custom' && this._modelData.eq.custom) {
-                this._state['eq-preset'] = 'custom';
-                const gains = items['eq-custom'];
+                this._state['eq-custom'] = gains;
                 this._socket?.setEqGains(gains);
+            } else if (items['eq-preset'] === 'custom' && this._modelData.eq?.custom) {
+                this._state['eq-preset'] = 'custom';
             }
         }
 
@@ -403,8 +399,8 @@ export const CambridgeBudsDevice = GObject.registerClass({
 
     updateEqGains(gains) {
         if (!this._eqInitialized) {
-            this._eqInitialized = false;
-            const presetId = Object.entries(this._modelData.eq.presets).find(([, preset]) =>
+            this._eqInitialized = true;
+            const presetId = Object.entries(this._modelData.eq?.presets ?? {}).find(([, preset]) =>
                 preset.length === gains.length &&
                 preset.every((g, i) => g === gains[i]))?.[0] ?? 'custom';
 

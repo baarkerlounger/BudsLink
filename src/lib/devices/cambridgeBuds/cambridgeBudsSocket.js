@@ -47,8 +47,10 @@ export const CambridgeBudsSocket = GObject.registerClass({
 
         this._qc(QcCmd.GET_APP_VERSION);
         this.requestBattery();
-        this._qc(QcCmd.GET_SELECTED_EQ_PRESET);
-        this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
+        if (this._modelData.eq) {
+            this._qc(QcCmd.GET_SELECTED_EQ_PRESET);
+            this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
+        }
         for (const gesture of Object.values(Gesture))
             this.requestGesture(gesture);
 
@@ -185,7 +187,8 @@ export const CambridgeBudsSocket = GObject.registerClass({
             }
 
             case QcNtf.USER_EQ_BANDS_CHANGED:
-                this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
+                if (this._modelData.eq)
+                    this._qc(QcCmd.GET_USER_EQ_BANDS, [0x00, this._modelData.eq.bands - 1]);
                 break;
 
             case QcRsp.GET_USER_EQ_BANDS: {
@@ -196,7 +199,7 @@ export const CambridgeBudsSocket = GObject.registerClass({
                     gains.push(value / 60);
                 }
 
-                if (gains.length === this._modelData.eq.bands)
+                if (gains.length === this._modelData.eq?.bands)
                     this._callbacks.updateEqGains(gains);
                 break;
             }
@@ -305,14 +308,10 @@ export const CambridgeBudsSocket = GObject.registerClass({
         this._qc(QcCmd.SET_GESTURE_CONFIG, payload);
     }
 
-    setPresetGains(preset) {
-        const gains = this._modelData.eq.presets[preset];
-
-        if (gains)
-            this.setEqGains(gains);
-    }
-
     setEqGains(gains) {
+        if (!this._modelData.eq)
+            return;
+
         const payload = [0x00, this._modelData.eq.bands - 1];
         for (const gain of gains) {
             const raw = Math.round(gain * 60);

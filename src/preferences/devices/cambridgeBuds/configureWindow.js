@@ -34,7 +34,6 @@ export const ConfigureWindow = GObject.registerClass({
         this._dropdowns = {};
 
         this._settingsItems = this._readSettingsItems();
-
         if (!this._settingsItems)
             return;
 
@@ -95,7 +94,7 @@ export const ConfigureWindow = GObject.registerClass({
             if (this._modelData.eq?.custom) {
                 values.push('custom');
 
-                customEqButton =  {
+                customEqButton = {
                     hasButton: true,
                     buttonIcon: 'bbm-eq-symbolic',
                     buttonTooltip: _('Custom Equalizer'),
@@ -154,7 +153,6 @@ export const ConfigureWindow = GObject.registerClass({
                 });
             }
 
-
             this._eqDropdown.connect('notify::selected-item', () => {
                 const preset = this._eqDropdown.selected_item;
                 if (preset === undefined || preset === this._settingsItems['eq-preset'])
@@ -166,7 +164,7 @@ export const ConfigureWindow = GObject.registerClass({
                     return;
 
                 const eqValues = this._modelData.eq?.presets?.[preset];
-                if (eqValues) {
+                if (eqValues && this._eq) {
                     this._updateGsettings('eq-custom', eqValues);
                     this._eq.setValues(eqValues);
                 }
@@ -255,9 +253,15 @@ export const ConfigureWindow = GObject.registerClass({
 
             if (this._eqDropdown)
                 this._eqDropdown.selected_item = this._settingsItems['eq-preset'];
+
+            if (this._eq && this._settingsItems['eq-custom'])
+                this._eq.setValues(this._settingsItems['eq-custom']);
         });
 
         this.connect('close-request', () => {
+            this._eq?.destroy();
+            this._eq = null;
+
             if (settingSignalId && this._settings)
                 this._settings.disconnect(settingSignalId);
 
